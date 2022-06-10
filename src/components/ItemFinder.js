@@ -1,14 +1,14 @@
 import React, { useMemo, useState } from 'react'
 
-export default function ItemFinder({ UniqueItems, Runewords, SetItems }) {
+export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
   const [search, setSearch] = useState('')
 
   const Runeword = props => (
     <div className='runeword-container'>
-      {props.T1Code1 && (
+      {props.T1Code1 && props.T1Code2 && (
         <div>
           <div className='runeword-name'>{props.Name}</div>
-          <div className='runeword-type'>{props.itype1}</div>
+          <div className='item-base'>{props.itype1}</div>
           <div className='runeword-runes'>
             '{props.Rune1}
             {props.Rune2}
@@ -97,7 +97,7 @@ export default function ItemFinder({ UniqueItems, Runewords, SetItems }) {
   const UniqueItem = props => (
     <div className='unique-item-container'>
       <div className='unique-item-name'>{props.name}</div>
-      <div className='unique-item-base'>{props.itemBase}</div>
+      <div className='item-base'>{props.itemBase}</div>
       {props.min1 !== props.max1 && props.min1 < props.max1 && (
         <div>
           {props.prop1 !== 'oskill' &&
@@ -200,7 +200,111 @@ export default function ItemFinder({ UniqueItems, Runewords, SetItems }) {
     </div>
   )
 
-  const SetItem = props => <div className='set-item-container'></div>
+  const SetItem = props => (
+    <div className='set-item-container'>
+      <div className='set-item-name'>{props.name}</div>
+      <div className='item-base'>{props.itemBase}</div>
+      {props.min1 !== props.max1 && props.min1 < props.max1 && (
+        <div>
+          {props.prop1 !== 'oskill' &&
+            props.prop1 !== 'hit-skill' &&
+            props.prop1 !== 'gethit-skill' &&
+            props.prop1 !== 'charged' && <span>{props.prop1}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min1}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max1}</span>
+        </div>
+      )}
+      {props.min2 !== props.max2 && props.min2 < props.max2 && (
+        <div>
+          {props.prop2 !== 'oskill' &&
+            props.prop2 !== 'hit-skill' &&
+            props.prop2 !== 'gethit-skill' &&
+            props.prop2 !== 'charged' && <span>{props.prop2}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min2}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max2}</span>
+        </div>
+      )}
+      {props.min3 !== props.max3 && props.min3 < props.max3 && (
+        <div>
+          {props.prop3 !== 'oskill' &&
+            props.prop3 !== 'hit-skill' &&
+            props.prop3 !== 'gethit-skill' &&
+            props.prop3 !== 'charged' && <span>{props.prop3}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min3}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max3}</span>
+        </div>
+      )}
+      {props.min4 !== props.max4 && props.min4 < props.max4 && (
+        <div>
+          {props.prop4 !== 'oskill' &&
+            props.prop4 !== 'hit-skill' &&
+            props.prop4 !== 'gethit-skill' &&
+            props.prop4 !== 'charged' && <span>{props.prop4}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min4}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max4}</span>
+        </div>
+      )}
+      {props.min5 !== props.max5 && props.min5 < props.max5 && (
+        <div>
+          {props.prop5 !== 'oskill' &&
+            props.prop5 !== 'hit-skill' &&
+            props.prop5 !== 'gethit-skill' &&
+            props.prop5 !== 'charged' && <span>{props.prop5}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min5}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max5}</span>
+        </div>
+      )}
+      {props.min6 !== props.max6 && props.min6 < props.max6 && (
+        <div>
+          {props.prop6 !== 'oskill' &&
+            props.prop6 !== 'hit-skill' &&
+            props.prop6 !== 'gethit-skill' &&
+            props.prop6 !== 'charged' && <span>{props.prop6}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min6}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max6}</span>
+        </div>
+      )}
+      {props.min7 !== props.max7 && props.min7 < props.max7 && (
+        <div>
+          {props.prop7 !== 'oskill' &&
+            props.prop7 !== 'hit-skill' &&
+            props.prop7 !== 'gethit-skill' &&
+            props.prop7 !== 'charged' && <span>{props.prop7}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min7}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max7}</span>
+        </div>
+      )}
+      {props.min8 !== props.max8 && props.min8 < props.max8 && (
+        <div>
+          {props.prop8 !== 'oskill' &&
+            props.prop8 !== 'hit-skill' &&
+            props.prop8 !== 'gethit-skill' &&
+            props.prop8 !== 'charged' && <span>{props.prop8}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min8}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max8}</span>
+        </div>
+      )}
+      {props.min9 !== props.max9 && props.min9 < props.max9 && (
+        <div>
+          {props.prop9 !== 'oskill' &&
+            props.prop9 !== 'hit-skill' &&
+            props.prop9 !== 'gethit-skill' &&
+            props.prop9 !== 'charged' && <span>{props.prop9}</span>}
+          <div></div>
+          <span className='set-item-min-roll'>{props.min9}</span> -{' '}
+          <span className='set-item-max-roll'>{props.max9}</span>
+        </div>
+      )}
+    </div>
+  )
 
   const filteredRunewords = Runewords.filter(runeword =>
     runeword.Name.toLowerCase().includes(search.toLowerCase())
@@ -210,25 +314,44 @@ export default function ItemFinder({ UniqueItems, Runewords, SetItems }) {
     uniqueItem.name.toLowerCase().includes(search.toLowerCase())
   )
 
+  const filteredSetItems = SetItems.filter(setItem =>
+    setItem.name.toLowerCase().includes(search.toLowerCase())
+  )
+
   return (
     <div className='itemfinder-container'>
-      <input
-        className='item-search'
-        type='search'
-        placeholder='Search item...'
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-      />
-      {search === ''
-        ? null
-        : filteredRunewords.map(runeword => {
-            return <Runeword key={runeword.id} {...runeword} />
-          })}
-      {search === ''
-        ? null
-        : filteredUniqueItemsByName.map(uniqueItem => {
-            return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
-          })}
+      <div className='searchbar-container'>
+        <img
+          className='diablo-2-logo'
+          src={require('../images/Diablo_II_Logo.webp')}
+          alt='Diablo_II_Logo'
+        />
+        <span className='app-name-text'>Rolled Stat Checker v1.0</span>
+        <input
+          className='item-search'
+          type='search'
+          placeholder='Search item...'
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+        />
+      </div>
+      <div className='itemlist-container'>
+        {search === ''
+          ? null
+          : filteredRunewords.map(runeword => {
+              return <Runeword key={runeword.id} {...runeword} />
+            })}
+        {search === ''
+          ? null
+          : filteredUniqueItemsByName.map(uniqueItem => {
+              return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
+            })}
+        {search === ''
+          ? null
+          : filteredSetItems.map(setItem => {
+              return <SetItem key={setItem.id} {...setItem} />
+            })}
+      </div>
     </div>
   )
 }

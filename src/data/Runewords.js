@@ -3,7 +3,7 @@ export const Runewords = [
     id: 'Runeword1',
     Name: "Ancients' Pledge",
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Shield',
     RequiredRunes: 'RalOrtTal',
     Rune1: 'Ral',
@@ -24,20 +24,10 @@ export const Runewords = [
     lineNumber: 0
   },
   {
-    id: 'Runeword2',
-    Name: 'Armageddon',
-    lineNumber: 1
-  },
-  {
-    id: 'Runeword3',
-    Name: 'Authority',
-    lineNumber: 2
-  },
-  {
     id: 'Runeword4',
     Name: 'Beast',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Axe',
     itype2: 'scep',
     itype3: 'hamm',
@@ -75,15 +65,10 @@ export const Runewords = [
     lineNumber: 3
   },
   {
-    id: 'Runeword5',
-    Name: 'Beauty',
-    lineNumber: 4
-  },
-  {
     id: 'Runeword6',
     Name: 'Black',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Club',
     itype2: 'hamm',
     itype3: 'mace',
@@ -113,15 +98,10 @@ export const Runewords = [
     lineNumber: 5
   },
   {
-    id: 'Runeword7',
-    Name: 'Blood',
-    lineNumber: 6
-  },
-  {
     id: 'Runeword8',
     Name: 'Bone',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'SolUmUm',
     Rune1: 'Sol',
@@ -138,7 +118,7 @@ export const Runewords = [
     T1Code3: 'nec',
     T1Min3: 2,
     T1Max3: 2,
-    T1Code4: 'mana',
+    T1Code4: 'Mana',
     T1Min4: 100,
     T1Max4: 150,
     lineNumber: 7
@@ -147,7 +127,7 @@ export const Runewords = [
     id: 'Runeword9',
     Name: 'Bramble',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'RalOhmSurEth',
     Rune1: 'Ral',
@@ -183,7 +163,7 @@ export const Runewords = [
     id: 'Runeword10',
     Name: 'Brand',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Missile',
     RequiredRunes: 'JahLoMalGul',
     Rune1: 'Jah',
@@ -219,7 +199,7 @@ export const Runewords = [
     id: 'Runeword11',
     Name: 'Breath of the Dying',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Weapon',
     RequiredRunes: 'VexHelElEldZodEth',
     Rune1: 'Vex',
@@ -253,15 +233,10 @@ export const Runewords = [
     lineNumber: 10
   },
   {
-    id: 'Runeword12',
-    Name: 'Broken Promise',
-    lineNumber: 11
-  },
-  {
     id: 'Runeword13',
     Name: 'Call to Arms',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Weapon',
     RequiredRunes: 'AmnRalMalIstOhm',
     Rune1: 'Amn',
@@ -299,7 +274,7 @@ export const Runewords = [
     id: 'Runeword14',
     Name: 'Chains of Honor',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'DolUmBerIst',
     Rune1: 'Dol',
@@ -330,15 +305,10 @@ export const Runewords = [
     lineNumber: 13
   },
   {
-    id: 'Runeword15',
-    Name: 'Chance',
-    lineNumber: 14
-  },
-  {
     id: 'Runeword16',
     Name: 'Chaos',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'h2h',
     RequiredRunes: 'FalOhmUm',
     Rune1: 'Fal',
@@ -374,7 +344,7 @@ export const Runewords = [
     id: 'Runeword17',
     Name: 'Crescent Moon',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Axe',
     itype2: 'Sword',
     itype3: 'Polearm',
@@ -409,20 +379,10 @@ export const Runewords = [
     lineNumber: 16
   },
   {
-    id: 'Runeword18',
-    Name: 'Darkness',
-    lineNumber: 17
-  },
-  {
-    id: 'Runeword19',
-    Name: 'Daylight',
-    lineNumber: 18
-  },
-  {
     id: 'Runeword20',
     Name: 'Death',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'Axe',
     RequiredRunes: 'HelElVexOrtGul',
@@ -457,15 +417,10 @@ export const Runewords = [
     lineNumber: 19
   },
   {
-    id: 'Runeword21',
-    Name: 'Deception',
-    lineNumber: 20
-  },
-  {
     id: 'Runeword22',
     Name: 'Delirium',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Helm',
     RequiredRunes: 'LemIstIo',
     Rune1: 'Lem',
@@ -500,20 +455,10 @@ export const Runewords = [
     lineNumber: 21
   },
   {
-    id: 'Runeword23',
-    Name: 'Desire',
-    lineNumber: 22
-  },
-  {
-    id: 'Runeword24',
-    Name: 'Despair',
-    lineNumber: 23
-  },
-  {
     id: 'Runeword25',
     Name: 'Destruction',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Polearm',
     itype2: 'Sword',
     RequiredRunes: 'VexLoBerJahKo',
@@ -536,14 +481,13 @@ export const Runewords = [
     T1Param4: 'Meteor',
     T1Min4: 100,
     T1Max4: 45,
-    T1Code5: 'att-skill',
     T1Param5: 'Nova',
     T1Min5: 15,
     T1Max5: 22,
     T1Code6: 'hit-skill',
     T1Param6: 'Volcano',
     T1Min6: 23,
-    T1Max6: 12,
+    T1Max6: 23,
     T1Code7: 'noheal',
     T1Min7: 1,
     T1Max7: 1,
@@ -553,7 +497,7 @@ export const Runewords = [
     id: 'Runeword26',
     Name: 'Doom',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Axe',
     itype2: 'Polearm',
     itype3: 'hamm',
@@ -584,7 +528,7 @@ export const Runewords = [
     T1Max6: 2,
     T1Code7: 'hit-skill',
     T1Param7: 'Volcano',
-    T1Min7: 5,
+    T1Min7: 18,
     T1Max7: 18,
     lineNumber: 25
   },
@@ -592,7 +536,7 @@ export const Runewords = [
     id: 'Runeword27',
     Name: 'Dragon',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Torso',
     itype2: 'Shield',
     RequiredRunes: 'SurLoSol',
@@ -607,7 +551,6 @@ export const Runewords = [
     T1Max2: 230,
     T1Code3: 'Strength Per Level',
     T1Param3: 3,
-    T1Code4: 'hit-skill',
     T1Param4: 'Hydra',
     T1Min4: 12,
     T1Max4: 15,
@@ -625,15 +568,10 @@ export const Runewords = [
     lineNumber: 26
   },
   {
-    id: 'Runeword28',
-    Name: 'Dread',
-    lineNumber: 27
-  },
-  {
     id: 'Runeword29',
     Name: 'Dream',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Helm',
     itype2: 'Shield',
     RequiredRunes: 'IoJahPul',
@@ -668,14 +606,13 @@ export const Runewords = [
     id: 'Runeword30',
     Name: 'Duress',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'ShaelUmThul',
     Rune1: 'Shael',
     Rune2: 'Um',
     Rune3: 'Thul',
     T1Code1: 'Adds Cold Damage',
-    T1Param1: 50,
     T1Min1: 37,
     T1Max1: 133,
     T1Code2: 'Enhanced Damage %',
@@ -702,7 +639,7 @@ export const Runewords = [
     id: 'Runeword31',
     Name: 'Edge',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Missile',
     RequiredRunes: 'TirTalAmn',
     Rune1: 'Tir',
@@ -733,15 +670,10 @@ export const Runewords = [
     lineNumber: 30
   },
   {
-    id: 'Runeword32',
-    Name: 'Elation',
-    lineNumber: 31
-  },
-  {
     id: 'Runeword33',
     Name: 'Enigma',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'JahIthBer',
     Rune1: 'Jah',
@@ -773,7 +705,7 @@ export const Runewords = [
     id: 'Runeword34',
     Name: 'Enlightenment',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'PulRalSur',
     Rune1: 'Pul',
@@ -797,15 +729,10 @@ export const Runewords = [
     lineNumber: 33
   },
   {
-    id: 'Runeword35',
-    Name: 'Envy',
-    lineNumber: 34
-  },
-  {
     id: 'Runeword36',
     Name: 'Eternity',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Melee',
     RequiredRunes: 'AmnBerIstSolSur',
     Rune1: 'Amn',
@@ -841,7 +768,7 @@ export const Runewords = [
     id: 'Runeword37',
     Name: 'Exile',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'pala',
     RequiredRunes: 'VexOhmIstDol',
     Rune1: 'Vex',
@@ -877,7 +804,7 @@ export const Runewords = [
     id: 'Runeword38',
     Name: 'Faith',
     complete: 1,
-    '*Patch Release': '"110, Previously Ladder Only"',
+    patchRelease: '"110, Previously Ladder Only"',
     itype1: 'Missile',
     RequiredRunes: 'OhmJahLemEld',
     Rune1: 'Ohm',
@@ -896,7 +823,6 @@ export const Runewords = [
     T1Code4: 'All Resistances',
     T1Min4: 15,
     T1Max4: 15,
-    T1Code5: 'aura',
     T1Param5: 'Fanaticism',
     T1Min5: 12,
     T1Max5: 15,
@@ -929,18 +855,18 @@ export const Runewords = [
     T1Code3: 'Increased Attack Speed %',
     T1Min3: 30,
     T1Max3: 30,
-    T1Code4: 'noheal',
-    T1Min4: 1,
-    T1Max4: 1,
-    T1Code5: 'Adds Magic Damage',
-    T1Min5: 180,
-    T1Max5: 200,
-    T1Code6: 'dmg-elem',
-    T1Min6: 50,
-    T1Max6: 200,
-    T1Code7: 'ethereal',
-    T1Min7: 1,
-    T1Max7: 1,
+    T1Code4: 'Adds Magic Damage',
+    T1Min4: 180,
+    T1Max4: 200,
+    T1Code5: 'Adds Fire Damage',
+    T1Min5: 50,
+    T1Max5: 250,
+    T1Code6: 'Adds Lightning Damage',
+    T1Min6: 51,
+    T1Max6: 250,
+    T1Code7: 'Add Cold Damage',
+    T1Min7: 50,
+    T1Max7: 200,
     lineNumber: 38
   },
   {
@@ -948,7 +874,7 @@ export const Runewords = [
     Name: 'Flickering Flame',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'Helm',
     RequiredRunes: 'NefPulVex',
     Rune1: 'Nef',
@@ -961,10 +887,10 @@ export const Runewords = [
     T1Param2: 'Resist Fire',
     T1Min2: 4,
     T1Max2: 8,
-    T1Code3: 'pierce-fire',
+    T1Code3: 'Enemy Fire Reisistance Reduction %',
     T1Min3: 10,
     T1Max3: 15,
-    T1Code4: 'mana',
+    T1Code4: 'Mana',
     T1Min4: 50,
     T1Max4: 75,
     T1Code5: 'half-freeze',
@@ -979,7 +905,7 @@ export const Runewords = [
     id: 'Runeword41',
     Name: 'Fortitude',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Weapon',
     itype2: 'Torso',
     RequiredRunes: 'ElSolDolLo',
@@ -1012,20 +938,10 @@ export const Runewords = [
     lineNumber: 40
   },
   {
-    id: 'Runeword42',
-    Name: 'Fortune',
-    lineNumber: 41
-  },
-  {
-    id: 'Runeword43',
-    Name: 'Amity',
-    lineNumber: 42
-  },
-  {
     id: 'Runeword44',
     Name: 'Fury',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Melee',
     RequiredRunes: 'JahGulEth',
     Rune1: 'Jah',
@@ -1059,7 +975,7 @@ export const Runewords = [
     id: 'Runeword45',
     Name: 'Gloom',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'FalUmPul',
     Rune1: 'Fal',
@@ -1090,15 +1006,10 @@ export const Runewords = [
     lineNumber: 44
   },
   {
-    id: 'Runeword46',
-    Name: 'Glory',
-    lineNumber: 45
-  },
-  {
     id: 'Runeword47',
     Name: 'Grief',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'Axe',
     RequiredRunes: 'EthTirLoMalRal',
@@ -1134,7 +1045,7 @@ export const Runewords = [
     id: 'Runeword48',
     Name: 'Hand of Justice',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Weapon',
     RequiredRunes: 'SurChamAmnLo',
     Rune1: 'Sur',
@@ -1162,7 +1073,7 @@ export const Runewords = [
     T1Code6: 'ignore-ac',
     T1Min6: 1,
     T1Max6: 1,
-    T1Code7: 'pierce-fire',
+    T1Code7: 'Enemy Fire Reisistance Reduction %',
     T1Min7: 20,
     T1Max7: 20,
     lineNumber: 47
@@ -1171,7 +1082,7 @@ export const Runewords = [
     id: 'Runeword49',
     Name: 'Harmony',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Missile',
     RequiredRunes: 'TirIthSolKo',
     Rune1: 'Tir',
@@ -1181,17 +1092,15 @@ export const Runewords = [
     T1Code1: 'Enhanced Damage %',
     T1Min1: 200,
     T1Max1: 275,
-    T1Code2: 'dmg-elem',
+    T1Code2: 'Adds Fire Damage',
     T1Min2: 55,
     T1Max2: 160,
-    T1Code3: 'charged',
-    T1Param3: 'Revive',
-    T1Min3: 25,
-    T1Max3: 20,
-    T1Code4: 'aura',
-    T1Param4: 'Vigor',
-    T1Min4: 10,
-    T1Max4: 10,
+    T1Code3: 'Adds Lightning Damage',
+    T1Min3: 55,
+    T1Max3: 160,
+    T1Code4: 'Adds Cold Damage',
+    T1Min4: 55,
+    T1Max4: 160,
     T1Code5: 'oskill',
     T1Param5: 'Valkyrie',
     T1Min5: 2,
@@ -1205,15 +1114,10 @@ export const Runewords = [
     lineNumber: 48
   },
   {
-    id: 'Runeword50',
-    Name: 'Hatred',
-    lineNumber: 49
-  },
-  {
     id: 'Runeword51',
     Name: 'Heart of the Oak',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Staff',
     itype2: 'mace',
     RequiredRunes: 'KoVexPulThul',
@@ -1247,20 +1151,10 @@ export const Runewords = [
     lineNumber: 50
   },
   {
-    id: 'Runeword52',
-    Name: "Heaven's Will",
-    lineNumber: 51
-  },
-  {
-    id: 'Runeword53',
-    Name: 'Holy Tears',
-    lineNumber: 52
-  },
-  {
     id: 'Runeword54',
     Name: 'Holy Thunder',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Scepter',
     RequiredRunes: 'EthRalOrtTal',
     Rune1: 'Eth',
@@ -1296,7 +1190,7 @@ export const Runewords = [
     id: 'Runeword55',
     Name: 'Honor',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Melee',
     RequiredRunes: 'AmnElIthTirSol',
     Rune1: 'Amn',
@@ -1325,20 +1219,10 @@ export const Runewords = [
     lineNumber: 54
   },
   {
-    id: 'Runeword57',
-    Name: 'Humility',
-    lineNumber: 56
-  },
-  {
-    id: 'Runeword58',
-    Name: 'Hunger',
-    lineNumber: 57
-  },
-  {
     id: 'Runeword59',
     Name: 'Ice',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Missile',
     RequiredRunes: 'AmnShaelJahLo',
     Rune1: 'Amn',
@@ -1374,7 +1258,7 @@ export const Runewords = [
     id: 'Runeword60',
     Name: 'Infinity',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Polearm',
     itype2: 'spea',
     RequiredRunes: 'BerMalBerIst',
@@ -1408,15 +1292,10 @@ export const Runewords = [
     lineNumber: 59
   },
   {
-    id: 'Runeword61',
-    Name: 'Innocence',
-    lineNumber: 60
-  },
-  {
     id: 'Runeword62',
     Name: 'Insight',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Polearm',
     itype2: 'Staff',
     itype3: 'Missile',
@@ -1451,20 +1330,10 @@ export const Runewords = [
     lineNumber: 61
   },
   {
-    id: 'Runeword63',
-    Name: 'Jealousy',
-    lineNumber: 62
-  },
-  {
-    id: 'Runeword64',
-    Name: 'Judgment',
-    lineNumber: 63
-  },
-  {
     id: 'Runeword65',
     Name: "King's Grace",
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Sword',
     itype2: 'scep',
     RequiredRunes: 'AmnRalThul',
@@ -1495,7 +1364,7 @@ export const Runewords = [
     id: 'Runeword66',
     Name: 'Kingslayer',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Sword',
     itype2: 'Axe',
     RequiredRunes: 'MalUmGulFal',
@@ -1528,20 +1397,10 @@ export const Runewords = [
     lineNumber: 65
   },
   {
-    id: 'Runeword67',
-    Name: "Knight's Vigil",
-    lineNumber: 66
-  },
-  {
-    id: 'Runeword68',
-    Name: 'Knowledge',
-    lineNumber: 67
-  },
-  {
     id: 'Runeword69',
     Name: 'Last Wish',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'hamm',
     itype3: 'Axe',
@@ -1579,15 +1438,10 @@ export const Runewords = [
     lineNumber: 68
   },
   {
-    id: 'Runeword70',
-    Name: 'Law',
-    lineNumber: 69
-  },
-  {
     id: 'Runeword71',
     Name: 'Lawbringer',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'hamm',
     itype3: 'scep',
@@ -1601,7 +1455,6 @@ export const Runewords = [
     T1Code2: 'Fire Damage',
     T1Min2: 150,
     T1Max2: 210,
-    T1Code3: 'aura',
     T1Param3: 'Sanctuary',
     T1Min3: 16,
     T1Max3: 18,
@@ -1609,7 +1462,7 @@ export const Runewords = [
     T1Param4: 'Decrepify',
     T1Min4: 20,
     T1Max4: 15,
-    T1Code5: 'Defense Vs. Missileile',
+    T1Code5: 'Defense Vs. Missile',
     T1Min5: 200,
     T1Max5: 250,
     T1Code6: 'rip',
@@ -1624,7 +1477,7 @@ export const Runewords = [
     id: 'Runeword72',
     Name: 'Leaf',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Staff',
     RequiredRunes: 'TirRal',
     Rune1: 'Tir',
@@ -1653,15 +1506,10 @@ export const Runewords = [
     lineNumber: 71
   },
   {
-    id: 'Runeword73',
-    Name: 'Lightning',
-    lineNumber: 72
-  },
-  {
     id: 'Runeword74',
     Name: 'Lionheart',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Torso',
     RequiredRunes: 'HelLumFal',
     Rune1: 'Hel',
@@ -1679,7 +1527,7 @@ export const Runewords = [
     T1Code4: 'Enhanced Damage %',
     T1Min4: 20,
     T1Max4: 20,
-    T1Code5: 'hp',
+    T1Code5: 'Life',
     T1Min5: 50,
     T1Max5: 50,
     T1Code6: 'All Resistances',
@@ -1691,7 +1539,7 @@ export const Runewords = [
     id: 'Runeword75',
     Name: 'Lore',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Helm',
     RequiredRunes: 'OrtSol',
     Rune1: 'Ort',
@@ -1711,30 +1559,10 @@ export const Runewords = [
     lineNumber: 74
   },
   {
-    id: 'Runeword76',
-    Name: 'Love',
-    lineNumber: 75
-  },
-  {
-    id: 'Runeword77',
-    Name: 'Loyalty',
-    lineNumber: 76
-  },
-  {
-    id: 'Runeword78',
-    Name: 'Lust',
-    lineNumber: 77
-  },
-  {
-    id: 'Runeword79',
-    Name: 'Madness',
-    lineNumber: 78
-  },
-  {
     id: 'Runeword81',
     Name: 'Malice',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Melee',
     RequiredRunes: 'IthElEth',
     Rune1: 'Ith',
@@ -1764,7 +1592,7 @@ export const Runewords = [
     id: 'Runeword82',
     Name: 'Melody',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Missile',
     RequiredRunes: 'ShaelKoNef',
     Rune1: 'Shael',
@@ -1798,7 +1626,7 @@ export const Runewords = [
     id: 'Runeword83',
     Name: 'Memory',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Staff',
     RequiredRunes: 'LumIoSolEth',
     Rune1: 'Lum',
@@ -1835,7 +1663,7 @@ export const Runewords = [
     Name: 'Mist',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'Missile',
     RequiredRunes: 'ChamShaelGulThulIth',
     Rune1: 'Cham',
@@ -1865,20 +1693,10 @@ export const Runewords = [
     lineNumber: 82
   },
   {
-    id: 'Runeword85',
-    Name: 'Morning',
-    lineNumber: 83
-  },
-  {
-    id: 'Runeword86',
-    Name: 'Mystery',
-    lineNumber: 84
-  },
-  {
     id: 'Runeword87',
     Name: 'Myth',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'HelAmnNef',
     Rune1: 'Hel',
@@ -1904,7 +1722,7 @@ export const Runewords = [
     id: 'Runeword88',
     Name: 'Nadir',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Helm',
     RequiredRunes: 'NefTir',
     Rune1: 'Nef',
@@ -1920,7 +1738,7 @@ export const Runewords = [
     T1Max3: -3,
     T1Code4: 'charged',
     T1Param4: 264,
-    T1Min4: 9,
+    T1Min4: 13,
     T1Max4: 13,
     T1Code5: 'gold%',
     T1Min5: -33,
@@ -1931,20 +1749,10 @@ export const Runewords = [
     lineNumber: 86
   },
   {
-    id: 'Runeword89',
-    Name: "Nature's Kingdom",
-    lineNumber: 87
-  },
-  {
-    id: 'Runeword90',
-    Name: 'Night',
-    lineNumber: 88
-  },
-  {
     id: 'Runeword91',
     Name: 'Oath',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'Axe',
     itype3: 'mace',
@@ -1983,7 +1791,7 @@ export const Runewords = [
     id: 'Runeword92',
     Name: 'Obedience',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Polearm',
     itype2: 'spea',
     RequiredRunes: 'HelKoThulEthFal',
@@ -2002,7 +1810,7 @@ export const Runewords = [
     T1Param3: 'enchant',
     T1Min3: 30,
     T1Max3: 21,
-    T1Code4: 'pierce-fire',
+    T1Code4: 'Enemy Fire Reisistance Reduction %',
     T1Min4: 25,
     T1Max4: 25,
     T1Code5: 'Defense',
@@ -2017,16 +1825,11 @@ export const Runewords = [
     lineNumber: 90
   },
   {
-    id: 'Runeword93',
-    Name: 'Oblivion',
-    lineNumber: 91
-  },
-  {
     id: 'Runeword94',
     Name: 'Obsession',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'Staff',
     RequiredRunes: 'ZodIstLemLumIoNef',
     Rune1: 'Zod',
@@ -2063,7 +1866,7 @@ export const Runewords = [
     id: 'Runeword95',
     Name: 'Passion',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Weapon',
     RequiredRunes: 'DolOrtEldLem',
     Rune1: 'Dol',
@@ -2097,16 +1900,11 @@ export const Runewords = [
     lineNumber: 93
   },
   {
-    id: 'Runeword96',
-    Name: 'Patience',
-    lineNumber: 94
-  },
-  {
     id: 'Runeword97',
     Name: 'Pattern',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'h2h',
     RequiredRunes: 'TalOrtThul',
     Rune1: 'Tal',
@@ -2139,7 +1937,7 @@ export const Runewords = [
     id: 'Runeword98',
     Name: 'Peace',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'ShaelThulAmn',
     Rune1: 'Shael',
@@ -2163,25 +1961,10 @@ export const Runewords = [
     lineNumber: 96
   },
   {
-    id: 'Runeword100',
-    Name: 'Penitence',
-    lineNumber: 98
-  },
-  {
-    id: 'Runeword101',
-    Name: 'Peril',
-    lineNumber: 99
-  },
-  {
-    id: 'Runeword102',
-    Name: 'Pestilence',
-    lineNumber: 100
-  },
-  {
     id: 'Runeword103',
     Name: 'Phoenix',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Weapon',
     itype2: 'Shield',
     RequiredRunes: 'VexVexLoJah',
@@ -2203,34 +1986,24 @@ export const Runewords = [
     T1Param4: 'Blaze',
     T1Min4: 100,
     T1Max4: 40,
-    T1Code5: 'pierce-fire',
+    T1Code5: 'Enemy Fire Reisistance Reduction %',
     T1Min5: 28,
     T1Max5: 28,
     T1Code6: 'aura',
     T1Param6: 'Redemption',
     T1Min6: 10,
     T1Max6: 15,
-    T1Code7: 'abs-fire',
+    T1Code7: 'Fire Absorbtion',
     T1Min7: 15,
     T1Max7: 21,
     lineNumber: 101
-  },
-  {
-    id: 'Runeword104',
-    Name: 'Piety',
-    lineNumber: 102
-  },
-  {
-    id: 'Runeword105',
-    Name: 'Pillar of Faith',
-    lineNumber: 103
   },
   {
     id: 'Runeword106',
     Name: 'Plague',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'Sword',
     itype2: 'knif',
     itype3: 'h2h',
@@ -2264,20 +2037,10 @@ export const Runewords = [
     lineNumber: 104
   },
   {
-    id: 'Runeword107',
-    Name: 'Praise',
-    lineNumber: 105
-  },
-  {
-    id: 'Runeword108',
-    Name: 'Prayer',
-    lineNumber: 106
-  },
-  {
     id: 'Runeword109',
     Name: 'Pride',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Polearm',
     itype2: 'spea',
     RequiredRunes: 'ChamSurIoLo',
@@ -2293,7 +2056,6 @@ export const Runewords = [
     T1Code3: 'Bonus to attack Rating %',
     T1Min3: 260,
     T1Max3: 300,
-    T1Code4: 'aura',
     T1Param4: 'Concentration',
     T1Min4: 16,
     T1Max4: 20,
@@ -2312,7 +2074,7 @@ export const Runewords = [
     id: 'Runeword110',
     Name: 'Principle',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'RalGulEld',
     Rune1: 'Ral',
@@ -2325,7 +2087,7 @@ export const Runewords = [
     T1Code2: 'pal',
     T1Min2: 2,
     T1Max2: 2,
-    T1Code3: 'hp',
+    T1Code3: 'Life',
     T1Min3: 100,
     T1Max3: 150,
     T1Code4: 'Damage To Undead',
@@ -2334,15 +2096,10 @@ export const Runewords = [
     lineNumber: 108
   },
   {
-    id: 'Runeword111',
-    Name: 'Prowess in Battle',
-    lineNumber: 109
-  },
-  {
     id: 'Runeword112',
     Name: 'Prudence',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'MalTir',
     Rune1: 'Mal',
@@ -2370,25 +2127,10 @@ export const Runewords = [
     lineNumber: 110
   },
   {
-    id: 'Runeword113',
-    Name: 'Punishment',
-    lineNumber: 111
-  },
-  {
-    id: 'Runeword114',
-    Name: 'Purity',
-    lineNumber: 112
-  },
-  {
-    id: 'Runeword115',
-    Name: 'Question',
-    lineNumber: 113
-  },
-  {
     id: 'Runeword116',
     Name: 'Radiance',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Helm',
     RequiredRunes: 'NefSolIth',
     Rune1: 'Nef',
@@ -2406,7 +2148,7 @@ export const Runewords = [
     T1Code4: 'red-mag',
     T1Min4: 3,
     T1Max4: 3,
-    T1Code5: 'mana',
+    T1Code5: 'Mana',
     T1Min5: 33,
     T1Max5: 33,
     T1Code6: 'Enhanced Defense %',
@@ -2418,7 +2160,7 @@ export const Runewords = [
     id: 'Runeword117',
     Name: 'Rain',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'OrtMalIth',
     Rune1: 'Ort',
@@ -2435,31 +2177,16 @@ export const Runewords = [
     T1Code3: 'dru',
     T1Min3: 2,
     T1Max3: 2,
-    T1Code4: 'mana',
+    T1Code4: 'Mana',
     T1Min4: 100,
     T1Max4: 150,
     lineNumber: 115
   },
   {
-    id: 'Runeword118',
-    Name: 'Reason',
-    lineNumber: 116
-  },
-  {
-    id: 'Runeword119',
-    Name: 'Red',
-    lineNumber: 117
-  },
-  {
-    id: 'Runeword56',
-    Name: 'Revenge',
-    lineNumber: 55
-  },
-  {
     id: 'Runeword120',
     Name: 'Rhyme',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Shield',
     RequiredRunes: 'ShaelEth',
     Rune1: 'Shael',
@@ -2488,7 +2215,7 @@ export const Runewords = [
     id: 'Runeword121',
     Name: 'Rift',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Polearm',
     itype2: 'scep',
     RequiredRunes: 'HelKoLemGul',
@@ -2526,7 +2253,7 @@ export const Runewords = [
     id: 'Runeword122',
     Name: 'Sanctuary',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Shield',
     RequiredRunes: 'KoKoMal',
     Rune1: 'Ko',
@@ -2557,25 +2284,10 @@ export const Runewords = [
     lineNumber: 120
   },
   {
-    id: 'Runeword123',
-    Name: 'Serendipity',
-    lineNumber: 121
-  },
-  {
-    id: 'Runeword124',
-    Name: 'Shadow',
-    lineNumber: 122
-  },
-  {
-    id: 'Runeword125',
-    Name: 'Shadow of Doubt',
-    lineNumber: 123
-  },
-  {
     id: 'Runeword126',
     Name: 'Silence',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Weapon',
     RequiredRunes: 'DolEldHelIstTirVex',
     Rune1: 'Dol',
@@ -2608,15 +2320,10 @@ export const Runewords = [
     lineNumber: 124
   },
   {
-    id: 'Runeword127',
-    Name: "Siren's Song",
-    lineNumber: 125
-  },
-  {
     id: 'Runeword128',
     Name: 'Smoke',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Torso',
     RequiredRunes: 'NefLum',
     Rune1: 'Nef',
@@ -2643,15 +2350,10 @@ export const Runewords = [
     lineNumber: 126
   },
   {
-    id: 'Runeword129',
-    Name: 'Sorrow',
-    lineNumber: 127
-  },
-  {
     id: 'Runeword130',
     Name: 'Spirit',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'Shield',
     RequiredRunes: 'TalThulOrtAmn',
@@ -2662,7 +2364,7 @@ export const Runewords = [
     T1Code1: 'Faster Hit Recovery %',
     T1Min1: 55,
     T1Max1: 55,
-    T1Code2: 'mana',
+    T1Code2: 'Mana',
     T1Min2: 89,
     T1Max2: 112,
     T1Code3: 'Defense Vs. Missileile',
@@ -2686,7 +2388,7 @@ export const Runewords = [
     id: 'Runeword131',
     Name: 'Splendor',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Shield',
     RequiredRunes: 'EthLum',
     Rune1: 'Eth',
@@ -2715,15 +2417,10 @@ export const Runewords = [
     lineNumber: 129
   },
   {
-    id: 'Runeword132',
-    Name: 'Starlight',
-    lineNumber: 130
-  },
-  {
     id: 'Runeword133',
     Name: 'Stealth',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Torso',
     RequiredRunes: 'TalEth',
     Rune1: 'Tal',
@@ -2752,7 +2449,7 @@ export const Runewords = [
     id: 'Runeword134',
     Name: 'Steel',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Sword',
     itype2: 'Axe',
     itype3: 'mace',
@@ -2777,20 +2474,10 @@ export const Runewords = [
     lineNumber: 132
   },
   {
-    id: 'Runeword135',
-    Name: 'Still Water',
-    lineNumber: 133
-  },
-  {
-    id: 'Runeword136',
-    Name: 'Sting',
-    lineNumber: 134
-  },
-  {
     id: 'Runeword137',
     Name: 'Stone',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Torso',
     RequiredRunes: 'ShaelUmPulLum',
     Rune1: 'Shael',
@@ -2823,15 +2510,10 @@ export const Runewords = [
     lineNumber: 135
   },
   {
-    id: 'Runeword138',
-    Name: 'Storm',
-    lineNumber: 136
-  },
-  {
     id: 'Runeword139',
     Name: 'Strength',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Melee',
     RequiredRunes: 'AmnTir',
     Rune1: 'Amn',
@@ -2851,50 +2533,10 @@ export const Runewords = [
     lineNumber: 137
   },
   {
-    id: 'Runeword140',
-    Name: 'Tempest',
-    lineNumber: 138
-  },
-  {
-    id: 'Runeword141',
-    Name: 'Temptation',
-    lineNumber: 139
-  },
-  {
-    id: 'Runeword142',
-    Name: 'Terror',
-    lineNumber: 140
-  },
-  {
-    id: 'Runeword143',
-    Name: 'Thirst',
-    lineNumber: 141
-  },
-  {
-    id: 'Runeword144',
-    Name: 'Thought',
-    lineNumber: 142
-  },
-  {
-    id: 'Runeword145',
-    Name: 'Thunder',
-    lineNumber: 143
-  },
-  {
-    id: 'Runeword146',
-    Name: 'Time',
-    lineNumber: 144
-  },
-  {
-    id: 'Runeword147',
-    Name: 'Tradition',
-    lineNumber: 145
-  },
-  {
     id: 'Runeword148',
     Name: 'Treachery',
     complete: 1,
-    '*Patch Release': 111,
+    patchRelease: 111,
     itype1: 'Torso',
     RequiredRunes: 'ShaelThulLem',
     Rune1: 'Shael',
@@ -2917,21 +2559,11 @@ export const Runewords = [
     lineNumber: 146
   },
   {
-    id: 'Runeword149',
-    Name: 'Trust',
-    lineNumber: 147
-  },
-  {
-    id: 'Runeword150',
-    Name: 'Truth',
-    lineNumber: 148
-  },
-  {
     id: 'Runeword151',
     Name: 'Unbending Will',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'Sword',
     RequiredRunes: 'FalIoIthEldElHel',
     Rune1: 'Fal',
@@ -2966,20 +2598,10 @@ export const Runewords = [
     lineNumber: 149
   },
   {
-    id: 'Runeword152',
-    Name: 'Valor',
-    lineNumber: 150
-  },
-  {
-    id: 'Runeword153',
-    Name: 'Vengeance',
-    lineNumber: 151
-  },
-  {
     id: 'Runeword154',
     Name: 'Venom',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Weapon',
     RequiredRunes: 'TalDolMal',
     Rune1: 'Tal',
@@ -2998,7 +2620,7 @@ export const Runewords = [
     T1Max3: 15,
     T1Code4: 'charged',
     T1Param4: 92,
-    T1Min4: 11,
+    T1Min4: 13,
     T1Max4: 13,
     T1Code5: 'Mana % Stolen Per Hit',
     T1Min5: 7,
@@ -3006,20 +2628,10 @@ export const Runewords = [
     lineNumber: 152
   },
   {
-    id: 'Runeword155',
-    Name: 'Victory',
-    lineNumber: 153
-  },
-  {
-    id: 'Runeword156',
-    Name: 'Voice',
-    lineNumber: 154
-  },
-  {
     id: 'Runeword99',
     Name: 'Voice of Reason',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Sword',
     itype2: 'mace',
     RequiredRunes: 'LemKoElEld',
@@ -3039,7 +2651,6 @@ export const Runewords = [
     T1Code4: 'pierce-cold',
     T1Min4: 24,
     T1Max4: 24,
-    T1Code5: 'hit-skill',
     T1Param5: 'Ice Blast',
     T1Min5: 18,
     T1Max5: 20,
@@ -3053,25 +2664,10 @@ export const Runewords = [
     lineNumber: 97
   },
   {
-    id: 'Runeword157',
-    Name: 'Void',
-    lineNumber: 155
-  },
-  {
-    id: 'Runeword158',
-    Name: 'War',
-    lineNumber: 156
-  },
-  {
-    id: 'Runeword159',
-    Name: 'Water',
-    lineNumber: 157
-  },
-  {
     id: 'Runeword160',
     Name: 'Wealth',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Torso',
     RequiredRunes: 'LmKoTir',
     Rune1: 'Lem',
@@ -3086,15 +2682,10 @@ export const Runewords = [
     lineNumber: 158
   },
   {
-    id: 'Runeword161',
-    Name: 'Whisper',
-    lineNumber: 159
-  },
-  {
     id: 'Runeword162',
     Name: 'White',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'wand',
     RequiredRunes: 'DolIo',
     Rune1: 'Dol',
@@ -3109,7 +2700,7 @@ export const Runewords = [
     T1Code3: 'cast2',
     T1Min3: 20,
     T1Max3: 20,
-    T1Code4: 'mana',
+    T1Code4: 'Mana',
     T1Min4: 13,
     T1Max4: 13,
     T1Code5: 'skill',
@@ -3130,7 +2721,7 @@ export const Runewords = [
     id: 'Runeword163',
     Name: 'Wind',
     complete: 1,
-    '*Patch Release': 110,
+    patchRelease: 110,
     itype1: 'Melee',
     RequiredRunes: 'SurEl',
     Rune1: 'Sur',
@@ -3161,16 +2752,11 @@ export const Runewords = [
     lineNumber: 161
   },
   {
-    id: 'Runeword164',
-    Name: 'Wings of Hope',
-    lineNumber: 162
-  },
-  {
     id: 'Runeword165',
     Name: 'Wisdom',
     complete: 1,
     server: 1,
-    '*Patch Release': 'D2R Ladder 1',
+    patchRelease: 'D2R Ladder 1',
     itype1: 'Helm',
     RequiredRunes: 'PulIthEld',
     Rune1: 'Pul',
@@ -3197,20 +2783,10 @@ export const Runewords = [
     lineNumber: 163
   },
   {
-    id: 'Runeword166',
-    Name: 'Woe',
-    lineNumber: 164
-  },
-  {
-    id: 'Runeword167',
-    Name: 'Wonder',
-    lineNumber: 165
-  },
-  {
     id: 'Runeword168',
     Name: 'Wrath',
     complete: 1,
-    '*Patch Release': 'Previously Ladder Only',
+    patchRelease: 'Previously Ladder Only',
     itype1: 'Missile',
     RequiredRunes: 'PulLumBerMal',
     Rune1: 'Pul',
@@ -3243,15 +2819,10 @@ export const Runewords = [
     lineNumber: 166
   },
   {
-    id: 'Runeword169',
-    Name: 'Youth',
-    lineNumber: 167
-  },
-  {
     id: 'Runeword170',
     Name: 'Zephyr',
     complete: 1,
-    '*Patch Release': 109,
+    patchRelease: 109,
     itype1: 'Missile',
     RequiredRunes: 'OrtEth',
     Rune1: 'Ort',

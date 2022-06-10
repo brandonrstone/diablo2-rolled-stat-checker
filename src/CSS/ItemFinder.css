@@ -3,6 +3,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url('../images/Diablo_II_Background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.searchbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 27.5vh;
+}
+
+.diablo-2-logo {
+  height: 150px;
+}
+
+.app-name-text {
+  color: rgb(201, 175, 111);
+  font-size: 1.15rem;
+  font-family: 'Roboto';
+}
+
+.itemlist-container {
+  height: 77.5vh;
+  overflow: scroll;
+  margin-top: 10px;
 }
 
 .runeword-container {
@@ -29,15 +57,19 @@
   color: rgb(201, 175, 111);
 }
 
-.runeword-type {
+.item-base {
   color: grey;
 }
 
-.runeword-min-roll {
+.runeword-min-roll,
+.unique-item-min-roll,
+.set-item-min-roll {
   color: rgb(214, 105, 105);
 }
 
-.runeword-max-roll {
+.runeword-max-roll,
+.unique-item-max-roll,
+.set-item-max-roll {
   color: rgb(74, 226, 175);
 }
 
@@ -60,14 +92,21 @@
   color: rgb(201, 175, 111);
 }
 
-.unique-item-base {
-  color: grey;
+.set-item-name {
+  color: rgb(3, 192, 34);
 }
 
-.unique-item-min-roll {
-  color: rgb(214, 105, 105);
-}
-
-.unique-item-max-roll {
-  color: rgb(74, 226, 175);
+.set-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  color: rgb(92, 92, 207);
+  background-color: black;
+  border-radius: 5px;
+  margin: 10px;
+  width: 50vw;
 }
