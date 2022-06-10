@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 
 export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
   const [search, setSearch] = useState('')

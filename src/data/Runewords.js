@@ -140,7 +140,6 @@ export const Runewords = [
     T1Code2: 'Defense',
     T1Min2: 300,
     T1Max2: 300,
-    T1Code3: 'aura',
     T1Param3: 'Thorns',
     T1Min3: 15,
     T1Max3: 21,
