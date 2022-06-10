@@ -7,6 +7,7 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  padding: 1rem;
 }
 
 .searchbar-container {
@@ -30,7 +31,8 @@
 .itemlist-container {
   height: 77.5vh;
   overflow: scroll;
-  margin-top: 10px;
+  margin-top: 5px;
+  padding: 15px;
 }
 
 .runeword-container {
@@ -45,7 +47,7 @@
   background-color: black;
   border-radius: 5px;
   margin: 10px;
-  width: 50vw;
+  width: 65vw;
 }
 
 .item-search {
@@ -53,8 +55,19 @@
 }
 
 .runeword-name,
+.unique-item-name,
 .runeword-runes {
   color: rgb(201, 175, 111);
+}
+
+.runeword-name,
+.unique-item-name {
+  font-size: 1.35rem;
+}
+
+.set-item-name {
+  font-size: 1.35rem;
+  color: rgb(3, 192, 34);
 }
 
 .item-base {
@@ -85,15 +98,7 @@
   background-color: black;
   border-radius: 5px;
   margin: 10px;
-  width: 50vw;
-}
-
-.unique-item-name {
-  color: rgb(201, 175, 111);
-}
-
-.set-item-name {
-  color: rgb(3, 192, 34);
+  width: 65vw;
 }
 
 .set-item-container {
@@ -108,5 +113,5 @@
   background-color: black;
   border-radius: 5px;
   margin: 10px;
-  width: 50vw;
+  width: 65vw;
 }
