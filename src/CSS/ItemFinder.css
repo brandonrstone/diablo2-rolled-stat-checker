@@ -51,7 +51,17 @@
 }
 
 .item-search {
+  background-color: rgb(172, 172, 172);
   margin: 15px;
+  border-radius: 5px;
+  border-color: rgb(49, 48, 48);
+}
+
+.item-search:focus {
+}
+
+.item-search::placeholder {
+  color: black;
 }
 
 .runeword-name,
@@ -71,6 +81,8 @@
 }
 
 .item-base {
+  font-size: 1.25rem;
+
   color: grey;
 }
 
