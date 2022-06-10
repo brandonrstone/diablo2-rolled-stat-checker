@@ -4,3 +4,70 @@
   justify-content: center;
   align-items: center;
 }
+
+.runeword-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  color: rgb(92, 92, 207);
+  background-color: black;
+  border-radius: 5px;
+  margin: 10px;
+  width: 50vw;
+}
+
+.item-search {
+  margin: 15px;
+}
+
+.runeword-name,
+.runeword-runes {
+  color: rgb(201, 175, 111);
+}
+
+.runeword-type {
+  color: grey;
+}
+
+.runeword-min-roll {
+  color: rgb(214, 105, 105);
+}
+
+.runeword-max-roll {
+  color: rgb(74, 226, 175);
+}
+
+.unique-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  color: rgb(92, 92, 207);
+  background-color: black;
+  border-radius: 5px;
+  margin: 10px;
+  width: 50vw;
+}
+
+.unique-item-name {
+  color: rgb(201, 175, 111);
+}
+
+.unique-item-base {
+  color: grey;
+}
+
+.unique-item-min-roll {
+  color: rgb(214, 105, 105);
+}
+
+.unique-item-max-roll {
+  color: rgb(74, 226, 175);
+}
