@@ -1,6 +1,6 @@
 export const UniqueItems = [
   {
-    Name: 'The Gnasher',
+    name: 'The Gnasher',
     id: 0,
     version: 0,
     enabled: 1,
@@ -28,7 +28,7 @@ export const UniqueItems = [
     lineNumber: 0
   },
   {
-    Name: 'Deathspade',
+    name: 'Deathspade',
     id: 1,
     version: 0,
     enabled: 1,
@@ -59,7 +59,7 @@ export const UniqueItems = [
     lineNumber: 1
   },
   {
-    Name: 'Bladebone',
+    name: 'Bladebone',
     id: 2,
     version: 0,
     enabled: 1,
@@ -96,7 +96,7 @@ export const UniqueItems = [
     lineNumber: 2
   },
   {
-    Name: 'Mindrend',
+    name: 'Mindrend',
     id: 3,
     version: 0,
     enabled: 1,
@@ -133,7 +133,7 @@ export const UniqueItems = [
     lineNumber: 3
   },
   {
-    Name: 'Rakescar',
+    name: 'Rakescar',
     id: 4,
     version: 0,
     enabled: 1,
@@ -170,7 +170,7 @@ export const UniqueItems = [
     lineNumber: 4
   },
   {
-    Name: 'Fechmars Axe',
+    name: 'Fechmars Axe',
     id: 5,
     version: 0,
     enabled: 1,
@@ -198,7 +198,7 @@ export const UniqueItems = [
     lineNumber: 5
   },
   {
-    Name: 'Goreshovel',
+    name: 'Goreshovel',
     id: 6,
     version: 0,
     enabled: 1,
@@ -229,7 +229,7 @@ export const UniqueItems = [
     lineNumber: 6
   },
   {
-    Name: 'The Chieftan',
+    name: 'The Chieftan',
     id: 7,
     version: 0,
     enabled: 1,
@@ -260,7 +260,7 @@ export const UniqueItems = [
     lineNumber: 7
   },
   {
-    Name: 'Brainhew',
+    name: 'Brainhew',
     id: 8,
     version: 0,
     enabled: 1,
@@ -294,7 +294,7 @@ export const UniqueItems = [
     lineNumber: 8
   },
   {
-    Name: 'The Humongous',
+    name: 'The Humongous',
     id: 9,
     version: 0,
     enabled: 1,
@@ -328,7 +328,7 @@ export const UniqueItems = [
     lineNumber: 9
   },
   {
-    Name: 'Iros Torch',
+    name: 'Iros Torch',
     id: 10,
     version: 0,
     enabled: 1,
@@ -362,7 +362,7 @@ export const UniqueItems = [
     lineNumber: 10
   },
   {
-    Name: 'MaelStrengthomwrath',
+    name: 'MaelStrengthomwrath',
     id: 11,
     version: 0,
     enabled: 1,
@@ -409,7 +409,7 @@ export const UniqueItems = [
     lineNumber: 11
   },
   {
-    Name: 'Gravenspine',
+    name: 'Gravenspine',
     id: 12,
     version: 0,
     enabled: 1,
@@ -449,7 +449,7 @@ export const UniqueItems = [
     lineNumber: 12
   },
   {
-    Name: 'Umes Lament',
+    name: 'Umes Lament',
     id: 13,
     version: 0,
     enabled: 1,
@@ -485,7 +485,7 @@ export const UniqueItems = [
     lineNumber: 13
   },
   {
-    Name: 'Felloak',
+    name: 'Felloak',
     id: 14,
     version: 0,
     enabled: 1,
@@ -519,7 +519,7 @@ export const UniqueItems = [
     lineNumber: 14
   },
   {
-    Name: 'Knell Strengthiker',
+    name: 'Knell Strengthiker',
     id: 15,
     version: 0,
     enabled: 1,
@@ -553,7 +553,7 @@ export const UniqueItems = [
     lineNumber: 15
   },
   {
-    Name: 'Rusthandle',
+    name: 'Rusthandle',
     id: 16,
     version: 0,
     enabled: 1,
@@ -595,7 +595,7 @@ export const UniqueItems = [
     lineNumber: 16
   },
   {
-    Name: 'Stormeye',
+    name: 'Stormeye',
     id: 17,
     version: 0,
     enabled: 1,
@@ -636,7 +636,7 @@ export const UniqueItems = [
     lineNumber: 17
   },
   {
-    Name: 'Stoutnail',
+    name: 'Stoutnail',
     id: 18,
     version: 0,
     enabled: 1,
@@ -664,7 +664,7 @@ export const UniqueItems = [
     lineNumber: 18
   },
   {
-    Name: 'Crushflange',
+    name: 'Crushflange',
     id: 19,
     version: 0,
     enabled: 1,
@@ -698,7 +698,7 @@ export const UniqueItems = [
     lineNumber: 19
   },
   {
-    Name: 'Bloodrise',
+    name: 'Bloodrise',
     id: 20,
     version: 0,
     enabled: 1,
@@ -736,7 +736,7 @@ export const UniqueItems = [
     lineNumber: 20
   },
   {
-    Name: 'The Generals Tan Do Li Ga',
+    name: 'The Generals Tan Do Li Ga',
     id: 21,
     version: 0,
     enabled: 1,
@@ -773,7 +773,7 @@ export const UniqueItems = [
     lineNumber: 21
   },
   {
-    Name: 'Ironstone',
+    name: 'Ironstone',
     id: 22,
     version: 0,
     enabled: 1,
@@ -807,7 +807,7 @@ export const UniqueItems = [
     lineNumber: 22
   },
   {
-    Name: 'Bonesob',
+    name: 'Bonesob',
     id: 23,
     version: 0,
     enabled: 1,
@@ -838,7 +838,7 @@ export const UniqueItems = [
     lineNumber: 23
   },
   {
-    Name: 'Steeldriver',
+    name: 'Steeldriver',
     id: 24,
     version: 0,
     enabled: 1,
@@ -867,7 +867,7 @@ export const UniqueItems = [
     lineNumber: 24
   },
   {
-    Name: 'Rixots Keen',
+    name: 'Rixots Keen',
     id: 25,
     version: 0,
     enabled: 1,
@@ -901,7 +901,7 @@ export const UniqueItems = [
     lineNumber: 25
   },
   {
-    Name: 'Blood Crescent',
+    name: 'Blood Crescent',
     id: 26,
     version: 0,
     enabled: 1,
@@ -938,7 +938,7 @@ export const UniqueItems = [
     lineNumber: 26
   },
   {
-    Name: 'Krintizs Skewer',
+    name: 'Krintizs Skewer',
     id: 27,
     version: 0,
     enabled: 1,
@@ -972,7 +972,7 @@ export const UniqueItems = [
     lineNumber: 27
   },
   {
-    Name: 'Gleamscythe',
+    name: 'Gleamscythe',
     id: 28,
     version: 0,
     enabled: 1,
@@ -1007,7 +1007,7 @@ export const UniqueItems = [
     lineNumber: 28
   },
   {
-    Name: 'Azurewrath',
+    name: 'Azurewrath',
     id: 29,
     version: 0,
     enabled: 0,
@@ -1042,7 +1042,7 @@ export const UniqueItems = [
     lineNumber: 29
   },
   {
-    Name: 'Griswolds Edge',
+    name: 'Griswolds Edge',
     id: 30,
     version: 0,
     enabled: 1,
@@ -1079,7 +1079,7 @@ export const UniqueItems = [
     lineNumber: 30
   },
   {
-    Name: 'Hellplague',
+    name: 'Hellplague',
     id: 31,
     version: 0,
     enabled: 1,
@@ -1119,7 +1119,7 @@ export const UniqueItems = [
     lineNumber: 31
   },
   {
-    Name: 'Culwens Point',
+    name: 'Culwens Point',
     id: 32,
     version: 0,
     enabled: 1,
@@ -1153,7 +1153,7 @@ export const UniqueItems = [
     lineNumber: 32
   },
   {
-    Name: 'Shadowfang',
+    name: 'Shadowfang',
     id: 33,
     version: 0,
     enabled: 1,
@@ -1188,7 +1188,7 @@ export const UniqueItems = [
     lineNumber: 33
   },
   {
-    Name: 'Soulflay',
+    name: 'Soulflay',
     id: 34,
     version: 0,
     enabled: 1,
@@ -1219,7 +1219,7 @@ export const UniqueItems = [
     lineNumber: 34
   },
   {
-    Name: 'Kinemils Awl',
+    name: 'Kinemils Awl',
     id: 35,
     version: 0,
     enabled: 1,
@@ -1254,7 +1254,7 @@ export const UniqueItems = [
     lineNumber: 35
   },
   {
-    Name: 'BlDefensektongue',
+    name: 'BlDefensektongue',
     id: 36,
     version: 0,
     enabled: 1,
@@ -1289,7 +1289,7 @@ export const UniqueItems = [
     lineNumber: 36
   },
   {
-    Name: 'Ripsaw',
+    name: 'Ripsaw',
     id: 37,
     version: 0,
     enabled: 1,
@@ -1317,7 +1317,7 @@ export const UniqueItems = [
     lineNumber: 37
   },
   {
-    Name: 'The Patriarch',
+    name: 'The Patriarch',
     id: 38,
     version: 0,
     enabled: 1,
@@ -1351,7 +1351,7 @@ export const UniqueItems = [
     lineNumber: 38
   },
   {
-    Name: 'Gull',
+    name: 'Gull',
     id: 39,
     version: 0,
     enabled: 1,
@@ -1381,7 +1381,7 @@ export const UniqueItems = [
     lineNumber: 39
   },
   {
-    Name: 'The Diggler',
+    name: 'The Diggler',
     id: 40,
     version: 0,
     enabled: 1,
@@ -1415,7 +1415,7 @@ export const UniqueItems = [
     lineNumber: 40
   },
   {
-    Name: 'The Jade Tan Do',
+    name: 'The Jade Tan Do',
     id: 41,
     version: 0,
     enabled: 1,
@@ -1447,7 +1447,7 @@ export const UniqueItems = [
     lineNumber: 41
   },
   {
-    Name: 'Irices Shard',
+    name: 'Irices Shard',
     id: 42,
     version: 0,
     enabled: 1,
@@ -1475,7 +1475,7 @@ export const UniqueItems = [
     lineNumber: 42
   },
   {
-    Name: 'The Dragon Chang',
+    name: 'The Dragon Chang',
     id: 43,
     version: 0,
     enabled: 1,
@@ -1506,7 +1506,7 @@ export const UniqueItems = [
     lineNumber: 43
   },
   {
-    Name: 'Razortine',
+    name: 'Razortine',
     id: 44,
     version: 0,
     enabled: 1,
@@ -1540,7 +1540,7 @@ export const UniqueItems = [
     lineNumber: 44
   },
   {
-    Name: 'Bloodthief',
+    name: 'Bloodthief',
     id: 45,
     version: 0,
     enabled: 1,
@@ -1571,7 +1571,7 @@ export const UniqueItems = [
     lineNumber: 45
   },
   {
-    Name: 'Lance of Yaggai',
+    name: 'Lance of Yaggai',
     id: 46,
     version: 0,
     enabled: 1,
@@ -1602,7 +1602,7 @@ export const UniqueItems = [
     lineNumber: 46
   },
   {
-    Name: 'The Tannr Gorerod',
+    name: 'The Tannr Gorerod',
     id: 47,
     version: 0,
     enabled: 1,
@@ -1642,7 +1642,7 @@ export const UniqueItems = [
     lineNumber: 47
   },
   {
-    Name: 'Dimoaks Hew',
+    name: 'Dimoaks Hew',
     id: 48,
     version: 0,
     enabled: 1,
@@ -1670,7 +1670,7 @@ export const UniqueItems = [
     lineNumber: 48
   },
   {
-    Name: 'Steelgoad',
+    name: 'Steelgoad',
     id: 49,
     version: 0,
     enabled: 1,
@@ -1704,7 +1704,7 @@ export const UniqueItems = [
     lineNumber: 49
   },
   {
-    Name: 'Soul Harvest',
+    name: 'Soul Harvest',
     id: 50,
     version: 0,
     enabled: 1,
@@ -1738,7 +1738,7 @@ export const UniqueItems = [
     lineNumber: 50
   },
   {
-    Name: 'The Battlebranch',
+    name: 'The Battlebranch',
     id: 51,
     version: 0,
     enabled: 1,
@@ -1769,7 +1769,7 @@ export const UniqueItems = [
     lineNumber: 51
   },
   {
-    Name: 'Woestave',
+    name: 'Woestave',
     id: 52,
     version: 0,
     enabled: 1,
@@ -1809,7 +1809,7 @@ export const UniqueItems = [
     lineNumber: 52
   },
   {
-    Name: 'The Grim Reaper',
+    name: 'The Grim Reaper',
     id: 53,
     version: 0,
     enabled: 1,
@@ -1843,7 +1843,7 @@ export const UniqueItems = [
     lineNumber: 53
   },
   {
-    Name: 'Bane Ash',
+    name: 'Bane Ash',
     id: 54,
     version: 0,
     enabled: 1,
@@ -1885,7 +1885,7 @@ export const UniqueItems = [
     lineNumber: 54
   },
   {
-    Name: 'Serpent Lord',
+    name: 'Serpent Lord',
     id: 55,
     version: 0,
     enabled: 1,
@@ -1923,7 +1923,7 @@ export const UniqueItems = [
     lineNumber: 55
   },
   {
-    Name: 'Lazarus Spire',
+    name: 'Lazarus Spire',
     id: 56,
     version: 0,
     enabled: 1,
@@ -1969,7 +1969,7 @@ export const UniqueItems = [
     lineNumber: 56
   },
   {
-    Name: 'The Salamander',
+    name: 'The Salamander',
     id: 57,
     version: 0,
     enabled: 1,
@@ -2006,7 +2006,7 @@ export const UniqueItems = [
     lineNumber: 57
   },
   {
-    Name: 'The Iron Jang Bong',
+    name: 'The Iron Jang Bong',
     id: 58,
     version: 0,
     enabled: 1,
@@ -2049,7 +2049,7 @@ export const UniqueItems = [
     lineNumber: 58
   },
   {
-    Name: 'Pluckeye',
+    name: 'Pluckeye',
     id: 59,
     version: 0,
     enabled: 1,
@@ -2083,7 +2083,7 @@ export const UniqueItems = [
     lineNumber: 59
   },
   {
-    Name: 'WitherStrengthing',
+    name: 'WitherStrengthing',
     id: 60,
     version: 0,
     enabled: 1,
@@ -2117,7 +2117,7 @@ export const UniqueItems = [
     lineNumber: 60
   },
   {
-    Name: 'Rimeraven',
+    name: 'Rimeraven',
     id: 61,
     version: 0,
     enabled: 1,
@@ -2148,7 +2148,7 @@ export const UniqueItems = [
     lineNumber: 61
   },
   {
-    Name: 'Piercerib',
+    name: 'Piercerib',
     id: 62,
     version: 0,
     enabled: 1,
@@ -2182,7 +2182,7 @@ export const UniqueItems = [
     lineNumber: 62
   },
   {
-    Name: 'Pullspite',
+    name: 'Pullspite',
     id: 63,
     version: 0,
     enabled: 1,
@@ -2216,7 +2216,7 @@ export const UniqueItems = [
     lineNumber: 63
   },
   {
-    Name: 'Wizendraw',
+    name: 'Wizendraw',
     id: 64,
     version: 0,
     enabled: 1,
@@ -2256,7 +2256,7 @@ export const UniqueItems = [
     lineNumber: 64
   },
   {
-    Name: 'Hellclap',
+    name: 'Hellclap',
     id: 65,
     version: 0,
     enabled: 1,
@@ -2296,7 +2296,7 @@ export const UniqueItems = [
     lineNumber: 65
   },
   {
-    Name: 'Blastbark',
+    name: 'Blastbark',
     id: 66,
     version: 0,
     enabled: 1,
@@ -2328,7 +2328,7 @@ export const UniqueItems = [
     lineNumber: 66
   },
   {
-    Name: 'Leadcrow',
+    name: 'Leadcrow',
     id: 67,
     version: 0,
     enabled: 1,
@@ -2362,7 +2362,7 @@ export const UniqueItems = [
     lineNumber: 67
   },
   {
-    Name: 'Ichorsting',
+    name: 'Ichorsting',
     id: 68,
     version: 0,
     enabled: 1,
@@ -2397,7 +2397,7 @@ export const UniqueItems = [
     lineNumber: 68
   },
   {
-    Name: 'Hellcast',
+    name: 'Hellcast',
     id: 69,
     version: 0,
     enabled: 1,
@@ -2434,7 +2434,7 @@ export const UniqueItems = [
     lineNumber: 69
   },
   {
-    Name: 'Doomspittle',
+    name: 'Doomspittle',
     id: 70,
     version: 0,
     enabled: 1,
@@ -2465,7 +2465,7 @@ export const UniqueItems = [
     lineNumber: 70
   },
   {
-    Name: 'War Bonnet',
+    name: 'War Bonnet',
     id: 71,
     version: 0,
     enabled: 1,
@@ -2496,7 +2496,7 @@ export const UniqueItems = [
     lineNumber: 71
   },
   {
-    Name: 'Tarnhelm',
+    name: 'Tarnhelm',
     id: 72,
     version: 0,
     enabled: 1,
@@ -2521,7 +2521,7 @@ export const UniqueItems = [
     lineNumber: 72
   },
   {
-    Name: 'Coif of Glory',
+    name: 'Coif of Glory',
     id: 73,
     version: 0,
     enabled: 1,
@@ -2552,7 +2552,7 @@ export const UniqueItems = [
     lineNumber: 73
   },
   {
-    Name: 'Duskdeep',
+    name: 'Duskdeep',
     id: 74,
     version: 0,
     enabled: 1,
@@ -2586,7 +2586,7 @@ export const UniqueItems = [
     lineNumber: 74
   },
   {
-    Name: 'Wormskull',
+    name: 'Wormskull',
     id: 75,
     version: 0,
     enabled: 1,
@@ -2618,7 +2618,7 @@ export const UniqueItems = [
     lineNumber: 75
   },
   {
-    Name: 'Howltusk',
+    name: 'Howltusk',
     id: 76,
     version: 0,
     enabled: 1,
@@ -2652,7 +2652,7 @@ export const UniqueItems = [
     lineNumber: 76
   },
   {
-    Name: 'Undead Crown',
+    name: 'Undead Crown',
     id: 77,
     version: 0,
     enabled: 1,
@@ -2693,7 +2693,7 @@ export const UniqueItems = [
     lineNumber: 77
   },
   {
-    Name: 'The FDefensee of Horror',
+    name: 'The FDefensee of Horror',
     id: 78,
     version: 0,
     enabled: 1,
@@ -2724,7 +2724,7 @@ export const UniqueItems = [
     lineNumber: 78
   },
   {
-    Name: 'Greyform',
+    name: 'Greyform',
     id: 79,
     version: 0,
     enabled: 1,
@@ -2758,7 +2758,7 @@ export const UniqueItems = [
     lineNumber: 79
   },
   {
-    Name: 'Blinkbats Form',
+    name: 'Blinkbats Form',
     id: 80,
     version: 0,
     enabled: 1,
@@ -2792,7 +2792,7 @@ export const UniqueItems = [
     lineNumber: 80
   },
   {
-    Name: 'The Centurion',
+    name: 'The Centurion',
     id: 81,
     version: 0,
     enabled: 1,
@@ -2832,7 +2832,7 @@ export const UniqueItems = [
     lineNumber: 81
   },
   {
-    Name: 'Twitchthroe',
+    name: 'Twitchthroe',
     id: 82,
     version: 0,
     enabled: 1,
@@ -2866,7 +2866,7 @@ export const UniqueItems = [
     lineNumber: 82
   },
   {
-    Name: 'Darkglow',
+    name: 'Darkglow',
     id: 83,
     version: 0,
     enabled: 1,
@@ -2900,7 +2900,7 @@ export const UniqueItems = [
     lineNumber: 83
   },
   {
-    Name: 'Hawkmail',
+    name: 'Hawkmail',
     id: 84,
     version: 0,
     enabled: 1,
@@ -2931,7 +2931,7 @@ export const UniqueItems = [
     lineNumber: 84
   },
   {
-    Name: 'Sparking Mail',
+    name: 'Sparking Mail',
     id: 85,
     version: 0,
     enabled: 1,
@@ -2959,7 +2959,7 @@ export const UniqueItems = [
     lineNumber: 85
   },
   {
-    Name: 'Venomsward',
+    name: 'Venomsward',
     id: 86,
     version: 0,
     enabled: 1,
@@ -2990,7 +2990,7 @@ export const UniqueItems = [
     lineNumber: 86
   },
   {
-    Name: 'Iceblink',
+    name: 'Iceblink',
     id: 87,
     version: 0,
     enabled: 1,
@@ -3021,7 +3021,7 @@ export const UniqueItems = [
     lineNumber: 87
   },
   {
-    Name: 'Boneflesh',
+    name: 'Boneflesh',
     id: 88,
     version: 0,
     enabled: 1,
@@ -3049,7 +3049,7 @@ export const UniqueItems = [
     lineNumber: 88
   },
   {
-    Name: 'Rockfleece',
+    name: 'Rockfleece',
     id: 89,
     version: 0,
     enabled: 1,
@@ -3080,7 +3080,7 @@ export const UniqueItems = [
     lineNumber: 89
   },
   {
-    Name: 'Rattlecage',
+    name: 'Rattlecage',
     id: 90,
     version: 0,
     enabled: 1,
@@ -3108,7 +3108,7 @@ export const UniqueItems = [
     lineNumber: 90
   },
   {
-    Name: 'Goldskin',
+    name: 'Goldskin',
     id: 91,
     version: 0,
     enabled: 1,
@@ -3139,7 +3139,7 @@ export const UniqueItems = [
     lineNumber: 91
   },
   {
-    Name: 'Victors Silk',
+    name: 'Victors Silk',
     id: 92,
     version: 0,
     enabled: 1,
@@ -3167,7 +3167,7 @@ export const UniqueItems = [
     lineNumber: 92
   },
   {
-    Name: 'Heavenly Garb',
+    name: 'Heavenly Garb',
     id: 93,
     version: 0,
     enabled: 1,
@@ -3201,7 +3201,7 @@ export const UniqueItems = [
     lineNumber: 93
   },
   {
-    Name: 'Pelta Lunata',
+    name: 'Pelta Lunata',
     id: 94,
     version: 0,
     enabled: 1,
@@ -3241,7 +3241,7 @@ export const UniqueItems = [
     lineNumber: 94
   },
   {
-    Name: 'Umbral Disk',
+    name: 'Umbral Disk',
     id: 95,
     version: 0,
     enabled: 1,
@@ -3281,7 +3281,7 @@ export const UniqueItems = [
     lineNumber: 95
   },
   {
-    Name: 'Stormguild',
+    name: 'Stormguild',
     id: 96,
     version: 0,
     enabled: 1,
@@ -3321,7 +3321,7 @@ export const UniqueItems = [
     lineNumber: 96
   },
   {
-    Name: 'Wall of the Eyeless',
+    name: 'Wall of the Eyeless',
     id: 97,
     version: 0,
     enabled: 1,
@@ -3355,7 +3355,7 @@ export const UniqueItems = [
     lineNumber: 97
   },
   {
-    Name: 'SwordbDefensek Hold',
+    name: 'SwordbDefensek Hold',
     id: 98,
     version: 0,
     enabled: 1,
@@ -3392,7 +3392,7 @@ export const UniqueItems = [
     lineNumber: 98
   },
   {
-    Name: 'Steelclash',
+    name: 'Steelclash',
     id: 99,
     version: 0,
     enabled: 1,
@@ -3435,7 +3435,7 @@ export const UniqueItems = [
     lineNumber: 99
   },
   {
-    Name: 'Bverrit Keep',
+    name: 'Bverrit Keep',
     id: 100,
     version: 0,
     enabled: 1,
@@ -3472,7 +3472,7 @@ export const UniqueItems = [
     lineNumber: 100
   },
   {
-    Name: 'The Ward',
+    name: 'The Ward',
     id: 101,
     version: 0,
     enabled: 1,
@@ -3506,7 +3506,7 @@ export const UniqueItems = [
     lineNumber: 101
   },
   {
-    Name: 'The Hand of Broc',
+    name: 'The Hand of Broc',
     id: 102,
     version: 0,
     enabled: 1,
@@ -3540,7 +3540,7 @@ export const UniqueItems = [
     lineNumber: 102
   },
   {
-    Name: 'Bloodfist',
+    name: 'Bloodfist',
     id: 103,
     version: 0,
     enabled: 1,
@@ -3574,7 +3574,7 @@ export const UniqueItems = [
     lineNumber: 103
   },
   {
-    Name: 'Chance Guards',
+    name: 'Chance Guards',
     id: 104,
     version: 0,
     enabled: 1,
@@ -3608,7 +3608,7 @@ export const UniqueItems = [
     lineNumber: 104
   },
   {
-    Name: 'Magefist',
+    name: 'Magefist',
     id: 105,
     version: 0,
     enabled: 1,
@@ -3642,7 +3642,7 @@ export const UniqueItems = [
     lineNumber: 105
   },
   {
-    Name: 'Frostburn',
+    name: 'Frostburn',
     id: 106,
     version: 0,
     enabled: 1,
@@ -3674,7 +3674,7 @@ export const UniqueItems = [
     lineNumber: 106
   },
   {
-    Name: 'Hotspur',
+    name: 'Hotspur',
     id: 107,
     version: 0,
     enabled: 1,
@@ -3708,7 +3708,7 @@ export const UniqueItems = [
     lineNumber: 107
   },
   {
-    Name: 'Gorefoot',
+    name: 'Gorefoot',
     id: 108,
     version: 0,
     enabled: 1,
@@ -3746,7 +3746,7 @@ export const UniqueItems = [
     lineNumber: 108
   },
   {
-    Name: 'Treads of Cthon',
+    name: 'Treads of Cthon',
     id: 109,
     version: 0,
     enabled: 1,
@@ -3780,7 +3780,7 @@ export const UniqueItems = [
     lineNumber: 109
   },
   {
-    Name: 'Goblin Toe',
+    name: 'Goblin Toe',
     id: 110,
     version: 0,
     enabled: 1,
@@ -3814,7 +3814,7 @@ export const UniqueItems = [
     lineNumber: 110
   },
   {
-    Name: 'Tearhaunch',
+    name: 'Tearhaunch',
     id: 111,
     version: 0,
     enabled: 1,
@@ -3852,7 +3852,7 @@ export const UniqueItems = [
     lineNumber: 111
   },
   {
-    Name: 'Lenyms Cord',
+    name: 'Lenyms Cord',
     id: 112,
     version: 0,
     enabled: 1,
@@ -3880,7 +3880,7 @@ export const UniqueItems = [
     lineNumber: 112
   },
   {
-    Name: 'Snakecord',
+    name: 'Snakecord',
     id: 113,
     version: 0,
     enabled: 1,
@@ -3915,7 +3915,7 @@ export const UniqueItems = [
     lineNumber: 113
   },
   {
-    Name: 'Nightsmoke',
+    name: 'Nightsmoke',
     id: 114,
     version: 0,
     enabled: 1,
@@ -3949,7 +3949,7 @@ export const UniqueItems = [
     lineNumber: 114
   },
   {
-    Name: 'Goldwrap',
+    name: 'Goldwrap',
     id: 115,
     version: 0,
     enabled: 1,
@@ -3983,7 +3983,7 @@ export const UniqueItems = [
     lineNumber: 115
   },
   {
-    Name: 'Bladebuckle',
+    name: 'Bladebuckle',
     id: 116,
     version: 0,
     enabled: 1,
@@ -4020,7 +4020,7 @@ export const UniqueItems = [
     lineNumber: 116
   },
   {
-    Name: 'Nokozan Relic',
+    name: 'Nokozan Relic',
     id: 117,
     version: 0,
     enabled: 1,
@@ -4050,7 +4050,7 @@ export const UniqueItems = [
     lineNumber: 117
   },
   {
-    Name: 'The Eye of Etlich',
+    name: 'The Eye of Etlich',
     id: 118,
     version: 0,
     enabled: 1,
@@ -4086,7 +4086,7 @@ export const UniqueItems = [
     lineNumber: 118
   },
   {
-    Name: 'The Mahim-Oak Curio',
+    name: 'The Mahim-Oak Curio',
     id: 119,
     version: 0,
     enabled: 1,
@@ -4125,7 +4125,7 @@ export const UniqueItems = [
     lineNumber: 119
   },
   {
-    Name: 'NagelRing',
+    name: 'NagelRing',
     id: 120,
     version: 0,
     enabled: 1,
@@ -4152,7 +4152,7 @@ export const UniqueItems = [
     lineNumber: 120
   },
   {
-    Name: 'Manald Heal',
+    name: 'Manald Heal',
     id: 121,
     version: 0,
     enabled: 1,
@@ -4179,7 +4179,7 @@ export const UniqueItems = [
     lineNumber: 121
   },
   {
-    Name: 'The Stone of Jordan',
+    name: 'The Stone of Jordan',
     id: 122,
     version: 0,
     enabled: 1,
@@ -4210,7 +4210,7 @@ export const UniqueItems = [
     lineNumber: 122
   },
   {
-    Name: 'Amulet of the Viper',
+    name: 'Amulet of the Viper',
     id: 123,
     version: 0,
     enabled: 1,
@@ -4242,7 +4242,7 @@ export const UniqueItems = [
     lineNumber: 123
   },
   {
-    Name: 'Staff of Kings',
+    name: 'Staff of Kings',
     id: 124,
     version: 0,
     enabled: 1,
@@ -4273,7 +4273,7 @@ export const UniqueItems = [
     lineNumber: 124
   },
   {
-    Name: 'Horadric Staff',
+    name: 'Horadric Staff',
     id: 125,
     version: 0,
     enabled: 1,
@@ -4307,7 +4307,7 @@ export const UniqueItems = [
     lineNumber: 125
   },
   {
-    Name: 'Hell Forge Hammer',
+    name: 'Hell Forge Hammer',
     id: 126,
     version: 0,
     enabled: 1,
@@ -4340,7 +4340,7 @@ export const UniqueItems = [
     lineNumber: 126
   },
   {
-    Name: 'KhalimFlail',
+    name: 'KhalimFlail',
     id: 127,
     version: 0,
     enabled: 1,
@@ -4373,7 +4373,7 @@ export const UniqueItems = [
     lineNumber: 127
   },
   {
-    Name: 'SuperKhalimFlail',
+    name: 'SuperKhalimFlail',
     id: 128,
     version: 0,
     enabled: 1,
@@ -4408,7 +4408,7 @@ export const UniqueItems = [
     lineNumber: 128
   },
   {
-    Name: 'Coldkill',
+    name: 'Coldkill',
     id: 129,
     version: 100,
     enabled: 1,
@@ -4450,7 +4450,7 @@ export const UniqueItems = [
     lineNumber: 130
   },
   {
-    Name: "Butcher's Pupil",
+    name: "Butcher's Pupil",
     id: 130,
     version: 100,
     enabled: 1,
@@ -4486,7 +4486,7 @@ export const UniqueItems = [
     lineNumber: 131
   },
   {
-    Name: 'IsleStrengthike',
+    name: 'IsleStrengthike',
     id: 131,
     version: 100,
     enabled: 1,
@@ -4533,7 +4533,7 @@ export const UniqueItems = [
     lineNumber: 132
   },
   {
-    Name: "Pompe's Wrath",
+    name: "Pompe's Wrath",
     id: 132,
     version: 100,
     enabled: 1,
@@ -4567,7 +4567,7 @@ export const UniqueItems = [
     lineNumber: 133
   },
   {
-    Name: 'Guardian Naga',
+    name: 'Guardian Naga',
     id: 133,
     version: 100,
     enabled: 1,
@@ -4602,7 +4602,7 @@ export const UniqueItems = [
     lineNumber: 134
   },
   {
-    Name: "Warlord's Trust",
+    name: "Warlord's Trust",
     id: 134,
     version: 100,
     enabled: 1,
@@ -4635,7 +4635,7 @@ export const UniqueItems = [
     lineNumber: 135
   },
   {
-    Name: 'Spellsteel',
+    name: 'Spellsteel',
     id: 135,
     version: 100,
     enabled: 1,
@@ -4686,7 +4686,7 @@ export const UniqueItems = [
     lineNumber: 136
   },
   {
-    Name: 'Stormrider',
+    name: 'Stormrider',
     id: 136,
     version: 100,
     enabled: 1,
@@ -4731,7 +4731,7 @@ export const UniqueItems = [
     lineNumber: 137
   },
   {
-    Name: 'Boneslayer Blade',
+    name: 'Boneslayer Blade',
     id: 137,
     version: 100,
     enabled: 1,
@@ -4771,7 +4771,7 @@ export const UniqueItems = [
     lineNumber: 138
   },
   {
-    Name: 'The Minataur',
+    name: 'The Minataur',
     id: 138,
     version: 100,
     enabled: 1,
@@ -4808,7 +4808,7 @@ export const UniqueItems = [
     lineNumber: 139
   },
   {
-    Name: 'Suicide Branch',
+    name: 'Suicide Branch',
     id: 139,
     version: 100,
     enabled: 1,
@@ -4841,7 +4841,7 @@ export const UniqueItems = [
     lineNumber: 140
   },
   {
-    Name: 'Carin Shard',
+    name: 'Carin Shard',
     id: 140,
     version: 100,
     enabled: 1,
@@ -4878,7 +4878,7 @@ export const UniqueItems = [
     lineNumber: 141
   },
   {
-    Name: 'Arm of King Leoric',
+    name: 'Arm of King Leoric',
     id: 141,
     version: 100,
     enabled: 1,
@@ -4931,7 +4931,7 @@ export const UniqueItems = [
     lineNumber: 142
   },
   {
-    Name: 'BlDefensekhand Key',
+    name: 'BlDefensekhand Key',
     id: 142,
     version: 100,
     enabled: 1,
@@ -4975,7 +4975,7 @@ export const UniqueItems = [
     lineNumber: 143
   },
   {
-    Name: 'Dark Clan Crusher',
+    name: 'Dark Clan Crusher',
     id: 143,
     version: 100,
     enabled: 1,
@@ -5011,7 +5011,7 @@ export const UniqueItems = [
     lineNumber: 144
   },
   {
-    Name: "Zakarum's Hand",
+    name: "Zakarum's Hand",
     id: 144,
     version: 100,
     enabled: 1,
@@ -5058,7 +5058,7 @@ export const UniqueItems = [
     lineNumber: 145
   },
   {
-    Name: 'The Fetid Sprinkler',
+    name: 'The Fetid Sprinkler',
     id: 145,
     version: 100,
     enabled: 1,
@@ -5097,7 +5097,7 @@ export const UniqueItems = [
     lineNumber: 146
   },
   {
-    Name: 'Hand of Blessed Light',
+    name: 'Hand of Blessed Light',
     id: 146,
     version: 100,
     enabled: 1,
@@ -5146,7 +5146,7 @@ export const UniqueItems = [
     lineNumber: 147
   },
   {
-    Name: 'Fleshrender',
+    name: 'Fleshrender',
     id: 147,
     version: 100,
     enabled: 1,
@@ -5191,7 +5191,7 @@ export const UniqueItems = [
     lineNumber: 148
   },
   {
-    Name: 'Sureshrill Frost',
+    name: 'Sureshrill Frost',
     id: 148,
     version: 100,
     enabled: 1,
@@ -5226,7 +5226,7 @@ export const UniqueItems = [
     lineNumber: 149
   },
   {
-    Name: 'Moonfall',
+    name: 'Moonfall',
     id: 149,
     version: 100,
     enabled: 1,
@@ -5265,7 +5265,7 @@ export const UniqueItems = [
     lineNumber: 150
   },
   {
-    Name: "Baezil's Vortex",
+    name: "Baezil's Vortex",
     id: 150,
     version: 100,
     enabled: 1,
@@ -5305,7 +5305,7 @@ export const UniqueItems = [
     lineNumber: 151
   },
   {
-    Name: 'Earthshaker',
+    name: 'Earthshaker',
     id: 151,
     version: 100,
     enabled: 1,
@@ -5343,7 +5343,7 @@ export const UniqueItems = [
     lineNumber: 152
   },
   {
-    Name: 'Bloodtree Stump',
+    name: 'Bloodtree Stump',
     id: 152,
     version: 100,
     enabled: 1,
@@ -5382,7 +5382,7 @@ export const UniqueItems = [
     lineNumber: 153
   },
   {
-    Name: 'The Gavel of Pain',
+    name: 'The Gavel of Pain',
     id: 153,
     version: 100,
     enabled: 1,
@@ -5422,7 +5422,7 @@ export const UniqueItems = [
     lineNumber: 154
   },
   {
-    Name: 'Bloodletter',
+    name: 'Bloodletter',
     id: 154,
     version: 100,
     enabled: 1,
@@ -5468,7 +5468,7 @@ export const UniqueItems = [
     lineNumber: 155
   },
   {
-    Name: 'Coldsteel Eye',
+    name: 'Coldsteel Eye',
     id: 155,
     version: 100,
     enabled: 1,
@@ -5506,7 +5506,7 @@ export const UniqueItems = [
     lineNumber: 156
   },
   {
-    Name: 'Hexfire',
+    name: 'Hexfire',
     id: 156,
     version: 100,
     enabled: 1,
@@ -5544,7 +5544,7 @@ export const UniqueItems = [
     lineNumber: 157
   },
   {
-    Name: 'Blade of Ali Baba',
+    name: 'Blade of Ali Baba',
     id: 157,
     version: 100,
     enabled: 1,
@@ -5576,7 +5576,7 @@ export const UniqueItems = [
     lineNumber: 158
   },
   {
-    Name: "Ginther's Rift",
+    name: "Ginther's Rift",
     id: 158,
     version: 100,
     enabled: 1,
@@ -5610,7 +5610,7 @@ export const UniqueItems = [
     lineNumber: 159
   },
   {
-    Name: 'HeadStrengthiker',
+    name: 'HeadStrengthiker',
     id: 159,
     version: 100,
     enabled: 1,
@@ -5640,7 +5640,7 @@ export const UniqueItems = [
     lineNumber: 160
   },
   {
-    Name: 'Plague Bearer',
+    name: 'Plague Bearer',
     id: 160,
     version: 100,
     enabled: 1,
@@ -5677,7 +5677,7 @@ export const UniqueItems = [
     lineNumber: 161
   },
   {
-    Name: 'The Atlantian',
+    name: 'The Atlantian',
     id: 161,
     version: 100,
     enabled: 1,
@@ -5718,7 +5718,7 @@ export const UniqueItems = [
     lineNumber: 162
   },
   {
-    Name: 'Crainte Vomir',
+    name: 'Crainte Vomir',
     id: 162,
     version: 100,
     enabled: 1,
@@ -5753,7 +5753,7 @@ export const UniqueItems = [
     lineNumber: 163
   },
   {
-    Name: 'Bing Sz Wang',
+    name: 'Bing Sz Wang',
     id: 163,
     version: 100,
     enabled: 1,
@@ -5788,7 +5788,7 @@ export const UniqueItems = [
     lineNumber: 164
   },
   {
-    Name: 'The Vile Husk',
+    name: 'The Vile Husk',
     id: 164,
     version: 100,
     enabled: 1,
@@ -5824,7 +5824,7 @@ export const UniqueItems = [
     lineNumber: 165
   },
   {
-    Name: 'CloudcrDefensek',
+    name: 'CloudcrDefensek',
     id: 165,
     version: 100,
     enabled: 1,
@@ -5870,7 +5870,7 @@ export const UniqueItems = [
     lineNumber: 166
   },
   {
-    Name: 'Todesfaelle Flamme',
+    name: 'Todesfaelle Flamme',
     id: 166,
     version: 100,
     enabled: 1,
@@ -5910,7 +5910,7 @@ export const UniqueItems = [
     lineNumber: 167
   },
   {
-    Name: 'Swordguard',
+    name: 'Swordguard',
     id: 167,
     version: 100,
     enabled: 1,
@@ -5954,7 +5954,7 @@ export const UniqueItems = [
     lineNumber: 168
   },
   {
-    Name: 'Spineripper',
+    name: 'Spineripper',
     id: 168,
     version: 100,
     enabled: 1,
@@ -5993,7 +5993,7 @@ export const UniqueItems = [
     lineNumber: 169
   },
   {
-    Name: 'Heart Carver',
+    name: 'Heart Carver',
     id: 169,
     version: 100,
     enabled: 1,
@@ -6032,7 +6032,7 @@ export const UniqueItems = [
     lineNumber: 170
   },
   {
-    Name: "BlDefensekbog's Sharp",
+    name: "BlDefensekbog's Sharp",
     id: 170,
     version: 100,
     enabled: 1,
@@ -6076,7 +6076,7 @@ export const UniqueItems = [
     lineNumber: 171
   },
   {
-    Name: 'Stormspike',
+    name: 'Stormspike',
     id: 171,
     version: 100,
     enabled: 1,
@@ -6109,7 +6109,7 @@ export const UniqueItems = [
     lineNumber: 172
   },
   {
-    Name: 'The Impaler',
+    name: 'The Impaler',
     id: 172,
     version: 100,
     enabled: 1,
@@ -6152,7 +6152,7 @@ export const UniqueItems = [
     lineNumber: 173
   },
   {
-    Name: 'Kelpie Snare',
+    name: 'Kelpie Snare',
     id: 173,
     version: 100,
     enabled: 1,
@@ -6185,7 +6185,7 @@ export const UniqueItems = [
     lineNumber: 174
   },
   {
-    Name: 'Soulfeast Tine',
+    name: 'Soulfeast Tine',
     id: 174,
     version: 100,
     enabled: 1,
@@ -6224,7 +6224,7 @@ export const UniqueItems = [
     lineNumber: 175
   },
   {
-    Name: 'Hone Sundan',
+    name: 'Hone Sundan',
     id: 175,
     version: 100,
     enabled: 1,
@@ -6252,7 +6252,7 @@ export const UniqueItems = [
     lineNumber: 176
   },
   {
-    Name: 'Spire of Honor',
+    name: 'Spire of Honor',
     id: 176,
     version: 100,
     enabled: 1,
@@ -6296,7 +6296,7 @@ export const UniqueItems = [
     lineNumber: 177
   },
   {
-    Name: 'The Meat Scraper',
+    name: 'The Meat Scraper',
     id: 177,
     version: 100,
     enabled: 1,
@@ -6332,7 +6332,7 @@ export const UniqueItems = [
     lineNumber: 178
   },
   {
-    Name: 'BlDefensekleDefenseh Blade',
+    name: 'BlDefensekleDefenseh Blade',
     id: 178,
     version: 100,
     enabled: 1,
@@ -6367,7 +6367,7 @@ export const UniqueItems = [
     lineNumber: 179
   },
   {
-    Name: "Athena's Wrath",
+    name: "Athena's Wrath",
     id: 179,
     version: 100,
     enabled: 1,
@@ -6399,7 +6399,7 @@ export const UniqueItems = [
     lineNumber: 180
   },
   {
-    Name: 'Pierre Tombale Couant',
+    name: 'Pierre Tombale Couant',
     id: 180,
     version: 100,
     enabled: 1,
@@ -6437,7 +6437,7 @@ export const UniqueItems = [
     lineNumber: 181
   },
   {
-    Name: 'Husoldal Evo',
+    name: 'Husoldal Evo',
     id: 181,
     version: 100,
     enabled: 1,
@@ -6470,7 +6470,7 @@ export const UniqueItems = [
     lineNumber: 182
   },
   {
-    Name: "Grim's Burning Dead",
+    name: "Grim's Burning Dead",
     id: 182,
     version: 100,
     enabled: 1,
@@ -6514,7 +6514,7 @@ export const UniqueItems = [
     lineNumber: 183
   },
   {
-    Name: 'Razorswitch',
+    name: 'Razorswitch',
     id: 183,
     version: 100,
     enabled: 1,
@@ -6551,7 +6551,7 @@ export const UniqueItems = [
     lineNumber: 184
   },
   {
-    Name: 'RibcrDefenseker',
+    name: 'RibcrDefenseker',
     id: 184,
     version: 100,
     enabled: 1,
@@ -6595,7 +6595,7 @@ export const UniqueItems = [
     lineNumber: 185
   },
   {
-    Name: 'Chromatic Ire',
+    name: 'Chromatic Ire',
     id: 185,
     version: 100,
     enabled: 1,
@@ -6638,7 +6638,7 @@ export const UniqueItems = [
     lineNumber: 186
   },
   {
-    Name: 'Warpspear',
+    name: 'Warpspear',
     id: 186,
     version: 100,
     enabled: 1,
@@ -6676,7 +6676,7 @@ export const UniqueItems = [
     lineNumber: 187
   },
   {
-    Name: 'Skullcollector',
+    name: 'Skullcollector',
     id: 187,
     version: 100,
     enabled: 1,
@@ -6705,7 +6705,7 @@ export const UniqueItems = [
     lineNumber: 188
   },
   {
-    Name: 'SkyStrengthike',
+    name: 'SkyStrengthike',
     id: 188,
     version: 100,
     enabled: 1,
@@ -6742,7 +6742,7 @@ export const UniqueItems = [
     lineNumber: 189
   },
   {
-    Name: 'Riphook',
+    name: 'Riphook',
     id: 189,
     version: 100,
     enabled: 1,
@@ -6777,7 +6777,7 @@ export const UniqueItems = [
     lineNumber: 190
   },
   {
-    Name: 'Kuko Shakaku',
+    name: 'Kuko Shakaku',
     id: 190,
     version: 100,
     enabled: 1,
@@ -6815,7 +6815,7 @@ export const UniqueItems = [
     lineNumber: 191
   },
   {
-    Name: 'Endlesshail',
+    name: 'Endlesshail',
     id: 191,
     version: 100,
     enabled: 1,
@@ -6851,7 +6851,7 @@ export const UniqueItems = [
     lineNumber: 192
   },
   {
-    Name: 'Whichwild Strengthing',
+    name: 'Whichwild Strengthing',
     id: 192,
     version: 100,
     enabled: 1,
@@ -6886,7 +6886,7 @@ export const UniqueItems = [
     lineNumber: 193
   },
   {
-    Name: 'Cliffkiller',
+    name: 'Cliffkiller',
     id: 193,
     version: 100,
     enabled: 1,
@@ -6923,7 +6923,7 @@ export const UniqueItems = [
     lineNumber: 194
   },
   {
-    Name: 'Magewrath',
+    name: 'Magewrath',
     id: 194,
     version: 100,
     enabled: 1,
@@ -6968,7 +6968,7 @@ export const UniqueItems = [
     lineNumber: 195
   },
   {
-    Name: 'GodStrengthike Arch',
+    name: 'GodStrengthike Arch',
     id: 195,
     version: 100,
     enabled: 1,
@@ -7007,7 +7007,7 @@ export const UniqueItems = [
     lineNumber: 196
   },
   {
-    Name: 'Langer Briser',
+    name: 'Langer Briser',
     id: 196,
     version: 100,
     enabled: 1,
@@ -7044,7 +7044,7 @@ export const UniqueItems = [
     lineNumber: 197
   },
   {
-    Name: 'Pus Spiter',
+    name: 'Pus Spiter',
     id: 197,
     version: 100,
     enabled: 1,
@@ -7088,7 +7088,7 @@ export const UniqueItems = [
     lineNumber: 198
   },
   {
-    Name: 'Buriza-Do Kyanon',
+    name: 'Buriza-Do Kyanon',
     id: 198,
     version: 100,
     enabled: 1,
@@ -7128,7 +7128,7 @@ export const UniqueItems = [
     lineNumber: 199
   },
   {
-    Name: 'Demon MDefensehine',
+    name: 'Demon MDefensehine',
     id: 199,
     version: 100,
     enabled: 1,
@@ -7167,7 +7167,7 @@ export const UniqueItems = [
     lineNumber: 200
   },
   {
-    Name: 'Peasent Crown',
+    name: 'Peasent Crown',
     id: 201,
     version: 100,
     enabled: 1,
@@ -7201,7 +7201,7 @@ export const UniqueItems = [
     lineNumber: 202
   },
   {
-    Name: 'Rockstopper',
+    name: 'Rockstopper',
     id: 202,
     version: 100,
     enabled: 1,
@@ -7238,7 +7238,7 @@ export const UniqueItems = [
     lineNumber: 203
   },
   {
-    Name: 'Stealskull',
+    name: 'Stealskull',
     id: 203,
     version: 100,
     enabled: 1,
@@ -7272,7 +7272,7 @@ export const UniqueItems = [
     lineNumber: 204
   },
   {
-    Name: 'Darksight Helm',
+    name: 'Darksight Helm',
     id: 204,
     version: 100,
     enabled: 1,
@@ -7312,7 +7312,7 @@ export const UniqueItems = [
     lineNumber: 205
   },
   {
-    Name: 'Valkiry Wing',
+    name: 'Valkiry Wing',
     id: 205,
     version: 100,
     enabled: 1,
@@ -7343,7 +7343,7 @@ export const UniqueItems = [
     lineNumber: 206
   },
   {
-    Name: 'Crown of Thieves',
+    name: 'Crown of Thieves',
     id: 206,
     version: 100,
     enabled: 1,
@@ -7382,7 +7382,7 @@ export const UniqueItems = [
     lineNumber: 207
   },
   {
-    Name: "BlDefensekhorn's FDefensee",
+    name: "BlDefensekhorn's FDefensee",
     id: 207,
     version: 100,
     enabled: 1,
@@ -7417,7 +7417,7 @@ export const UniqueItems = [
     lineNumber: 208
   },
   {
-    Name: 'Vampiregaze',
+    name: 'Vampiregaze',
     id: 208,
     version: 100,
     enabled: 1,
@@ -7457,7 +7457,7 @@ export const UniqueItems = [
     lineNumber: 209
   },
   {
-    Name: 'The Spirit Shroud',
+    name: 'The Spirit Shroud',
     id: 209,
     version: 100,
     enabled: 1,
@@ -7487,7 +7487,7 @@ export const UniqueItems = [
     lineNumber: 210
   },
   {
-    Name: 'Skin of the Vipermagi',
+    name: 'Skin of the Vipermagi',
     id: 210,
     version: 100,
     enabled: 1,
@@ -7519,7 +7519,7 @@ export const UniqueItems = [
     lineNumber: 211
   },
   {
-    Name: 'Skin of the Flayerd One',
+    name: 'Skin of the Flayerd One',
     id: 211,
     version: 100,
     enabled: 1,
@@ -7553,7 +7553,7 @@ export const UniqueItems = [
     lineNumber: 212
   },
   {
-    Name: 'Ironpelt',
+    name: 'Ironpelt',
     id: 212,
     version: 100,
     enabled: 1,
@@ -7588,7 +7588,7 @@ export const UniqueItems = [
     lineNumber: 213
   },
   {
-    Name: 'Spiritforge',
+    name: 'Spiritforge',
     id: 213,
     version: 100,
     enabled: 1,
@@ -7622,7 +7622,7 @@ export const UniqueItems = [
     lineNumber: 214
   },
   {
-    Name: 'Crow Caw',
+    name: 'Crow Caw',
     id: 214,
     version: 100,
     enabled: 1,
@@ -7656,7 +7656,7 @@ export const UniqueItems = [
     lineNumber: 215
   },
   {
-    Name: 'Shaftstop',
+    name: 'Shaftstop',
     id: 215,
     version: 100,
     enabled: 1,
@@ -7684,7 +7684,7 @@ export const UniqueItems = [
     lineNumber: 216
   },
   {
-    Name: "Duriel's Shell",
+    name: "Duriel's Shell",
     id: 216,
     version: 100,
     enabled: 1,
@@ -7729,7 +7729,7 @@ export const UniqueItems = [
     lineNumber: 217
   },
   {
-    Name: "Skullder's Ire",
+    name: "Skullder's Ire",
     id: 217,
     version: 100,
     enabled: 1,
@@ -7760,7 +7760,7 @@ export const UniqueItems = [
     lineNumber: 218
   },
   {
-    Name: 'Guardian Angel',
+    name: 'Guardian Angel',
     id: 218,
     version: 100,
     enabled: 1,
@@ -7797,7 +7797,7 @@ export const UniqueItems = [
     lineNumber: 219
   },
   {
-    Name: 'Toothrow',
+    name: 'Toothrow',
     id: 219,
     version: 100,
     enabled: 1,
@@ -7835,7 +7835,7 @@ export const UniqueItems = [
     lineNumber: 220
   },
   {
-    Name: "Atma's Wail",
+    name: "Atma's Wail",
     id: 220,
     version: 100,
     enabled: 1,
@@ -7873,7 +7873,7 @@ export const UniqueItems = [
     lineNumber: 221
   },
   {
-    Name: 'BlDefensek Hades',
+    name: 'BlDefensek Hades',
     id: 221,
     version: 100,
     enabled: 1,
@@ -7905,7 +7905,7 @@ export const UniqueItems = [
     lineNumber: 222
   },
   {
-    Name: 'Corpsemourn',
+    name: 'Corpsemourn',
     id: 222,
     version: 100,
     enabled: 1,
@@ -7946,7 +7946,7 @@ export const UniqueItems = [
     lineNumber: 223
   },
   {
-    Name: "Que-Hegan's Wisdon",
+    name: "Que-Hegan's Wisdon",
     id: 223,
     version: 100,
     enabled: 1,
@@ -7982,7 +7982,7 @@ export const UniqueItems = [
     lineNumber: 224
   },
   {
-    Name: 'Visceratuant',
+    name: 'Visceratuant',
     id: 224,
     version: 100,
     enabled: 1,
@@ -8014,7 +8014,7 @@ export const UniqueItems = [
     lineNumber: 225
   },
   {
-    Name: 'Mosers Blessed Circle',
+    name: 'Mosers Blessed Circle',
     id: 225,
     version: 100,
     enabled: 1,
@@ -8044,7 +8044,7 @@ export const UniqueItems = [
     lineNumber: 226
   },
   {
-    Name: 'Stormchaser',
+    name: 'Stormchaser',
     id: 226,
     version: 100,
     enabled: 1,
@@ -8091,7 +8091,7 @@ export const UniqueItems = [
     lineNumber: 227
   },
   {
-    Name: "Tiamat's Rebuke",
+    name: "Tiamat's Rebuke",
     id: 227,
     version: 100,
     enabled: 1,
@@ -8140,7 +8140,7 @@ export const UniqueItems = [
     lineNumber: 228
   },
   {
-    Name: "Kerke's Sanctuary",
+    name: "Kerke's Sanctuary",
     id: 228,
     version: 100,
     enabled: 1,
@@ -8179,7 +8179,7 @@ export const UniqueItems = [
     lineNumber: 229
   },
   {
-    Name: "Radimant's Sphere",
+    name: "Radimant's Sphere",
     id: 229,
     version: 100,
     enabled: 1,
@@ -8222,7 +8222,7 @@ export const UniqueItems = [
     lineNumber: 230
   },
   {
-    Name: 'Lidless Wall',
+    name: 'Lidless Wall',
     id: 230,
     version: 100,
     enabled: 1,
@@ -8261,7 +8261,7 @@ export const UniqueItems = [
     lineNumber: 231
   },
   {
-    Name: 'Lance Guard',
+    name: 'Lance Guard',
     id: 231,
     version: 100,
     enabled: 1,
@@ -8295,7 +8295,7 @@ export const UniqueItems = [
     lineNumber: 232
   },
   {
-    Name: 'Venom Grip',
+    name: 'Venom Grip',
     id: 232,
     version: 100,
     enabled: 1,
@@ -8333,7 +8333,7 @@ export const UniqueItems = [
     lineNumber: 233
   },
   {
-    Name: 'Gravepalm',
+    name: 'Gravepalm',
     id: 233,
     version: 100,
     enabled: 1,
@@ -8363,7 +8363,7 @@ export const UniqueItems = [
     lineNumber: 234
   },
   {
-    Name: 'Ghoulhide',
+    name: 'Ghoulhide',
     id: 234,
     version: 100,
     enabled: 1,
@@ -8391,7 +8391,7 @@ export const UniqueItems = [
     lineNumber: 235
   },
   {
-    Name: 'Lavagout',
+    name: 'Lavagout',
     id: 235,
     version: 100,
     enabled: 1,
@@ -8429,7 +8429,7 @@ export const UniqueItems = [
     lineNumber: 236
   },
   {
-    Name: 'Hellmouth',
+    name: 'Hellmouth',
     id: 236,
     version: 100,
     enabled: 1,
@@ -8464,7 +8464,7 @@ export const UniqueItems = [
     lineNumber: 237
   },
   {
-    Name: 'InfernoStrengthide',
+    name: 'InfernoStrengthide',
     id: 237,
     version: 100,
     enabled: 1,
@@ -8507,7 +8507,7 @@ export const UniqueItems = [
     lineNumber: 238
   },
   {
-    Name: 'Waterwalk',
+    name: 'Waterwalk',
     id: 238,
     version: 100,
     enabled: 1,
@@ -8546,7 +8546,7 @@ export const UniqueItems = [
     lineNumber: 239
   },
   {
-    Name: 'Silkweave',
+    name: 'Silkweave',
     id: 239,
     version: 100,
     enabled: 1,
@@ -8576,7 +8576,7 @@ export const UniqueItems = [
     lineNumber: 240
   },
   {
-    Name: 'War Traveler',
+    name: 'War Traveler',
     id: 240,
     version: 100,
     enabled: 1,
@@ -8618,7 +8618,7 @@ export const UniqueItems = [
     lineNumber: 241
   },
   {
-    Name: 'Gorerider',
+    name: 'Gorerider',
     id: 241,
     version: 100,
     enabled: 1,
@@ -8658,7 +8658,7 @@ export const UniqueItems = [
     lineNumber: 242
   },
   {
-    Name: 'Strengthing of Ears',
+    name: 'Strengthing of Ears',
     id: 242,
     version: 100,
     enabled: 1,
@@ -8692,7 +8692,7 @@ export const UniqueItems = [
     lineNumber: 243
   },
   {
-    Name: 'Razortail',
+    name: 'Razortail',
     id: 243,
     version: 100,
     enabled: 1,
@@ -8724,7 +8724,7 @@ export const UniqueItems = [
     lineNumber: 244
   },
   {
-    Name: 'GloomStrengthap',
+    name: 'GloomStrengthap',
     id: 244,
     version: 100,
     enabled: 1,
@@ -8757,7 +8757,7 @@ export const UniqueItems = [
     lineNumber: 245
   },
   {
-    Name: 'Snowclash',
+    name: 'Snowclash',
     id: 245,
     version: 100,
     enabled: 1,
@@ -8801,7 +8801,7 @@ export const UniqueItems = [
     lineNumber: 246
   },
   {
-    Name: "Thudergod's Vigor",
+    name: "Thudergod's Vigor",
     id: 246,
     version: 100,
     enabled: 1,
@@ -8846,7 +8846,7 @@ export const UniqueItems = [
     lineNumber: 247
   },
   {
-    Name: 'Harlequin Crest',
+    name: 'Harlequin Crest',
     id: 248,
     version: 100,
     enabled: 1,
@@ -8888,7 +8888,7 @@ export const UniqueItems = [
     lineNumber: 249
   },
   {
-    Name: 'Veil of Steel',
+    name: 'Veil of Steel',
     id: 249,
     version: 100,
     enabled: 1,
@@ -8926,7 +8926,7 @@ export const UniqueItems = [
     lineNumber: 250
   },
   {
-    Name: "The Gladiator's Bane",
+    name: "The Gladiator's Bane",
     id: 250,
     version: 100,
     enabled: 1,
@@ -8970,7 +8970,7 @@ export const UniqueItems = [
     lineNumber: 251
   },
   {
-    Name: "Arkaine's Valor",
+    name: "Arkaine's Valor",
     id: 251,
     version: 100,
     enabled: 1,
@@ -9001,7 +9001,7 @@ export const UniqueItems = [
     lineNumber: 252
   },
   {
-    Name: 'BlDefensekoak Shield',
+    name: 'BlDefensekoak Shield',
     id: 252,
     version: 100,
     enabled: 1,
@@ -9039,7 +9039,7 @@ export const UniqueItems = [
     lineNumber: 253
   },
   {
-    Name: 'Stormshield',
+    name: 'Stormshield',
     id: 253,
     version: 100,
     enabled: 1,
@@ -9081,7 +9081,7 @@ export const UniqueItems = [
     lineNumber: 254
   },
   {
-    Name: 'Hellslayer',
+    name: 'Hellslayer',
     id: 254,
     version: 100,
     enabled: 1,
@@ -9118,7 +9118,7 @@ export const UniqueItems = [
     lineNumber: 255
   },
   {
-    Name: "Messerschmidt's Reaver",
+    name: "Messerschmidt's Reaver",
     id: 255,
     version: 100,
     enabled: 1,
@@ -9162,7 +9162,7 @@ export const UniqueItems = [
     lineNumber: 256
   },
   {
-    Name: "Baranar's Star",
+    name: "Baranar's Star",
     id: 256,
     version: 100,
     enabled: 1,
@@ -9207,7 +9207,7 @@ export const UniqueItems = [
     lineNumber: 257
   },
   {
-    Name: "Schaefer's Hammer",
+    name: "Schaefer's Hammer",
     id: 257,
     version: 100,
     enabled: 1,
@@ -9253,7 +9253,7 @@ export const UniqueItems = [
     lineNumber: 258
   },
   {
-    Name: 'The Cranium Basher',
+    name: 'The Cranium Basher',
     id: 258,
     version: 100,
     enabled: 1,
@@ -9295,7 +9295,7 @@ export const UniqueItems = [
     lineNumber: 259
   },
   {
-    Name: 'Lightsabre',
+    name: 'Lightsabre',
     id: 259,
     version: 100,
     enabled: 1,
@@ -9344,7 +9344,7 @@ export const UniqueItems = [
     lineNumber: 260
   },
   {
-    Name: 'DoombRinger',
+    name: 'DoombRinger',
     id: 260,
     version: 100,
     enabled: 1,
@@ -9384,7 +9384,7 @@ export const UniqueItems = [
     lineNumber: 261
   },
   {
-    Name: 'The Grandfather',
+    name: 'The Grandfather',
     id: 261,
     version: 100,
     enabled: 1,
@@ -9428,7 +9428,7 @@ export const UniqueItems = [
     lineNumber: 262
   },
   {
-    Name: 'Wizardspike',
+    name: 'Wizardspike',
     id: 262,
     version: 100,
     enabled: 1,
@@ -9462,7 +9462,7 @@ export const UniqueItems = [
     lineNumber: 263
   },
   {
-    Name: 'ConStrengthicting Ring',
+    name: 'ConStrengthicting Ring',
     id: 263,
     version: 100,
     enabled: 0,
@@ -9492,7 +9492,7 @@ export const UniqueItems = [
     lineNumber: 264
   },
   {
-    Name: 'Stormspire',
+    name: 'Stormspire',
     id: 264,
     version: 100,
     enabled: 1,
@@ -9538,7 +9538,7 @@ export const UniqueItems = [
     lineNumber: 265
   },
   {
-    Name: 'Eaglehorn',
+    name: 'Eaglehorn',
     id: 265,
     version: 100,
     enabled: 1,
@@ -9571,7 +9571,7 @@ export const UniqueItems = [
     lineNumber: 266
   },
   {
-    Name: 'Windforce',
+    name: 'Windforce',
     id: 266,
     version: 100,
     enabled: 1,
@@ -9611,7 +9611,7 @@ export const UniqueItems = [
     lineNumber: 267
   },
   {
-    Name: "Bul Katho's Wedding Band",
+    name: "Bul Katho's Wedding Band",
     id: 268,
     version: 100,
     enabled: 1,
@@ -9639,7 +9639,7 @@ export const UniqueItems = [
     lineNumber: 269
   },
   {
-    Name: "The Cat's Eye",
+    name: "The Cat's Eye",
     id: 269,
     version: 100,
     enabled: 1,
@@ -9671,7 +9671,7 @@ export const UniqueItems = [
     lineNumber: 270
   },
   {
-    Name: 'The Rising Sun',
+    name: 'The Rising Sun',
     id: 270,
     version: 100,
     enabled: 1,
@@ -9706,7 +9706,7 @@ export const UniqueItems = [
     lineNumber: 271
   },
   {
-    Name: 'Crescent Moon',
+    name: 'Crescent Moon',
     id: 271,
     version: 100,
     enabled: 1,
@@ -9741,7 +9741,7 @@ export const UniqueItems = [
     lineNumber: 272
   },
   {
-    Name: "Mara's Kaleidoscope",
+    name: "Mara's Kaleidoscope",
     id: 272,
     version: 100,
     enabled: 1,
@@ -9776,7 +9776,7 @@ export const UniqueItems = [
     lineNumber: 273
   },
   {
-    Name: "Atma's Scarab",
+    name: "Atma's Scarab",
     id: 273,
     version: 100,
     enabled: 1,
@@ -9813,7 +9813,7 @@ export const UniqueItems = [
     lineNumber: 274
   },
   {
-    Name: 'Dwarf Star',
+    name: 'Dwarf Star',
     id: 274,
     version: 100,
     enabled: 1,
@@ -9848,7 +9848,7 @@ export const UniqueItems = [
     lineNumber: 275
   },
   {
-    Name: 'Raven Frost',
+    name: 'Raven Frost',
     id: 275,
     version: 100,
     enabled: 1,
@@ -9884,7 +9884,7 @@ export const UniqueItems = [
     lineNumber: 276
   },
   {
-    Name: "Highlord's Wrath",
+    name: "Highlord's Wrath",
     id: 276,
     version: 100,
     enabled: 1,
@@ -9918,7 +9918,7 @@ export const UniqueItems = [
     lineNumber: 277
   },
   {
-    Name: "SarDefenseen's Chance",
+    name: "SarDefenseen's Chance",
     id: 277,
     version: 100,
     enabled: 1,
@@ -9954,7 +9954,7 @@ export const UniqueItems = [
     lineNumber: 278
   },
   {
-    Name: "Arreat's FDefensee",
+    name: "Arreat's FDefensee",
     id: 279,
     version: 100,
     enabled: 1,
@@ -9997,7 +9997,7 @@ export const UniqueItems = [
     lineNumber: 280
   },
   {
-    Name: 'Homunculus',
+    name: 'Homunculus',
     id: 280,
     version: 100,
     enabled: 1,
@@ -10040,7 +10040,7 @@ export const UniqueItems = [
     lineNumber: 281
   },
   {
-    Name: "Titan's Revenge",
+    name: "Titan's Revenge",
     id: 281,
     version: 100,
     enabled: 1,
@@ -10085,7 +10085,7 @@ export const UniqueItems = [
     lineNumber: 282
   },
   {
-    Name: "Lycander's Aim",
+    name: "Lycander's Aim",
     id: 282,
     version: 100,
     enabled: 1,
@@ -10128,7 +10128,7 @@ export const UniqueItems = [
     lineNumber: 283
   },
   {
-    Name: "Lycander's Flank",
+    name: "Lycander's Flank",
     id: 283,
     version: 100,
     enabled: 1,
@@ -10171,7 +10171,7 @@ export const UniqueItems = [
     lineNumber: 284
   },
   {
-    Name: 'The Oculus',
+    name: 'The Oculus',
     id: 284,
     version: 100,
     enabled: 1,
@@ -10214,7 +10214,7 @@ export const UniqueItems = [
     lineNumber: 285
   },
   {
-    Name: 'Herald of Zakarum',
+    name: 'Herald of Zakarum',
     id: 285,
     version: 100,
     enabled: 1,
@@ -10257,7 +10257,7 @@ export const UniqueItems = [
     lineNumber: 286
   },
   {
-    Name: 'Cutthroat1',
+    name: 'Cutthroat1',
     id: 286,
     version: 100,
     enabled: 1,
@@ -10300,7 +10300,7 @@ export const UniqueItems = [
     lineNumber: 287
   },
   {
-    Name: "Jalal's Mane",
+    name: "Jalal's Mane",
     id: 287,
     version: 100,
     enabled: 1,
@@ -10343,7 +10343,7 @@ export const UniqueItems = [
     lineNumber: 288
   },
   {
-    Name: 'The Scalper',
+    name: 'The Scalper',
     id: 288,
     version: 100,
     enabled: 1,
@@ -10378,7 +10378,7 @@ export const UniqueItems = [
     lineNumber: 289
   },
   {
-    Name: 'Bloodmoon',
+    name: 'Bloodmoon',
     id: 289,
     version: 100,
     enabled: 1,
@@ -10412,7 +10412,7 @@ export const UniqueItems = [
     lineNumber: 290
   },
   {
-    Name: 'Djinnslayer',
+    name: 'Djinnslayer',
     id: 290,
     version: 100,
     enabled: 1,
@@ -10451,7 +10451,7 @@ export const UniqueItems = [
     lineNumber: 291
   },
   {
-    Name: 'Deathbit',
+    name: 'Deathbit',
     id: 291,
     version: 100,
     enabled: 1,
@@ -10483,7 +10483,7 @@ export const UniqueItems = [
     lineNumber: 292
   },
   {
-    Name: 'Warshrike',
+    name: 'Warshrike',
     id: 292,
     version: 100,
     enabled: 1,
@@ -10519,7 +10519,7 @@ export const UniqueItems = [
     lineNumber: 293
   },
   {
-    Name: 'Gutsiphon',
+    name: 'Gutsiphon',
     id: 293,
     version: 100,
     enabled: 1,
@@ -10552,7 +10552,7 @@ export const UniqueItems = [
     lineNumber: 294
   },
   {
-    Name: 'Razoredge',
+    name: 'Razoredge',
     id: 294,
     version: 100,
     enabled: 1,
@@ -10584,7 +10584,7 @@ export const UniqueItems = [
     lineNumber: 295
   },
   {
-    Name: 'Gore Ripper',
+    name: 'Gore Ripper',
     id: 295,
     version: 100,
     rarity: 1,
@@ -10596,7 +10596,7 @@ export const UniqueItems = [
     lineNumber: 296
   },
   {
-    Name: 'Demonlimb',
+    name: 'Demonlimb',
     id: 296,
     version: 100,
     enabled: 1,
@@ -10635,7 +10635,7 @@ export const UniqueItems = [
     lineNumber: 297
   },
   {
-    Name: 'Steelshade',
+    name: 'Steelshade',
     id: 297,
     version: 100,
     enabled: 1,
@@ -10665,7 +10665,7 @@ export const UniqueItems = [
     lineNumber: 298
   },
   {
-    Name: 'Tomb Reaver',
+    name: 'Tomb Reaver',
     id: 298,
     version: 100,
     enabled: 1,
@@ -10713,7 +10713,7 @@ export const UniqueItems = [
     lineNumber: 299
   },
   {
-    Name: "Death's Web",
+    name: "Death's Web",
     id: 299,
     version: 100,
     enabled: 1,
@@ -10746,7 +10746,7 @@ export const UniqueItems = [
     lineNumber: 300
   },
   {
-    Name: "Nature's PeDefensee",
+    name: "Nature's PeDefensee",
     id: 300,
     version: 100,
     enabled: 1,
@@ -10779,7 +10779,7 @@ export const UniqueItems = [
     lineNumber: 301
   },
   {
-    Name: 'Azurewrath',
+    name: 'Azurewrath',
     id: 301,
     version: 100,
     enabled: 1,
@@ -10822,7 +10822,7 @@ export const UniqueItems = [
     lineNumber: 302
   },
   {
-    Name: "Seraph's Hymn",
+    name: "Seraph's Hymn",
     id: 302,
     version: 100,
     enabled: 1,
@@ -10862,7 +10862,7 @@ export const UniqueItems = [
     lineNumber: 303
   },
   {
-    Name: "Zakarum's Salvation",
+    name: "Zakarum's Salvation",
     id: 303,
     version: 100,
     rarity: 1,
@@ -10872,7 +10872,7 @@ export const UniqueItems = [
     lineNumber: 304
   },
   {
-    Name: 'Fleshripper',
+    name: 'Fleshripper',
     id: 304,
     version: 100,
     enabled: 1,
@@ -10911,7 +10911,7 @@ export const UniqueItems = [
     lineNumber: 305
   },
   {
-    Name: 'Odium',
+    name: 'Odium',
     id: 305,
     version: 100,
     rarity: 1,
@@ -10922,7 +10922,7 @@ export const UniqueItems = [
     lineNumber: 306
   },
   {
-    Name: "Horizon's Tornado",
+    name: "Horizon's Tornado",
     id: 306,
     version: 100,
     enabled: 1,
@@ -10955,7 +10955,7 @@ export const UniqueItems = [
     lineNumber: 307
   },
   {
-    Name: 'Stone Crusher',
+    name: 'Stone Crusher',
     id: 307,
     version: 100,
     enabled: 1,
@@ -10989,7 +10989,7 @@ export const UniqueItems = [
     lineNumber: 308
   },
   {
-    Name: 'Jadetalon',
+    name: 'Jadetalon',
     id: 308,
     version: 100,
     enabled: 1,
@@ -11026,7 +11026,7 @@ export const UniqueItems = [
     lineNumber: 309
   },
   {
-    Name: 'Shadowdancer',
+    name: 'Shadowdancer',
     id: 309,
     version: 100,
     enabled: 1,
@@ -11062,7 +11062,7 @@ export const UniqueItems = [
     lineNumber: 310
   },
   {
-    Name: 'Cerebus',
+    name: 'Cerebus',
     id: 310,
     version: 100,
     enabled: 1,
@@ -11099,7 +11099,7 @@ export const UniqueItems = [
     lineNumber: 311
   },
   {
-    Name: "Tyrael's Might",
+    name: "Tyrael's Might",
     id: 311,
     version: 100,
     enabled: 1,
@@ -11144,7 +11144,7 @@ export const UniqueItems = [
     lineNumber: 312
   },
   {
-    Name: 'Souldrain',
+    name: 'Souldrain',
     id: 312,
     version: 100,
     enabled: 1,
@@ -11177,7 +11177,7 @@ export const UniqueItems = [
     lineNumber: 313
   },
   {
-    Name: 'Runemaster',
+    name: 'Runemaster',
     id: 313,
     version: 100,
     enabled: 1,
@@ -11206,7 +11206,7 @@ export const UniqueItems = [
     lineNumber: 314
   },
   {
-    Name: 'Deathcleaver',
+    name: 'Deathcleaver',
     id: 314,
     version: 100,
     enabled: 1,
@@ -11237,7 +11237,7 @@ export const UniqueItems = [
     lineNumber: 315
   },
   {
-    Name: "Executioner's Justice",
+    name: "Executioner's Justice",
     id: 315,
     version: 100,
     enabled: 1,
@@ -11270,7 +11270,7 @@ export const UniqueItems = [
     lineNumber: 316
   },
   {
-    Name: 'Stoneraven',
+    name: 'Stoneraven',
     id: 316,
     version: 100,
     enabled: 1,
@@ -11302,7 +11302,7 @@ export const UniqueItems = [
     lineNumber: 317
   },
   {
-    Name: 'Leviathan',
+    name: 'Leviathan',
     id: 317,
     version: 100,
     enabled: 1,
@@ -11334,7 +11334,7 @@ export const UniqueItems = [
     lineNumber: 318
   },
   {
-    Name: "Larzuk's Champion",
+    name: "Larzuk's Champion",
     id: 318,
     version: 100,
     rarity: 1,
@@ -11347,7 +11347,7 @@ export const UniqueItems = [
     lineNumber: 319
   },
   {
-    Name: 'Wisp Projector',
+    name: 'Wisp Projector',
     id: 319,
     version: 100,
     enabled: 1,
@@ -11386,7 +11386,7 @@ export const UniqueItems = [
     lineNumber: 320
   },
   {
-    Name: "Gargoyle's Bite",
+    name: "Gargoyle's Bite",
     id: 320,
     version: 100,
     enabled: 1,
@@ -11419,7 +11419,7 @@ export const UniqueItems = [
     lineNumber: 321
   },
   {
-    Name: 'LDefenseerator',
+    name: 'LDefenseerator',
     id: 321,
     version: 100,
     enabled: 1,
@@ -11457,7 +11457,7 @@ export const UniqueItems = [
     lineNumber: 322
   },
   {
-    Name: "Mang Song's Lesson",
+    name: "Mang Song's Lesson",
     id: 322,
     version: 100,
     enabled: 1,
@@ -11493,7 +11493,7 @@ export const UniqueItems = [
     lineNumber: 323
   },
   {
-    Name: 'Viperfork',
+    name: 'Viperfork',
     id: 323,
     version: 100,
     enabled: 1,
@@ -11530,7 +11530,7 @@ export const UniqueItems = [
     lineNumber: 324
   },
   {
-    Name: 'Ethereal Edge',
+    name: 'Ethereal Edge',
     id: 324,
     version: 100,
     enabled: 1,
@@ -11571,7 +11571,7 @@ export const UniqueItems = [
     lineNumber: 325
   },
   {
-    Name: "Demonhorn's Edge",
+    name: "Demonhorn's Edge",
     id: 325,
     version: 100,
     enabled: 1,
@@ -11612,7 +11612,7 @@ export const UniqueItems = [
     lineNumber: 326
   },
   {
-    Name: "The Reaper's Toll",
+    name: "The Reaper's Toll",
     id: 326,
     version: 100,
     enabled: 1,
@@ -11650,7 +11650,7 @@ export const UniqueItems = [
     lineNumber: 327
   },
   {
-    Name: 'Spiritkeeper',
+    name: 'Spiritkeeper',
     id: 327,
     version: 100,
     enabled: 1,
@@ -11686,7 +11686,7 @@ export const UniqueItems = [
     lineNumber: 328
   },
   {
-    Name: 'HellrDefensek',
+    name: 'HellrDefensek',
     id: 328,
     version: 100,
     enabled: 1,
@@ -11723,7 +11723,7 @@ export const UniqueItems = [
     lineNumber: 329
   },
   {
-    Name: 'Alma Negra',
+    name: 'Alma Negra',
     id: 329,
     version: 100,
     enabled: 1,
@@ -11761,7 +11761,7 @@ export const UniqueItems = [
     lineNumber: 330
   },
   {
-    Name: 'Darkforge Spawn',
+    name: 'Darkforge Spawn',
     id: 330,
     version: 100,
     enabled: 1,
@@ -11799,7 +11799,7 @@ export const UniqueItems = [
     lineNumber: 331
   },
   {
-    Name: 'Widowmaker',
+    name: 'Widowmaker',
     id: 331,
     version: 100,
     enabled: 1,
@@ -11833,7 +11833,7 @@ export const UniqueItems = [
     lineNumber: 332
   },
   {
-    Name: "Bloodraven's Charge",
+    name: "Bloodraven's Charge",
     id: 332,
     version: 100,
     enabled: 1,
@@ -11868,7 +11868,7 @@ export const UniqueItems = [
     lineNumber: 333
   },
   {
-    Name: 'Ghostflame',
+    name: 'Ghostflame',
     id: 333,
     version: 100,
     enabled: 1,
@@ -11906,7 +11906,7 @@ export const UniqueItems = [
     lineNumber: 334
   },
   {
-    Name: 'Shadowkiller',
+    name: 'Shadowkiller',
     id: 334,
     version: 100,
     enabled: 1,
@@ -11944,7 +11944,7 @@ export const UniqueItems = [
     lineNumber: 335
   },
   {
-    Name: 'Gimmershred',
+    name: 'Gimmershred',
     id: 335,
     version: 100,
     enabled: 1,
@@ -11979,7 +11979,7 @@ export const UniqueItems = [
     lineNumber: 336
   },
   {
-    Name: "Griffon's Eye",
+    name: "Griffon's Eye",
     id: 336,
     version: 100,
     enabled: 1,
@@ -12009,7 +12009,7 @@ export const UniqueItems = [
     lineNumber: 337
   },
   {
-    Name: 'Windhammer',
+    name: 'Windhammer',
     id: 337,
     version: 100,
     enabled: 1,
@@ -12040,7 +12040,7 @@ export const UniqueItems = [
     lineNumber: 338
   },
   {
-    Name: 'ThunderStrengthoke',
+    name: 'ThunderStrengthoke',
     id: 338,
     version: 100,
     enabled: 1,
@@ -12081,7 +12081,7 @@ export const UniqueItems = [
     lineNumber: 339
   },
   {
-    Name: 'Giantmaimer',
+    name: 'Giantmaimer',
     id: 339,
     version: 100,
     rarity: 1,
@@ -12093,7 +12093,7 @@ export const UniqueItems = [
     lineNumber: 340
   },
   {
-    Name: "Demon's Arch",
+    name: "Demon's Arch",
     id: 340,
     version: 100,
     enabled: 1,
@@ -12127,7 +12127,7 @@ export const UniqueItems = [
     lineNumber: 341
   },
   {
-    Name: 'Boneflame',
+    name: 'Boneflame',
     id: 341,
     version: 100,
     enabled: 1,
@@ -12160,7 +12160,7 @@ export const UniqueItems = [
     lineNumber: 342
   },
   {
-    Name: 'Steelpillar',
+    name: 'Steelpillar',
     id: 342,
     version: 100,
     enabled: 1,
@@ -12193,7 +12193,7 @@ export const UniqueItems = [
     lineNumber: 343
   },
   {
-    Name: "Nightwing's Veil",
+    name: "Nightwing's Veil",
     id: 343,
     version: 100,
     enabled: 1,
@@ -12231,7 +12231,7 @@ export const UniqueItems = [
     lineNumber: 344
   },
   {
-    Name: 'Crown of Ages',
+    name: 'Crown of Ages',
     id: 344,
     version: 100,
     enabled: 1,
@@ -12272,7 +12272,7 @@ export const UniqueItems = [
     lineNumber: 345
   },
   {
-    Name: "Andariel's Visage",
+    name: "Andariel's Visage",
     id: 345,
     version: 100,
     enabled: 1,
@@ -12321,7 +12321,7 @@ export const UniqueItems = [
     lineNumber: 346
   },
   {
-    Name: 'Darkfear',
+    name: 'Darkfear',
     id: 346,
     version: 100,
     rarity: 1,
@@ -12335,7 +12335,7 @@ export const UniqueItems = [
     lineNumber: 347
   },
   {
-    Name: 'Dragonscale',
+    name: 'Dragonscale',
     id: 347,
     version: 100,
     enabled: 1,
@@ -12374,7 +12374,7 @@ export const UniqueItems = [
     lineNumber: 348
   },
   {
-    Name: 'Steel Carapice',
+    name: 'Steel Carapice',
     id: 348,
     version: 100,
     enabled: 1,
@@ -12412,7 +12412,7 @@ export const UniqueItems = [
     lineNumber: 349
   },
   {
-    Name: "Medusa's Gaze",
+    name: "Medusa's Gaze",
     id: 349,
     version: 100,
     enabled: 1,
@@ -12450,7 +12450,7 @@ export const UniqueItems = [
     lineNumber: 350
   },
   {
-    Name: 'Ravenlore',
+    name: 'Ravenlore',
     id: 350,
     version: 100,
     enabled: 1,
@@ -12487,7 +12487,7 @@ export const UniqueItems = [
     lineNumber: 351
   },
   {
-    Name: 'Boneshade',
+    name: 'Boneshade',
     id: 351,
     version: 100,
     enabled: 1,
@@ -12531,7 +12531,7 @@ export const UniqueItems = [
     lineNumber: 352
   },
   {
-    Name: 'Nethercrow',
+    name: 'Nethercrow',
     id: 352,
     version: 100,
     rarity: 1,
@@ -12543,7 +12543,7 @@ export const UniqueItems = [
     lineNumber: 353
   },
   {
-    Name: 'Flamebellow',
+    name: 'Flamebellow',
     id: 353,
     version: 100,
     enabled: 1,
@@ -12587,7 +12587,7 @@ export const UniqueItems = [
     lineNumber: 354
   },
   {
-    Name: 'Fathom',
+    name: 'Fathom',
     id: 354,
     version: 100,
     enabled: 1,
@@ -12618,7 +12618,7 @@ export const UniqueItems = [
     lineNumber: 355
   },
   {
-    Name: 'Wolfhowl',
+    name: 'Wolfhowl',
     id: 355,
     version: 100,
     enabled: 1,
@@ -12667,7 +12667,7 @@ export const UniqueItems = [
     lineNumber: 356
   },
   {
-    Name: 'Spirit Ward',
+    name: 'Spirit Ward',
     id: 356,
     version: 100,
     enabled: 1,
@@ -12704,7 +12704,7 @@ export const UniqueItems = [
     lineNumber: 357
   },
   {
-    Name: "Kira's Guardian",
+    name: "Kira's Guardian",
     id: 357,
     version: 100,
     enabled: 1,
@@ -12733,7 +12733,7 @@ export const UniqueItems = [
     lineNumber: 358
   },
   {
-    Name: "Ormus' Robes",
+    name: "Ormus' Robes",
     id: 358,
     version: 100,
     enabled: 1,
@@ -12772,7 +12772,7 @@ export const UniqueItems = [
     lineNumber: 359
   },
   {
-    Name: "Gheed's Fortune",
+    name: "Gheed's Fortune",
     id: 359,
     version: 100,
     enabled: 1,
@@ -12798,7 +12798,7 @@ export const UniqueItems = [
     lineNumber: 360
   },
   {
-    Name: 'Stormlash',
+    name: 'Stormlash',
     id: 360,
     version: 100,
     enabled: 1,
@@ -12841,7 +12841,7 @@ export const UniqueItems = [
     lineNumber: 361
   },
   {
-    Name: "Halaberd's Reign",
+    name: "Halaberd's Reign",
     id: 361,
     version: 100,
     enabled: 1,
@@ -12880,7 +12880,7 @@ export const UniqueItems = [
     lineNumber: 362
   },
   {
-    Name: "Warriv's Warder",
+    name: "Warriv's Warder",
     id: 362,
     version: 100,
     rarity: 1,
@@ -12890,7 +12890,7 @@ export const UniqueItems = [
     lineNumber: 363
   },
   {
-    Name: 'Spike Thorn',
+    name: 'Spike Thorn',
     id: 363,
     version: 100,
     enabled: 1,
@@ -12925,7 +12925,7 @@ export const UniqueItems = [
     lineNumber: 364
   },
   {
-    Name: "DrDefenseul's Grasp",
+    name: "DrDefenseul's Grasp",
     id: 364,
     version: 100,
     enabled: 1,
@@ -12961,7 +12961,7 @@ export const UniqueItems = [
     lineNumber: 365
   },
   {
-    Name: 'Frostwind',
+    name: 'Frostwind',
     id: 365,
     version: 100,
     enabled: 1,
@@ -13002,7 +13002,7 @@ export const UniqueItems = [
     lineNumber: 366
   },
   {
-    Name: "Templar's Might",
+    name: "Templar's Might",
     id: 366,
     version: 100,
     enabled: 1,
@@ -13042,7 +13042,7 @@ export const UniqueItems = [
     lineNumber: 367
   },
   {
-    Name: "Eschuta's Temper",
+    name: "Eschuta's Temper",
     id: 367,
     version: 100,
     enabled: 1,
@@ -13073,7 +13073,7 @@ export const UniqueItems = [
     lineNumber: 368
   },
   {
-    Name: "Firelizard's Talons",
+    name: "Firelizard's Talons",
     id: 368,
     version: 100,
     enabled: 1,
@@ -13112,7 +13112,7 @@ export const UniqueItems = [
     lineNumber: 369
   },
   {
-    Name: 'Sandstorm Trek',
+    name: 'Sandstorm Trek',
     id: 369,
     version: 100,
     enabled: 1,
@@ -13152,7 +13152,7 @@ export const UniqueItems = [
     lineNumber: 370
   },
   {
-    Name: 'Marrowwalk',
+    name: 'Marrowwalk',
     id: 370,
     version: 100,
     enabled: 1,
@@ -13201,7 +13201,7 @@ export const UniqueItems = [
     lineNumber: 371
   },
   {
-    Name: "Heaven's Light",
+    name: "Heaven's Light",
     id: 371,
     version: 100,
     enabled: 1,
@@ -13242,14 +13242,14 @@ export const UniqueItems = [
     lineNumber: 372
   },
   {
-    Name: "Merman's Speed",
+    name: "Merman's Speed",
     id: 372,
     version: 100,
     expansion: 1,
     lineNumber: 373
   },
   {
-    Name: 'Arachnid Mesh',
+    name: 'Arachnid Mesh',
     id: 373,
     version: 100,
     enabled: 1,
@@ -13285,7 +13285,7 @@ export const UniqueItems = [
     lineNumber: 374
   },
   {
-    Name: "Nosferatu's Coil",
+    name: "Nosferatu's Coil",
     id: 374,
     version: 100,
     enabled: 1,
@@ -13318,7 +13318,7 @@ export const UniqueItems = [
     lineNumber: 375
   },
   {
-    Name: 'Metalgrid',
+    name: 'Metalgrid',
     id: 375,
     version: 100,
     enabled: 1,
@@ -13350,7 +13350,7 @@ export const UniqueItems = [
     lineNumber: 376
   },
   {
-    Name: "Verdugo's Hearty Cord",
+    name: "Verdugo's Hearty Cord",
     id: 376,
     version: 100,
     enabled: 1,
@@ -13385,7 +13385,7 @@ export const UniqueItems = [
     lineNumber: 377
   },
   {
-    Name: "Sigurd's Staunch",
+    name: "Sigurd's Staunch",
     id: 377,
     version: 100,
     rarity: 1,
@@ -13395,7 +13395,7 @@ export const UniqueItems = [
     lineNumber: 378
   },
   {
-    Name: 'Carrion Wind',
+    name: 'Carrion Wind',
     id: 378,
     version: 100,
     enabled: 1,
@@ -13434,7 +13434,7 @@ export const UniqueItems = [
     lineNumber: 379
   },
   {
-    Name: 'Giantskull',
+    name: 'Giantskull',
     id: 379,
     version: 100,
     enabled: 1,
@@ -13467,7 +13467,7 @@ export const UniqueItems = [
     lineNumber: 380
   },
   {
-    Name: 'Ironward',
+    name: 'Ironward',
     id: 380,
     version: 100,
     enabled: 1,
@@ -13512,7 +13512,7 @@ export const UniqueItems = [
     lineNumber: 381
   },
   {
-    Name: 'Annihilus',
+    name: 'Annihilus',
     id: 381,
     version: 100,
     enabled: 1,
@@ -13545,7 +13545,7 @@ export const UniqueItems = [
     lineNumber: 382
   },
   {
-    Name: "Arioc's Needle",
+    name: "Arioc's Needle",
     id: 382,
     version: 100,
     enabled: 1,
@@ -13579,7 +13579,7 @@ export const UniqueItems = [
     lineNumber: 383
   },
   {
-    Name: 'Cranebeak',
+    name: 'Cranebeak',
     id: 383,
     version: 100,
     enabled: 1,
@@ -13615,7 +13615,7 @@ export const UniqueItems = [
     lineNumber: 384
   },
   {
-    Name: "Nord's Tenderizer",
+    name: "Nord's Tenderizer",
     id: 384,
     version: 100,
     enabled: 1,
@@ -13654,7 +13654,7 @@ export const UniqueItems = [
     lineNumber: 385
   },
   {
-    Name: 'Earthshifter',
+    name: 'Earthshifter',
     id: 385,
     version: 100,
     enabled: 1,
@@ -13693,7 +13693,7 @@ export const UniqueItems = [
     lineNumber: 386
   },
   {
-    Name: 'Wraithflight',
+    name: 'Wraithflight',
     id: 386,
     version: 100,
     enabled: 1,
@@ -13724,7 +13724,7 @@ export const UniqueItems = [
     lineNumber: 387
   },
   {
-    Name: 'Bonehew',
+    name: 'Bonehew',
     id: 387,
     version: 100,
     enabled: 1,
@@ -13761,7 +13761,7 @@ export const UniqueItems = [
     lineNumber: 388
   },
   {
-    Name: "Ondal's Wisdom",
+    name: "Ondal's Wisdom",
     id: 388,
     version: 100,
     enabled: 1,
@@ -13795,7 +13795,7 @@ export const UniqueItems = [
     lineNumber: 389
   },
   {
-    Name: 'The Reedeemer',
+    name: 'The Reedeemer',
     id: 389,
     version: 100,
     enabled: 1,
@@ -13839,7 +13839,7 @@ export const UniqueItems = [
     lineNumber: 390
   },
   {
-    Name: "Headhunter's Glory",
+    name: "Headhunter's Glory",
     id: 390,
     version: 100,
     enabled: 1,
@@ -13873,7 +13873,7 @@ export const UniqueItems = [
     lineNumber: 391
   },
   {
-    Name: 'Steelrend',
+    name: 'Steelrend',
     id: 391,
     version: 100,
     enabled: 1,
@@ -13900,7 +13900,7 @@ export const UniqueItems = [
     lineNumber: 392
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 392,
     version: 100,
     enabled: 1,
@@ -13928,7 +13928,7 @@ export const UniqueItems = [
     lineNumber: 393
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 393,
     version: 100,
     enabled: 1,
@@ -13957,7 +13957,7 @@ export const UniqueItems = [
     lineNumber: 394
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 394,
     version: 100,
     enabled: 1,
@@ -13985,7 +13985,7 @@ export const UniqueItems = [
     lineNumber: 395
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 395,
     version: 100,
     enabled: 1,
@@ -14014,7 +14014,7 @@ export const UniqueItems = [
     lineNumber: 396
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 396,
     version: 100,
     enabled: 1,
@@ -14042,7 +14042,7 @@ export const UniqueItems = [
     lineNumber: 397
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 397,
     version: 100,
     enabled: 1,
@@ -14071,7 +14071,7 @@ export const UniqueItems = [
     lineNumber: 398
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 398,
     version: 100,
     enabled: 1,
@@ -14099,7 +14099,7 @@ export const UniqueItems = [
     lineNumber: 399
   },
   {
-    Name: 'Rainbow Facet',
+    name: 'Rainbow Facet',
     id: 399,
     version: 100,
     enabled: 1,
@@ -14128,7 +14128,7 @@ export const UniqueItems = [
     lineNumber: 400
   },
   {
-    Name: 'Hellfire Torch',
+    name: 'Hellfire Torch',
     id: 400,
     version: 100,
     enabled: 1,

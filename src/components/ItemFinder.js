@@ -1,9 +1,6 @@
 import React, { useMemo, useState } from 'react'
 
-import { Runewords } from '../data/Runewords'
-import { UniqueItems } from '../data/UniqueItems'
-
-export default function ItemFinder() {
+export default function ItemFinder({ UniqueItems, Runewords, SetItems }) {
   const [search, setSearch] = useState('')
 
   const Runeword = props => (
@@ -99,7 +96,7 @@ export default function ItemFinder() {
 
   const UniqueItem = props => (
     <div className='unique-item-container'>
-      <div className='unique-item-name'>{props.Name}</div>
+      <div className='unique-item-name'>{props.name}</div>
       <div className='unique-item-base'>{props.itemBase}</div>
       {props.min1 !== props.max1 && props.min1 < props.max1 && (
         <div>
@@ -203,12 +200,14 @@ export default function ItemFinder() {
     </div>
   )
 
+  const SetItem = props => <div className='set-item-container'></div>
+
   const filteredRunewords = Runewords.filter(runeword =>
     runeword.Name.toLowerCase().includes(search.toLowerCase())
   )
 
   const filteredUniqueItemsByName = UniqueItems.filter(uniqueItem =>
-    uniqueItem.Name.toLowerCase().includes(search.toLowerCase())
+    uniqueItem.name.toLowerCase().includes(search.toLowerCase())
   )
 
   return (
