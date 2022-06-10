@@ -44,11 +44,10 @@ export default function ItemFinder() {
 
   const Runeword = props => (
     <div>
-      <div className='runeword'>
-        <h3>{props.Name}</h3>
-        {props.T1Min1 !== props.T1Max1 &&
-          props.T1Min1 < props.T1Max1 &&
-          props.T1Code1 !== 'oskill' && (
+      {props.T1Code1 && (
+        <div className='runeword'>
+          <h3>{props.Name}</h3>
+          {props.T1Min1 !== props.T1Max1 && props.T1Min1 < props.T1Max1 && (
             <div>
               <div>{<p>{props.T1Code1}</p>}</div>
               <div>{props.T1Param1 && <p>{props.T1Param1}</p>}</div>
@@ -56,60 +55,50 @@ export default function ItemFinder() {
               <span style={{ color: 'green' }}>{props.T1Max1}</span>
             </div>
           )}
-        {
-          <div>
-            <div>{<p>{props.T1Code2}</p>}</div>
-            <div>{props.T1Param2 && <p>{props.T1Param2}</p>}</div>
-            <span style={{ color: 'red' }}>{props.T1Min2}</span> -{' '}
-            <span style={{ color: 'green' }}>{props.T1Max2}</span>
-          </div>
-        }
-        {props.T1Min3 !== props.T1Max3 &&
-          props.T1Min3 < props.T1Max3 &&
-          props.T1Code3 !== 'oskill' &&
-          props.T1Code3 !== 'hit-skill' &&
-          props.T1Code3 !== 'death-skill' &&
-          props.T1Code3 !== 'att-skill' && (
+          {props.T1Min2 !== props.T1Max2 && props.T1Min2 < props.T1Max2 && (
             <div>
-              <div>{<p>{props.T1Code3}</p>}</div>
+              <div>{<p>{props.T1Code2}</p>}</div>
+              <div>{props.T1Param2 && <p>{props.T1Param2}</p>}</div>
+              <span style={{ color: 'red' }}>{props.T1Min2}</span> -{' '}
+              <span style={{ color: 'green' }}>{props.T1Max2}</span>
+            </div>
+          )}
+          {props.T1Min3 !== props.T1Max3 && props.T1Min3 < props.T1Max3 && (
+            <div>
+              {props.T1Code3 !== 'oskill' && <p>{props.T1Code3}</p>}
               <div>{props.T1Param3 && <p>{props.T1Param3}</p>}</div>
               <span style={{ color: 'red' }}>{props.T1Min3}</span> -{' '}
               <span style={{ color: 'green' }}>{props.T1Max3}</span>
             </div>
           )}
-        {props.T1Min4 !== props.T1Max4 &&
-          props.T1Min4 < props.T1Max4 &&
-          props.T1Code4 !== 'oskill' &&
-          props.T1Code4 !== 'hit-skill' &&
-          props.T1Code4 !== 'death-skill' && (
+          {props.T1Min4 !== props.T1Max4 && props.T1Min4 < props.T1Max4 && (
             <div>
-              <div>{<p>{props.T1Code4}</p>}</div>
+              {props.T1Code4 !== 'oskill' && <p>{props.T1Code4}</p>}
               <div>{props.T1Param4 && <p>{props.T1Param4}</p>}</div>
               <span style={{ color: 'red' }}>{props.T1Min4}</span> -{' '}
               <span style={{ color: 'green' }}>{props.T1Max4}</span>
             </div>
           )}
-        {props.T1Min5 !== props.T1Max5 &&
-          props.T1Min5 < props.T1Max5 &&
-          props.T1Code5 !== 'oskill' && (
+          {props.T1Min5 !== props.T1Max5 && props.T1Min5 < props.T1Max5 && (
             <div>
-              {<p>{props.T1Code5}</p>}
+              {props.T1Code5 !== 'oskill' && <p>{props.T1Code5}</p>}
               <div>{props.T1Param5 && <p>{props.T1Param5}</p>}</div>
               <span style={{ color: 'red' }}>{props.T1Min5}</span> -{' '}
               <span style={{ color: 'green' }}>{props.T1Max5}</span>
             </div>
           )}
-        {props.T1Min6 !== props.T1Max6 &&
-          props.T1Min6 < props.T1Max6 &&
-          props.T1Code6 !== 'oskill' && (
+          {props.T1Min6 !== props.T1Max6 && props.T1Min6 < props.T1Max6 && (
             <div>
-              {<p>{props.T1Code6}</p>}
+              {props.T1Code6 !== 'oskill' && props.T1Code6 !== 'aura' && (
+                <p>{props.T1Code6}</p>
+              )}
               <div>{props.T1Param6 && <p>{props.T1Param6}</p>}</div>
               <span style={{ color: 'red' }}>{props.T1Min6}</span> -{' '}
               <span style={{ color: 'green' }}>{props.T1Max6}</span>
             </div>
           )}
-      </div>
+        </div>
+      )}
     </div>
   )
 
@@ -125,9 +114,7 @@ export default function ItemFinder() {
         onChange={e => setSearch(e.target.value)}
       />
       {search === ''
-        ? Runewords.map(runeword => {
-            return <Runeword key={runeword.id} {...runeword} />
-          })
+        ? null
         : filteredRunewords.map(runeword => {
             return <Runeword key={runeword.id} {...runeword} />
           })}
