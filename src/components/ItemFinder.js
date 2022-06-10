@@ -184,7 +184,7 @@ export default function ItemFinder() {
           <span style={{ color: 'green' }}>{props.max4}</span>
         </div>
       )}
-      {props.min5 !== props.max4 && props.min5 < props.max5 && (
+      {props.min5 !== props.max5 && props.min5 < props.max5 && (
         <div>
           {props.prop5 !== 'oskill' &&
             props.prop5 !== 'hit-skill' &&
