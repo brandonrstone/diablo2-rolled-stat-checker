@@ -6,6 +6,7 @@
 }
 
 .runeword-container {
+  font-family: 'Roboto';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,6 +43,7 @@
 }
 
 .unique-item-container {
+  font-family: 'Roboto';
   display: flex;
   flex-direction: column;
   justify-content: center;

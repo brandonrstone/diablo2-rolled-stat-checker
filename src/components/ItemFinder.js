@@ -178,6 +178,28 @@ export default function ItemFinder() {
           <span className='unique-item-max-roll'>{props.max7}</span>
         </div>
       )}
+      {props.min8 !== props.max8 && props.min8 < props.max8 && (
+        <div>
+          {props.prop8 !== 'oskill' &&
+            props.prop8 !== 'hit-skill' &&
+            props.prop8 !== 'gethit-skill' &&
+            props.prop8 !== 'charged' && <span>{props.prop8}</span>}
+          <div></div>
+          <span className='unique-item-min-roll'>{props.min8}</span> -{' '}
+          <span className='unique-item-max-roll'>{props.max8}</span>
+        </div>
+      )}
+      {props.min9 !== props.max9 && props.min9 < props.max9 && (
+        <div>
+          {props.prop9 !== 'oskill' &&
+            props.prop9 !== 'hit-skill' &&
+            props.prop9 !== 'gethit-skill' &&
+            props.prop9 !== 'charged' && <span>{props.prop9}</span>}
+          <div></div>
+          <span className='unique-item-min-roll'>{props.min9}</span> -{' '}
+          <span className='unique-item-max-roll'>{props.max9}</span>
+        </div>
+      )}
     </div>
   )
 
