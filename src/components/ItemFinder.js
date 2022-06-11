@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
   const [search, setSearch] = useState('')
@@ -306,16 +306,28 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
     </div>
   )
 
-  const filteredRunewords = Runewords.filter(runeword =>
-    runeword.Name.toLowerCase().includes(search.toLowerCase())
+  const filteredUniqueItems = useMemo(
+    () =>
+      UniqueItems.filter(uniqueItem =>
+        uniqueItem.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    [search, UniqueItems]
   )
 
-  const filteredUniqueItemsByName = UniqueItems.filter(uniqueItem =>
-    uniqueItem.name.toLowerCase().includes(search.toLowerCase())
+  const filteredSetItems = useMemo(
+    () =>
+      SetItems.filter(setItem =>
+        setItem.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    [search, SetItems]
   )
 
-  const filteredSetItems = SetItems.filter(setItem =>
-    setItem.name.toLowerCase().includes(search.toLowerCase())
+  const filteredRunewords = useMemo(
+    () =>
+      Runewords.filter(runeword =>
+        runeword.Name.toLowerCase().includes(search.toLowerCase())
+      ),
+    [search, Runewords]
   )
 
   return (
@@ -343,7 +355,7 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
             })}
         {search === ''
           ? null
-          : filteredUniqueItemsByName.map(uniqueItem => {
+          : filteredUniqueItems.map(uniqueItem => {
               return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
             })}
         {search === ''
