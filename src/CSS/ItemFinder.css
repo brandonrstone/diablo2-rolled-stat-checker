@@ -24,15 +24,15 @@
 
 .app-name-text {
   color: rgb(201, 175, 111);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-family: 'Roboto';
 }
 
 .itemlist-container {
   height: 77.5vh;
   overflow: scroll;
-  margin-top: 5px;
-  padding: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .runeword-container {
