@@ -18,6 +18,9 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
       >
         {props.itemBase}
       </div>
+      <div className='item-requirements'>
+        Required Level: {props.requiredLevel}
+      </div>
       {props.min1 !== props.max1 && props.min1 < props.max1 && (
         <div>
           {props.prop1 !== 'oskill' &&
@@ -124,6 +127,9 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
     <div className='set-item-container'>
       <div className='set-item-name'>{props.name}</div>
       <div className='item-base'>{props.itemBase}</div>
+      <div className='item-requirements'>
+        Required Level: {props.requiredLevel}
+      </div>
       {props.min1 !== props.max1 && props.min1 < props.max1 && (
         <div>
           {props.prop1 !== 'oskill' &&
@@ -238,6 +244,9 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
             {props.Rune3}
             {props.Rune4}
             {props.Rune5}'
+          </div>
+          <div className='item-requirements'>
+            Required Level: {props.requiredLevel}
           </div>
           {props.T1Min1 !== props.T1Max1 && props.T1Min1 < props.T1Max1 && (
             <div>

@@ -112,6 +112,10 @@
   color: rgb(110, 108, 108);
 }
 
+.item-requirements {
+  color: white;
+}
+
 .runeword-min-roll,
 .unique-item-min-roll,
 .set-item-min-roll {
