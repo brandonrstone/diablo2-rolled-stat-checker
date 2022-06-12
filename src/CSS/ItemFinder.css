@@ -109,8 +109,7 @@
 
 .item-base {
   font-size: 1.25rem;
-
-  color: grey;
+  color: rgb(110, 108, 108);
 }
 
 .runeword-min-roll,
