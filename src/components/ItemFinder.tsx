@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
 
 const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState<any>('')
 
   const UniqueItem = (props: any) => (
     <div className='unique-item-container'>
@@ -345,7 +345,7 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
   const filteredRunewords = useMemo(
     () =>
       Runewords.filter((runeword: any) =>
-        runeword.Name.toLowerCase().includes(search.toLowerCase())
+        runeword.name.toLowerCase().includes(search.toLowerCase())
       ),
     [search, Runewords]
   )

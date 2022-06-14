@@ -1,7 +1,7 @@
 export const Runewords = [
   {
     id: 'Runeword1',
-    Name: "Ancients' Pledge",
+    name: "Ancients' Pledge",
     requiredLevel: 21,
     complete: 1,
     patchRelease: 109,
@@ -26,7 +26,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword4',
-    Name: 'Beast',
+    name: 'Beast',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 110,
@@ -68,7 +68,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword6',
-    Name: 'Black',
+    name: 'Black',
     requiredLevel: 35,
     complete: 1,
     patchRelease: 109,
@@ -102,7 +102,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword8',
-    Name: 'Bone',
+    name: 'Bone',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 111,
@@ -129,7 +129,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword9',
-    Name: 'Bramble',
+    name: 'Bramble',
     requiredLevel: 61,
     complete: 1,
     patchRelease: 110,
@@ -165,7 +165,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword10',
-    Name: 'Brand',
+    name: 'Brand',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -202,7 +202,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword11',
-    Name: 'Breath of the Dying',
+    name: 'Breath of the Dying',
     requiredLevel: 69,
     complete: 1,
     patchRelease: 110,
@@ -240,7 +240,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword13',
-    Name: 'Call to Arms',
+    name: 'Call to Arms',
     requiredLevel: 57,
     complete: 1,
     patchRelease: 110,
@@ -279,7 +279,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword14',
-    Name: 'Chains of Honor',
+    name: 'Chains of Honor',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 110,
@@ -314,7 +314,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword16',
-    Name: 'Chaos',
+    name: 'Chaos',
     requiredLevel: 57,
     complete: 1,
     patchRelease: 110,
@@ -351,7 +351,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword17',
-    Name: 'Crescent Moon',
+    name: 'Crescent Moon',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 110,
@@ -388,7 +388,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword20',
-    Name: 'Death',
+    name: 'Death',
     requiredLevel: 55,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -427,7 +427,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword22',
-    Name: 'Delirium',
+    name: 'Delirium',
     requiredLevel: 51,
     complete: 1,
     patchRelease: 110,
@@ -463,7 +463,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword25',
-    Name: 'Destruction',
+    name: 'Destruction',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -503,7 +503,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword26',
-    Name: 'Doom',
+    name: 'Doom',
     requiredLevel: 67,
     complete: 1,
     patchRelease: 110,
@@ -543,7 +543,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword27',
-    Name: 'Dragon',
+    name: 'Dragon',
     requiredLevel: 66,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -579,7 +579,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword29',
-    Name: 'Dream',
+    name: 'Dream',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -615,7 +615,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword30',
-    Name: 'Duress',
+    name: 'Duress',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 110,
@@ -649,7 +649,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword31',
-    Name: 'Edge',
+    name: 'Edge',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -684,7 +684,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword33',
-    Name: 'Enigma',
+    name: 'Enigma',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 110,
@@ -717,7 +717,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword34',
-    Name: 'Enlightenment',
+    name: 'Enlightenment',
     requiredLevel: 45,
     complete: 1,
     patchRelease: 111,
@@ -745,7 +745,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword36',
-    Name: 'Eternity',
+    name: 'Eternity',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 110,
@@ -782,7 +782,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword37',
-    Name: 'Exile',
+    name: 'Exile',
     requiredLevel: 57,
     complete: 1,
     patchRelease: 110,
@@ -818,7 +818,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword38',
-    Name: 'Faith',
+    name: 'Faith',
     requiredLevel: 65,
     complete: 1,
     patchRelease: '"110, Previously Ladder Only"',
@@ -854,7 +854,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword39',
-    Name: 'Famine',
+    name: 'Famine',
     requiredLevel: 65,
     complete: 1,
     itype1: 'Axe',
@@ -889,7 +889,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword40',
-    Name: 'Flickering Flame',
+    name: 'Flickering Flame',
     requiredLevel: 55,
     complete: 1,
     server: 1,
@@ -921,7 +921,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword41',
-    Name: 'Fortitude',
+    name: 'Fortitude',
     requiredLevel: 59,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -958,7 +958,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword44',
-    Name: 'Fury',
+    name: 'Fury',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 109,
@@ -993,7 +993,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword45',
-    Name: 'Gloom',
+    name: 'Gloom',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 110,
@@ -1028,7 +1028,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword47',
-    Name: 'Grief',
+    name: 'Grief',
     requiredLevel: 59,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1065,7 +1065,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword48',
-    Name: 'Hand of Justice',
+    name: 'Hand of Justice',
     requiredLevel: 67,
     complete: 1,
     patchRelease: 110,
@@ -1103,7 +1103,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword49',
-    Name: 'Harmony',
+    name: 'Harmony',
     requiredLevel: 39,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1139,7 +1139,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword51',
-    Name: 'Heart of the Oak',
+    name: 'Heart of the Oak',
     requiredLevel: 55,
     complete: 1,
     patchRelease: 110,
@@ -1177,7 +1177,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword54',
-    Name: 'Holy Thunder',
+    name: 'Holy Thunder',
     requiredLevel: 24,
     complete: 1,
     patchRelease: 109,
@@ -1214,7 +1214,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword55',
-    Name: 'Honor',
+    name: 'Honor',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 109,
@@ -1247,7 +1247,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword59',
-    Name: 'Ice',
+    name: 'Ice',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1284,7 +1284,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword60',
-    Name: 'Infinity',
+    name: 'Infinity',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1322,7 +1322,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword62',
-    Name: 'Insight',
+    name: 'Insight',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1356,7 +1356,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword65',
-    Name: "King's Grace",
+    name: "King's Grace",
     requiredLevel: 25,
     complete: 1,
     patchRelease: 109,
@@ -1388,7 +1388,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword66',
-    Name: 'Kingslayer',
+    name: 'Kingslayer',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 110,
@@ -1425,7 +1425,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword69',
-    Name: 'Last Wish',
+    name: 'Last Wish',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1467,7 +1467,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword71',
-    Name: 'Lawbringer',
+    name: 'Lawbringer',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1504,7 +1504,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword72',
-    Name: 'Leaf',
+    name: 'Leaf',
     requiredLevel: 19,
     complete: 1,
     patchRelease: 109,
@@ -1537,7 +1537,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword74',
-    Name: 'Lionheart',
+    name: 'Lionheart',
     requiredLevel: 41,
     complete: 1,
     patchRelease: 109,
@@ -1568,7 +1568,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword75',
-    Name: 'Lore',
+    name: 'Lore',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 109,
@@ -1592,7 +1592,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword81',
-    Name: 'Malice',
+    name: 'Malice',
     complete: 1,
     patchRelease: 109,
     itype1: 'Melee',
@@ -1622,7 +1622,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword82',
-    Name: 'Melody',
+    name: 'Melody',
     requiredLevel: 39,
     complete: 1,
     patchRelease: 109,
@@ -1657,7 +1657,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword83',
-    Name: 'Memory',
+    name: 'Memory',
     requiredLevel: 37,
     complete: 1,
     patchRelease: 109,
@@ -1694,7 +1694,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword84',
-    Name: 'Mist',
+    name: 'Mist',
     requiredLevel: 67,
     complete: 1,
     server: 1,
@@ -1729,7 +1729,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword87',
-    Name: 'Myth',
+    name: 'Myth',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 111,
@@ -1756,7 +1756,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword88',
-    Name: 'Nadir',
+    name: 'Nadir',
     requiredLevel: 13,
     complete: 1,
     patchRelease: 109,
@@ -1787,7 +1787,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword91',
-    Name: 'Oath',
+    name: 'Oath',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1827,7 +1827,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword92',
-    Name: 'Obedience',
+    name: 'Obedience',
     requiredLevel: 41,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1865,7 +1865,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword94',
-    Name: 'Obsession',
+    name: 'Obsession',
     requiredLevel: 69,
     complete: 1,
     server: 1,
@@ -1904,7 +1904,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword95',
-    Name: 'Passion',
+    name: 'Passion',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 110,
@@ -1942,7 +1942,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword97',
-    Name: 'Pattern',
+    name: 'Pattern',
     requiredLevel: 23,
     complete: 1,
     server: 1,
@@ -1977,7 +1977,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword98',
-    Name: 'Peace',
+    name: 'Peace',
     requiredLevel: 29,
     complete: 1,
     patchRelease: 111,
@@ -2005,7 +2005,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword103',
-    Name: 'Phoenix',
+    name: 'Phoenix',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2044,7 +2044,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword106',
-    Name: 'Plague',
+    name: 'Plague',
     requiredLevel: 67,
     complete: 1,
     server: 1,
@@ -2083,7 +2083,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword109',
-    Name: 'Pride',
+    name: 'Pride',
     requiredLevel: 67,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2118,7 +2118,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword110',
-    Name: 'Principle',
+    name: 'Principle',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 111,
@@ -2144,7 +2144,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword112',
-    Name: 'Prudence',
+    name: 'Prudence',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 110,
@@ -2176,7 +2176,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword116',
-    Name: 'Radiance',
+    name: 'Radiance',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 109,
@@ -2207,7 +2207,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword117',
-    Name: 'Rain',
+    name: 'Rain',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 111,
@@ -2234,7 +2234,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword120',
-    Name: 'Rhyme',
+    name: 'Rhyme',
     requiredLevel: 29,
     complete: 1,
     patchRelease: 109,
@@ -2264,7 +2264,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword121',
-    Name: 'Rift',
+    name: 'Rift',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2303,7 +2303,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword122',
-    Name: 'Sanctuary',
+    name: 'Sanctuary',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 110,
@@ -2338,7 +2338,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword126',
-    Name: 'Silence',
+    name: 'Silence',
     requiredLevel: 55,
     complete: 1,
     patchRelease: 109,
@@ -2375,7 +2375,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword128',
-    Name: 'Smoke',
+    name: 'Smoke',
     requiredLevel: 37,
     complete: 1,
     patchRelease: 109,
@@ -2406,7 +2406,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword130',
-    Name: 'Spirit',
+    name: 'Spirit',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2442,7 +2442,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword131',
-    Name: 'Splendor',
+    name: 'Splendor',
     requiredLevel: 37,
     complete: 1,
     patchRelease: 110,
@@ -2475,7 +2475,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword133',
-    Name: 'Stealth',
+    name: 'Stealth',
     requiredLevel: 17,
     complete: 1,
     patchRelease: 109,
@@ -2505,7 +2505,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword134',
-    Name: 'Steel',
+    name: 'Steel',
     requiredLevel: 13,
     complete: 1,
     patchRelease: 109,
@@ -2534,7 +2534,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword137',
-    Name: 'Stone',
+    name: 'Stone',
     requiredLevel: 66,
     complete: 1,
     patchRelease: 110,
@@ -2571,7 +2571,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword139',
-    Name: 'Strength',
+    name: 'Strength',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 109,
@@ -2595,7 +2595,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword148',
-    Name: 'Treachery',
+    name: 'Treachery',
     complete: 1,
     patchRelease: 111,
     itype1: 'Torso',
@@ -2621,7 +2621,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword151',
-    Name: 'Unbending Will',
+    name: 'Unbending Will',
     requiredLevel: 63,
     complete: 1,
     server: 1,
@@ -2661,7 +2661,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword154',
-    Name: 'Venom',
+    name: 'Venom',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 109,
@@ -2692,7 +2692,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword99',
-    Name: 'Voice of Reason',
+    name: 'Voice of Reason',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2729,7 +2729,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword160',
-    Name: 'Wealth',
+    name: 'Wealth',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 109,
@@ -2748,7 +2748,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword162',
-    Name: 'White',
+    name: 'White',
     requiredLevel: 35,
     complete: 1,
     patchRelease: 109,
@@ -2785,7 +2785,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword163',
-    Name: 'Wind',
+    name: 'Wind',
     requiredLevel: 61,
     complete: 1,
     patchRelease: 110,
@@ -2820,7 +2820,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword165',
-    Name: 'Wisdom',
+    name: 'Wisdom',
     requiredLevel: 45,
     complete: 1,
     server: 1,
@@ -2852,7 +2852,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword168',
-    Name: 'Wrath',
+    name: 'Wrath',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2889,7 +2889,7 @@ export const Runewords = [
   },
   {
     id: 'Runeword170',
-    Name: 'Zephyr',
+    name: 'Zephyr',
     requiredLevel: 21,
     complete: 1,
     patchRelease: 109,
