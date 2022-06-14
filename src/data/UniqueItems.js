@@ -96,7 +96,7 @@ export const UniqueItems = [
     lineNumber: 2
   },
   {
-    name: 'Mindrend',
+    name: 'Skull Splitter',
     id: 3,
     version: 0,
     enabled: 1,
@@ -118,7 +118,7 @@ export const UniqueItems = [
     prop3: 'ltng-min',
     min3: 1,
     max3: 1,
-    prop4: 'ltng-max',
+    prop4: 'Adds Lightning Damage',
     min4: 12,
     max4: 15,
     prop5: 'Attack Rating',
