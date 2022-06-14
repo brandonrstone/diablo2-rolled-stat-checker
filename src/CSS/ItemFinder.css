@@ -94,11 +94,16 @@
   padding: 10px 15px;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 10px;
+  box-shadow: inset 0 0 10px black;
 }
 
 .item-search:focus {
   outline: none;
+  box-shadow: inset 0 0 2.5px black;
+}
+
+.item-search:focus::placeholder {
+  color: transparent;
 }
 
 .item-search::placeholder {
