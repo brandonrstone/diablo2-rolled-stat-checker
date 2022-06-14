@@ -529,7 +529,7 @@ export const Runewords = [
     T1Code4: 'noheal',
     T1Min4: 1,
     T1Max4: 1,
-    T1Code5: 'pierce-cold',
+    T1Code5: 'Enemy Cold Resistance Reduction %',
     T1Min5: 40,
     T1Max5: 60,
     T1Code6: '+ All Skills',

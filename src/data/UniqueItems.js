@@ -9320,7 +9320,7 @@ export const UniqueItems = [
     lineNumber: 260
   },
   {
-    name: 'DoombRinger',
+    name: 'Doombringer',
     id: 260,
     version: 100,
     enabled: 1,
