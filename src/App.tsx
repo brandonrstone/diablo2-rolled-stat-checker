@@ -7,7 +7,7 @@ import { Runewords } from './data/Runewords'
 
 import ItemFinder from './components/ItemFinder'
 
-export default function App() {
+const App = () => {
   return (
     <div className='App'>
       <ItemFinder
@@ -18,3 +18,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App

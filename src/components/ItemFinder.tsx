@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react'
 
-export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
+const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
   const [search, setSearch] = useState('')
 
-  const UniqueItem = props => (
+  const UniqueItem = (props: any) => (
     <div className='unique-item-container'>
       <div className='unique-item-name'>{props.name}</div>
       <div
@@ -123,7 +123,7 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
     </div>
   )
 
-  const SetItem = props => (
+  const SetItem = (props: any) => (
     <div className='set-item-container'>
       <div className='set-item-name'>{props.name}</div>
       <div className='item-base'>{props.itemBase}</div>
@@ -232,7 +232,7 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
     </div>
   )
 
-  const Runeword = props => (
+  const Runeword = (props: any) => (
     <div className='runeword-container'>
       {props.T1Code1 && props.T1Code2 && (
         <div>
@@ -328,7 +328,7 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
 
   const filteredUniqueItems = useMemo(
     () =>
-      UniqueItems.filter(uniqueItem =>
+      UniqueItems.filter((uniqueItem: any) =>
         uniqueItem.name.toLowerCase().includes(search.toLowerCase())
       ),
     [search, UniqueItems]
@@ -336,7 +336,7 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
 
   const filteredSetItems = useMemo(
     () =>
-      SetItems.filter(setItem =>
+      SetItems.filter((setItem: any) =>
         setItem.name.toLowerCase().includes(search.toLowerCase())
       ),
     [search, SetItems]
@@ -344,7 +344,7 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
 
   const filteredRunewords = useMemo(
     () =>
-      Runewords.filter(runeword =>
+      Runewords.filter((runeword: any) =>
         runeword.Name.toLowerCase().includes(search.toLowerCase())
       ),
     [search, Runewords]
@@ -370,20 +370,22 @@ export default function ItemFinder({ UniqueItems, SetItems, Runewords }) {
       <div className='itemlist-container'>
         {search === ''
           ? null
-          : filteredRunewords.map(runeword => {
-              return <Runeword key={runeword.id} {...runeword} />
-            })}
-        {search === ''
-          ? null
-          : filteredUniqueItems.map(uniqueItem => {
+          : filteredUniqueItems.map((uniqueItem: any) => {
               return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
             })}
         {search === ''
           ? null
-          : filteredSetItems.map(setItem => {
+          : filteredSetItems.map((setItem: any) => {
               return <SetItem key={setItem.id} {...setItem} />
+            })}
+        {search === ''
+          ? null
+          : filteredRunewords.map((runeword: any) => {
+              return <Runeword key={runeword.id} {...runeword} />
             })}
       </div>
     </div>
   )
 }
+
+export default ItemFinder
