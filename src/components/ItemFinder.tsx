@@ -1,6 +1,13 @@
 import React, { useState, useMemo } from 'react'
 
-const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
+import { Runeword, SetItem, UniqueItem } from '../itemsModel'
+interface Props {
+  UniqueItems: UniqueItem[]
+  SetItems: SetItem[]
+  Runewords: Runeword[]
+}
+
+const ItemFinder: React.FC<any> = ({ UniqueItems, SetItems, Runewords }) => {
   const [search, setSearch] = useState<any>('')
 
   const UniqueItem = (props: any) => (
@@ -207,28 +214,6 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
           <span className='set-item-max-roll'>{props.max7}</span>
         </div>
       )}
-      {props.min8 !== props.max8 && props.min8 < props.max8 && (
-        <div>
-          {props.prop8 !== 'oskill' &&
-            props.prop8 !== 'hit-skill' &&
-            props.prop8 !== 'gethit-skill' &&
-            props.prop8 !== 'charged' && <span>{props.prop8}</span>}
-          <div></div>
-          <span className='set-item-min-roll'>{props.min8}</span> -{' '}
-          <span className='set-item-max-roll'>{props.max8}</span>
-        </div>
-      )}
-      {props.min9 !== props.max9 && props.min9 < props.max9 && (
-        <div>
-          {props.prop9 !== 'oskill' &&
-            props.prop9 !== 'hit-skill' &&
-            props.prop9 !== 'gethit-skill' &&
-            props.prop9 !== 'charged' && <span>{props.prop9}</span>}
-          <div></div>
-          <span className='set-item-min-roll'>{props.min9}</span> -{' '}
-          <span className='set-item-max-roll'>{props.max9}</span>
-        </div>
-      )}
     </div>
   )
 
@@ -236,7 +221,7 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
     <div className='runeword-container'>
       {props.T1Code1 && props.T1Code2 && (
         <div>
-          <div className='runeword-name'>{props.Name}</div>
+          <div className='runeword-name'>{props.name}</div>
           <div className='item-base'>{props.itype1}</div>
           <div className='runeword-runes'>
             '{props.Rune1}
@@ -370,17 +355,17 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: any) => {
       <div className='itemlist-container'>
         {search === ''
           ? null
-          : filteredUniqueItems.map((uniqueItem: any) => {
+          : filteredUniqueItems.map((uniqueItem: UniqueItem) => {
               return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
             })}
         {search === ''
           ? null
-          : filteredSetItems.map((setItem: any) => {
+          : filteredSetItems.map((setItem: SetItem) => {
               return <SetItem key={setItem.id} {...setItem} />
             })}
         {search === ''
           ? null
-          : filteredRunewords.map((runeword: any) => {
+          : filteredRunewords.map((runeword: Runeword) => {
               return <Runeword key={runeword.id} {...runeword} />
             })}
       </div>
