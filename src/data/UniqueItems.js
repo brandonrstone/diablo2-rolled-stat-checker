@@ -8620,7 +8620,7 @@ export const UniqueItems = [
     lineNumber: 242
   },
   {
-    name: 'Strengthing of Ears',
+    name: 'String of Ears',
     id: 242,
     version: 100,
     enabled: 1,
