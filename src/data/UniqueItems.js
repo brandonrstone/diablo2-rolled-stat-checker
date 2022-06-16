@@ -6977,7 +6977,7 @@ export const UniqueItems = [
     max3: 200,
     prop4: 'Damage To Demons %',
     min4: 100,
-    max4: 200;
+    max4: 200,
     prop5: 'Increased Attack Speed %',
     min5: 50,
     max5: 50,
