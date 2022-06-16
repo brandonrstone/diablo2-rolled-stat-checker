@@ -519,7 +519,7 @@ export const UniqueItems = [
     lineNumber: 14
   },
   {
-    name: 'Knell Strengthiker',
+    name: 'Knell Striker',
     id: 15,
     version: 0,
     enabled: 1,
@@ -4481,7 +4481,7 @@ export const UniqueItems = [
     lineNumber: 131
   },
   {
-    name: 'IsleStrengthike',
+    name: 'Islestrike',
     id: 131,
     version: 100,
     enabled: 1,
@@ -5605,7 +5605,7 @@ export const UniqueItems = [
     lineNumber: 159
   },
   {
-    name: 'HeadStrengthiker',
+    name: 'Headstriker',
     id: 159,
     version: 100,
     enabled: 1,
@@ -6700,7 +6700,7 @@ export const UniqueItems = [
     lineNumber: 188
   },
   {
-    name: 'SkyStrengthike',
+    name: 'Skystrike',
     id: 188,
     version: 100,
     enabled: 1,
@@ -6727,12 +6727,6 @@ export const UniqueItems = [
     min5: 150,
     max5: 200,
     prop6: 'hit-skill',
-    par6: 56,
-    min6: 2,
-    max6: 6,
-    prop7: 'ama',
-    min7: 1,
-    max7: 1,
     expansion: 1,
     lineNumber: 189
   },
@@ -6846,7 +6840,7 @@ export const UniqueItems = [
     lineNumber: 192
   },
   {
-    name: 'Whichwild Strengthing',
+    name: 'Witchwild Strengthing',
     id: 192,
     version: 100,
     enabled: 1,
@@ -6860,23 +6854,19 @@ export const UniqueItems = [
     chrtransform: 'lblu',
     invtransform: 'lblu',
     invfile: 'inv8s8u',
-    prop1: 'hit-skill',
-    par1: 66,
-    min1: 2,
-    max1: 5,
-    prop2: 'All Resistances',
-    min2: 40,
-    max2: 40,
-    prop3: 'deadly/level',
-    par3: 8,
-    prop4: 'Enhanced Damage %',
-    min4: 150,
-    max4: 170,
-    prop5: 'magicarrow',
-    min5: 20,
-    max5: 20,
-    prop6: 'Sockets',
-    par6: 2,
+    prop1: 'All Resistances',
+    min1: 40,
+    max1: 40,
+    prop2: 'deadly/level',
+    par2: 8,
+    prop3: 'Enhanced Damage %',
+    min3: 150,
+    max3: 170,
+    prop4: 'magicarrow',
+    min4: 20,
+    max4: 20,
+    prop5: 'Sockets',
+    par5: 2,
     expansion: 1,
     lineNumber: 193
   },
@@ -6963,7 +6953,7 @@ export const UniqueItems = [
     lineNumber: 195
   },
   {
-    name: 'GodStrengthike Arch',
+    name: 'Godstrike Arch',
     id: 195,
     version: 100,
     enabled: 1,
@@ -6987,17 +6977,13 @@ export const UniqueItems = [
     max3: 200,
     prop4: 'Damage To Demons %',
     min4: 100,
-    max4: 200,
-    prop5: 'hit-skill',
-    par5: 121,
-    min5: 5,
-    max5: 7,
-    prop6: 'Increased Attack Speed %',
-    min6: 50,
-    max6: 50,
-    prop7: 'Replenish Life',
-    min7: 12,
-    max7: 12,
+    max4: 200;
+    prop5: 'Increased Attack Speed %',
+    min5: 50,
+    max5: 50,
+    prop6: 'Replenish Life',
+    min6: 12,
+    max6: 12,
     expansion: 1,
     lineNumber: 196
   },
