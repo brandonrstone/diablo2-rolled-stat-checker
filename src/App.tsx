@@ -6,7 +6,6 @@ import { SetItems } from './data/SetItems'
 import { Runewords } from './data/Runewords'
 
 import ItemFinder from './components/ItemFinder'
-import { UniqueItem, SetItem, Runeword } from './itemsModel'
 
 const App: React.FC = () => {
   return (
