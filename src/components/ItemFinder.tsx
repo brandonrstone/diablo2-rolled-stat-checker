@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react'
 
 import { Runeword, SetItem, UniqueItem } from '../itemsModel'
-interface Props {
-  UniqueItems: UniqueItem[]
-  SetItems: SetItem[]
-  Runewords: Runeword[]
-}
+// interface Props {
+//   UniqueItems: UniqueItem[]
+//   SetItems: SetItem[]
+//   Runewords: Runeword[]
+// }
 
 const ItemFinder: React.FC<any> = ({ UniqueItems, SetItems, Runewords }) => {
   const [search, setSearch] = useState<any>('')
