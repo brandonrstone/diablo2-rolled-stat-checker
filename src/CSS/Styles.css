@@ -124,11 +124,32 @@
   color: rgb(74, 226, 175);
 }
 
-@media (max-width: 1000px) {
+@media (max-height: 700px) {
+  .searchbar-container {
+    margin-top: 20px;
+  }
+  .itemlist-container {
+    margin-top: 30px;
+  }
+}
+
+@media (max-height: 550px) {
+  .itemlist-container {
+    margin-top: 50px;
+  }
+}
+
+@media (max-height: 400px) {
+  .itemlist-container {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 1000px) {
   .unique-item-container,
   .set-item-container,
   .runeword-container {
-    width: 50%;
+    width: 35%;
   }
 }
 
