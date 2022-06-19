@@ -304,7 +304,7 @@ export const Runewords = [
     T1Code5: 'Life Stolen Per hit',
     T1Min5: 8,
     T1Max5: 8,
-    T1Code6: '+ All Skills',
+    T1Code6: 'All Skills',
     T1Min6: 2,
     T1Max6: 2,
     T1Code7: 'Strength',
