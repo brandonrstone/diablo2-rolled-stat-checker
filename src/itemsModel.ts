@@ -1,5 +1,5 @@
 export interface UniqueItem {
-  name?: string
+  name: string
   id?: number
   version?: number
   enabled?: number
@@ -17,35 +17,35 @@ export interface UniqueItem {
   min2?: number
   max2?: number
   prop3?: string
-  min3?: number
+  min3?: number | string
   max3?: number
   prop4?: string
   min4?: number
   max4?: number
   prop5?: string
-  par5?: number
-  min5?: number
-  max5?: number
+  par5?: number | string
+  min5?: number | string
+  max5?: number | string
   prop6?: string
-  par6?: number
+  par6?: number | string
   min6?: number
   max6?: number
   prop7?: string
-  par7?: number
-  min7?: number
-  max7?: number
+  par7?: number | string
+  min7?: number | string
+  max7?: number | string
   prop8?: string
-  par8?: number
-  min8?: number
-  max8?: number
+  par8?: number | string
+  min8?: number | string
+  max8?: number | string
   prop9?: string
-  par9?: number
-  min9?: number
-  max9?: number
+  par9?: number | string
+  min9?: number | string
+  max9?: number | string
   prop10?: string
-  par10?: number
-  min10?: number
-  max10?: number
+  par10?: number | string
+  min10?: number | string
+  max10?: number | string
   expansion?: number
   lineNumber?: number
 }
@@ -110,7 +110,7 @@ export interface Runeword {
   id?: string
   requiredLevel?: number
   complete?: number
-  patchRelease?: number
+  patchRelease?: number | string
   itype1?: string
   RequiredRunes?: string
   Rune1?: string
@@ -120,31 +120,31 @@ export interface Runeword {
   Rune5?: string
   Rune6?: string
   T1Code1?: string
-  T1Param1?: string
+  T1Param1?: string | number
   T1Min1?: number
   T1Max1?: number
   T1Code2?: string
-  T1Param2?: string
+  T1Param2?: string | number
   T1Min2?: number
   T1Max2?: number
   T1Code3?: string
-  T1Param3?: string
+  T1Param3?: string | number
   T1Min3?: number
   T1Max3?: number
   T1Code4?: string
-  T1Param4?: string
+  T1Param4?: string | number
   T1Min4?: number
   T1Max4?: number
   T1Code5?: string
-  T1Param5?: string
+  T1Param5?: string | number
   T1Min5?: number
   T1Max5?: number
   T1Code6?: string
-  T1Param6?: string
+  T1Param6?: string | number
   T1Min6?: number
   T1Max6?: number
   T1Code7?: string
-  T1Param7?: string
+  T1Param7?: string | number
   T1Min7?: number
   T1Max7?: number
   lineNumber?: number
