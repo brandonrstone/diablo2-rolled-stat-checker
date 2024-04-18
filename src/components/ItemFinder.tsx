@@ -1,13 +1,14 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, ReactElement } from 'react'
 
 import { Runeword, SetItem, UniqueItem } from '../itemsModel'
+
 interface Props {
   UniqueItems: UniqueItem[]
   SetItems: SetItem[]
   Runewords: Runeword[]
 }
 
-const ItemFinder: React.FC<any> = ({ UniqueItems, SetItems, Runewords }) => {
+const ItemFinder: React.FC<Props> = ({ UniqueItems, SetItems, Runewords }): ReactElement => {
   const [search, setSearch] = useState<any>('')
 
   const itemIsCharm = (props: any) => {
@@ -273,12 +274,12 @@ const ItemFinder: React.FC<any> = ({ UniqueItems, SetItems, Runewords }) => {
   )
 
   const filteredUniqueItems = useMemo(
-      () =>
-        UniqueItems.filter((uniqueItem: any) =>
-          uniqueItem.name.toLowerCase().includes(search.toLowerCase())
-        ),
-      [search, UniqueItems]
-    ),
+    () =>
+      UniqueItems.filter((uniqueItem: any) =>
+        uniqueItem.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    [search, UniqueItems]
+  ),
     filteredSetItems = useMemo(
       () =>
         SetItems.filter((setItem: any) =>
@@ -315,18 +316,18 @@ const ItemFinder: React.FC<any> = ({ UniqueItems, SetItems, Runewords }) => {
         {search === ''
           ? null
           : filteredUniqueItems.map((uniqueItem: UniqueItem) => {
-              return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
-            })}
+            return <UniqueItem key={uniqueItem.id} {...uniqueItem} />
+          })}
         {search === ''
           ? null
           : filteredSetItems.map((setItem: SetItem) => {
-              return <SetItem key={setItem.id} {...setItem} />
-            })}
+            return <SetItem key={setItem.id} {...setItem} />
+          })}
         {search === ''
           ? null
           : filteredRunewords.map((runeword: Runeword) => {
-              return <Runeword key={runeword.id} {...runeword} />
-            })}
+            return <Runeword key={runeword.id} {...runeword} />
+          })}
       </div>
     </div>
   )

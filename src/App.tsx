@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import './CSS/App.css'
 
 import { UniqueItems } from './data/UniqueItems'
@@ -7,7 +7,7 @@ import { Runewords } from './data/Runewords'
 
 import ItemFinder from './components/ItemFinder'
 
-const App: React.FC = () => {
+const App = (): ReactElement => {
   return (
     <div className='App'>
       <ItemFinder
