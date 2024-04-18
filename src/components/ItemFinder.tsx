@@ -2,13 +2,13 @@ import React, { useState, useMemo, ReactElement } from 'react'
 
 import { Runeword, SetItem, UniqueItem } from '../itemsModel'
 
-interface Props {
+interface ItemFinderProps {
   UniqueItems: UniqueItem[]
   SetItems: SetItem[]
   Runewords: Runeword[]
 }
 
-const ItemFinder: React.FC<Props> = ({ UniqueItems, SetItems, Runewords }): ReactElement => {
+const ItemFinder = ({ UniqueItems, SetItems, Runewords }: ItemFinderProps): ReactElement => {
   const [search, setSearch] = useState<any>('')
 
   const itemIsCharm = (props: any) => {
@@ -23,7 +23,7 @@ const ItemFinder: React.FC<Props> = ({ UniqueItems, SetItems, Runewords }): Reac
     return !['oskill', 'aura', 'charged'].includes(props)
   }
 
-  const UniqueItem = (props: any) => {
+  const UniqueItem = (props: any): JSX.Element => {
     return (
       <div className='unique-item-container'>
         <div className='unique-item-name'>{props.name}</div>
@@ -116,7 +116,7 @@ const ItemFinder: React.FC<Props> = ({ UniqueItems, SetItems, Runewords }): Reac
     )
   }
 
-  const SetItem = (props: any) => (
+  const SetItem = (props: any): JSX.Element => (
     <div className='set-item-container'>
       <div className='set-item-name'>{props.name}</div>
       <div className='item-base'>{props.itemBase}</div>
@@ -182,18 +182,14 @@ const ItemFinder: React.FC<Props> = ({ UniqueItems, SetItems, Runewords }): Reac
     </div>
   )
 
-  const Runeword = (props: any) => (
+  const Runeword = (props: any): JSX.Element => (
     <div className='runeword-container'>
       {props.T1Code1 && props.T1Code2 && (
         <div>
           <div className='runeword-name'>{props.name}</div>
           <div className='item-base'>{props.itype1}</div>
           <div className='runeword-runes'>
-            '{props.Rune1}
-            {props.Rune2}
-            {props.Rune3}
-            {props.Rune4}
-            {props.Rune5}'
+            '{props.Rune1}{props.Rune2}{props.Rune3}{props.Rune4}{props.Rune5}'
           </div>
           <div className='item-requirements'>
             Required Level: {props.requiredLevel}
@@ -273,27 +269,18 @@ const ItemFinder: React.FC<Props> = ({ UniqueItems, SetItems, Runewords }): Reac
     </div>
   )
 
-  const filteredUniqueItems = useMemo(
-    () =>
-      UniqueItems.filter((uniqueItem: any) =>
-        uniqueItem.name.toLowerCase().includes(search.toLowerCase())
-      ),
+  const filteredUniqueItems = useMemo(() =>
+    UniqueItems.filter((uniqueItem: any) => uniqueItem.name.toLowerCase().includes(search.toLowerCase())),
     [search, UniqueItems]
-  ),
-    filteredSetItems = useMemo(
-      () =>
-        SetItems.filter((setItem: any) =>
-          setItem.name.toLowerCase().includes(search.toLowerCase())
-        ),
-      [search, SetItems]
-    ),
-    filteredRunewords = useMemo(
-      () =>
-        Runewords.filter((runeword: any) =>
-          runeword.name.toLowerCase().includes(search.toLowerCase())
-        ),
-      [search, Runewords]
-    )
+  )
+  const filteredSetItems = useMemo(() =>
+    SetItems.filter((setItem: any) => setItem.name.toLowerCase().includes(search.toLowerCase())),
+    [search, SetItems]
+  )
+  const filteredRunewords = useMemo(() =>
+    Runewords.filter((runeword: any) => runeword.name.toLowerCase().includes(search.toLowerCase())),
+    [search, Runewords]
+  )
 
   return (
     <div className='itemfinder-container'>

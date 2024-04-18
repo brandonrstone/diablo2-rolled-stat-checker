@@ -10,11 +10,7 @@ import ItemFinder from './components/ItemFinder'
 const App = (): ReactElement => {
   return (
     <div className='App'>
-      <ItemFinder
-        UniqueItems={UniqueItems}
-        SetItems={SetItems}
-        Runewords={Runewords}
-      />
+      <ItemFinder UniqueItems={UniqueItems} SetItems={SetItems} Runewords={Runewords} />
     </div>
   )
 }
