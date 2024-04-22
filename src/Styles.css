@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('../images/Diablo_II_Background.png');
+  background: url('./images/Diablo_II_Background.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -24,8 +24,8 @@
 
 .app-name-text {
   color: rgb(201, 175, 111);
+  font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.1rem;
-  font-family: 'Roboto';
 }
 
 .itemlist-container {
@@ -64,10 +64,14 @@
 }
 
 .item-search {
-  font-size: 25px;
+  padding: 200px;
+  font-size: 24px;
+  font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: rgb(221, 221, 221);
   margin: 15px;
-  padding: 10px 20px 10px 20px;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 50px;
   border: none;
   box-shadow: inset 0 0 10px black;
@@ -128,6 +132,7 @@
   .searchbar-container {
     margin-top: 20px;
   }
+
   .itemlist-container {
     margin-top: 30px;
   }
@@ -146,6 +151,7 @@
 }
 
 @media (min-width: 1000px) {
+
   .unique-item-container,
   .set-item-container,
   .runeword-container {
@@ -154,6 +160,7 @@
 }
 
 @media (max-width: 750px) {
+
   .unique-item-container,
   .set-item-container,
   .runeword-container {
@@ -162,6 +169,7 @@
 }
 
 @media (max-width: 600px) {
+
   .unique-item-container,
   .set-item-container,
   .runeword-container {

@@ -1,0 +1,16 @@
+@import './Styles.css';
+
+@font-face {
+  font-family: 'Exocet';
+  src: url('../assets/EXL_____.TTF') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Exocet';
+  font-size: 1.25rem;
+}
+
+body {
+  margin: 0;
+}

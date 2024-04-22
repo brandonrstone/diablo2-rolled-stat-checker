@@ -1,4 +1,6 @@
-export const SetItems = [
+import { SetItemType } from '../types';
+
+export const SetItems: SetItemType[] = [
   {
     name: "Aldur's Advance",
     id: 69,

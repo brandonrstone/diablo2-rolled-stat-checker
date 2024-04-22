@@ -1,11 +1,11 @@
 import { ReactElement } from 'react'
-import './CSS/App.css'
+import './App.css'
 
 import { UniqueItems } from './data/UniqueItems'
 import { SetItems } from './data/SetItems'
 import { Runewords } from './data/Runewords'
 
-import ItemFinder from './components/ItemFinder'
+import ItemFinder from './pages/ItemFinder'
 
 const App = (): ReactElement => {
   return (

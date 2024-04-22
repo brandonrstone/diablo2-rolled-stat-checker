@@ -13137,6 +13137,8 @@ export const UniqueItems = [
   {
     name: "Merman's Speed",
     id: 372,
+    enabled: 1,
+    rarity: 1,
     version: 100,
     expansion: 1,
     lineNumber: 373
@@ -14009,3 +14011,5 @@ export const UniqueItems = [
     lineNumber: 401
   }
 ]
+
+console.log(UniqueItems.filter(uniqueItem => !uniqueItem.rarity))

@@ -1,4 +1,6 @@
-export const Runewords = [
+import { RunewordType } from '../types';
+
+export const Runewords: RunewordType[] = [
   {
     id: 'Runeword1',
     name: "Ancients' Pledge",
@@ -857,6 +859,7 @@ export const Runewords = [
     name: 'Famine',
     requiredLevel: 65,
     complete: 1,
+    patchRelease: 110,
     itype1: 'Axe',
     itype2: 'hamm',
     RequiredRunes: 'FalOhmOrtJah',
@@ -1593,6 +1596,7 @@ export const Runewords = [
   {
     id: 'Runeword81',
     name: 'Malice',
+    requiredLevel: 15,
     complete: 1,
     patchRelease: 109,
     itype1: 'Melee',
@@ -2596,6 +2600,7 @@ export const Runewords = [
   {
     id: 'Runeword148',
     name: 'Treachery',
+    requiredLevel: 43,
     complete: 1,
     patchRelease: 111,
     itype1: 'Torso',
