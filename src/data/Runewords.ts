@@ -1259,7 +1259,7 @@ export const Runewords: RunewordType[] = [
     Stat3: 'Bonus to attack Rating %',
     Stat3Min: 5,
     Stat3Max: 30,
-    T1Param4: 'Adds Fire Damage',
+    Stat4: 'Adds Fire Damage',
     Stat4Min: 1,
     Stat4Max: 6,
     Stat5: 'Critical Strike',
