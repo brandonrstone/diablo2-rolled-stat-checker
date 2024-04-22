@@ -16,15 +16,15 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: ItemFinderProps): Reac
 
   const filteredUniqueItems = useMemo(() => {
     return UniqueItems.filter((uniqueItem: UniqueItemType) => uniqueItem.name.toLowerCase().includes(search.toLowerCase()))
-  }, [search, UniqueItems])
+  }, [search])
 
   const filteredSetItems = useMemo(() => {
     return SetItems.filter((setItem: SetItemType) => setItem.name.toLowerCase().includes(search.toLowerCase()))
-  }, [search, SetItems])
+  }, [search])
 
   const filteredRunewords = useMemo(() => {
     return Runewords.filter((runeword: RunewordType) => runeword?.name?.toLowerCase().includes(search.toLowerCase()))
-  }, [search, Runewords])
+  }, [search])
 
   return (
     <div className='itemfinder-container'>
