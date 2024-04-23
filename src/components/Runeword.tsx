@@ -1,6 +1,10 @@
 import { RunewordType } from '../types'
 
-const Runeword = (runeward: RunewordType): JSX.Element => (
+type RunewordProps = {
+  runeward: RunewordType
+}
+
+const Runeword: React.FC<RunewordProps> = ({ runeward }): JSX.Element => (
   <div className='runeword-container'>
     <div className='runeword-name'>{runeward.name}</div>
     <div className='item-base'>{runeward.itype1}</div>
@@ -8,7 +12,7 @@ const Runeword = (runeward: RunewordType): JSX.Element => (
       '{runeward.Rune1}{runeward.Rune2}{runeward.Rune3}{runeward.Rune4}{runeward.Rune5}'
     </div>
     <div className='item-requirements'>Required Level: {runeward.requiredLevel}</div>
-    {[1, 2, 3, 4, 5, 6, 7].map((stat: number) => (
+    {[1, 2, 3, 4, 5, 6, 7].map(stat => (
       <>
         {runeward[`Stat${stat}Min`] < runeward[`Stat${stat}Max`] && (
           <div>
@@ -21,6 +25,5 @@ const Runeword = (runeward: RunewordType): JSX.Element => (
     ))}
   </div>
 )
-
 
 export default Runeword

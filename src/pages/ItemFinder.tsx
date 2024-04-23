@@ -29,11 +29,7 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: ItemFinderProps): Reac
   return (
     <div className='itemfinder-container'>
       <div className='searchbar-container'>
-        <img
-          className='diablo-2-logo'
-          src={require('../images/Diablo_II_Logo.webp')}
-          alt='Diablo_II_Logo'
-        />
+        <img className='diablo-2-logo' src={require('../images/Diablo_II_Logo.webp')} alt='Diablo_II_Logo' />
         <span className='app-name-text'>Rolled Stat Checker v1.1</span>
         <input
           className='item-search'
@@ -57,7 +53,7 @@ const ItemFinder = ({ UniqueItems, SetItems, Runewords }: ItemFinderProps): Reac
         {search === ''
           ? null
           : filteredRunewords.map((runeword: RunewordType) => {
-            return <Runeword key={runeword.id} {...runeword} />
+            return <Runeword key={runeword.id} runeward={runeword} />
           })}
       </div>
     </div>
