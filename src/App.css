@@ -13,4 +13,7 @@
 
 body {
   margin: 0;
+  background: url('./images/Diablo_II_Background.png');
+  background-size: cover;
+  background-position: center;
 }

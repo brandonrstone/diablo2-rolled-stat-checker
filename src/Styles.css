@@ -3,9 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./images/Diablo_II_Background.png');
-  background-size: cover;
-  background-position: center;
   height: 100vh;
   padding: 1rem;
 }
@@ -15,17 +12,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 27.5vh;
 }
 
 .diablo-2-logo {
-  height: 150px;
+  margin-top: 30px;
 }
 
 .app-name-text {
-  color: rgb(201, 175, 111);
+  color: rgb(185, 157, 87);
   font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.10rem;
 }
 
 .itemlist-container {
@@ -35,8 +31,7 @@
   height: 77.5vh;
   width: 90%;
   overflow-y: scroll;
-  margin-top: 15px;
-  padding-top: 15px;
+  margin-top: 30px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
