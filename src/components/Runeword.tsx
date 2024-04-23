@@ -28,5 +28,4 @@ const Runeword: React.FC = (runeward: RunewordType): JSX.Element => (
   </div>
 )
 
-
 export default Runeword
