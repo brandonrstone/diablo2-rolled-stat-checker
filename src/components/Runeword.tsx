@@ -14,7 +14,7 @@ const Runeword: React.FC = (runeward: RunewordType): JSX.Element => (
       {runeward.Rune5 != null && runeward.Rune5.substring(0, 1)}{runeward.Rune5 != null && <span style={{ fontSize: 18 }}>{runeward.Rune5.substring(1, runeward.Rune1.length)}</span>}'
     </div>
     <div className='item-requirements'>Required Level: {runeward.requiredLevel}</div>
-    {[1, 2, 3, 4, 5, 6, 7].map((stat: number) => (
+    {[1, 2, 3, 4, 5, 6, 7].map(stat => (
       <Fragment key={stat}>
         {runeward[`Stat${stat}Min`] < runeward[`Stat${stat}Max`] && (
           <div>

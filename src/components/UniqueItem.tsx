@@ -17,7 +17,7 @@ const UniqueItem: React.FC = (uniqueItem: UniqueItemType): JSX.Element => {
         {uniqueItem.itemBase}
       </div>
       <div className='item-requirements'>Required Level: {uniqueItem.requiredLevel}</div>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((stat: number) => (
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(stat => (
         <Fragment key={stat}>
           {uniqueItem[`min${stat}`] < uniqueItem[`max${stat}`] && (
             <div>
