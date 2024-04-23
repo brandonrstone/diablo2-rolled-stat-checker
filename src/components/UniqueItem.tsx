@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
+
 import useItemValidation from '../hooks/useItemValidation'
-import { UniqueItemType } from '../types'
+import type { UniqueItemType } from '../types'
 
 const UniqueItem: React.FC = (uniqueItem: UniqueItemType): JSX.Element => {
   const { isValidStat } = useItemValidation()

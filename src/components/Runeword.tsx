@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
-import { RunewordType } from '../types'
+
+import type { RunewordType } from '../types'
 
 const Runeword: React.FC = (runeward: RunewordType): JSX.Element => (
   <div className='runeword-container'>

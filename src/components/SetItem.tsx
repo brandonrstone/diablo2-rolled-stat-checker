@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 import useItemValidation from '../hooks/useItemValidation'
-import { SetItemType } from '../types'
+import type { SetItemType } from '../types'
 
 const SetItem: React.FC = (setItem: SetItemType): JSX.Element => {
   const { isValidStat } = useItemValidation()
@@ -13,7 +13,7 @@ const SetItem: React.FC = (setItem: SetItemType): JSX.Element => {
       <div className='item-requirements'>
         Required Level: {setItem.requiredLevel}
       </div>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((stat: number) => (
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(stat => (
         <Fragment key={stat}>
           {setItem[`min${stat}`] < setItem[`max${stat}`] && (
             <div>
