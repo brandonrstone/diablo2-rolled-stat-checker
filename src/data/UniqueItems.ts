@@ -4195,7 +4195,7 @@ export const UniqueItems = [
     prop3: 'All Skills',
     min3: 1,
     max3: 1,
-    prop4: '+ Lightning Damage',
+    prop4: 'Adds Lightning Damage',
     min4: 1,
     max4: 12,
     diablocloneweight: 1,
