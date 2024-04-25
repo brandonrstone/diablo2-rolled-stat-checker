@@ -1,5 +1,5 @@
 import { ReactElement, useMemo, useState } from 'react'
-import './App.css'
+import './styles.css'
 
 import { UniqueItems } from './data/UniqueItems'
 import { SetItems } from './data/SetItems'

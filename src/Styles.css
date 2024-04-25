@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Exocet';
+  src: url('../assets/EXL_____.TTF') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Exocet';
+  font-size: 1.25rem;
+}
+
+body {
+  margin: 0;
+  background: url('./images/Diablo_II_Background.png');
+  background-size: cover;
+  background-position: center;
+}
+
 .itemfinder-container {
   display: flex;
   flex-direction: column;
