@@ -1,4 +1,5 @@
 import { ReactElement, useMemo, useState } from 'react'
+import './index.css'
 
 import { UniqueItems } from './data/UniqueItems'
 import { SetItems } from './data/SetItems'
