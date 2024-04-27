@@ -12502,7 +12502,7 @@ export const UniqueItems = [
     lineNumber: 354
   },
   {
-    name: 'Fathom',
+    name: "Death's Fathom",
     id: 354,
     version: 100,
     enabled: 1,
