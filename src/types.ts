@@ -1,3 +1,3 @@
-export type RunewordType = Record<string, string | number>
-export type SetItemType = Record<string, string | number>
-export type UniqueItemType = Record<string, string | number>
+export type RunewordType = Record<string, any>
+export type SetItemType = Record<string, any>
+export type UniqueItemType = Record<string, any>
