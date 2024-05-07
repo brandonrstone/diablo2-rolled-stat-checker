@@ -1,11 +1,3 @@
-export type UniqueItemType = {
-  [key: string]: any
-}
-
-export type SetItemType = {
-  [key: string]: any
-}
-
-export type RunewordType = {
-  [key: string]: any
-}
+export type RunewordType = Record<string, string | number>
+export type SetItemType = Record<string, string | number>
+export type UniqueItemType = Record<string, string | number>

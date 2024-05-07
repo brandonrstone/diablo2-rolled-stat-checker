@@ -2735,7 +2735,33 @@ export const Runewords: RunewordType[] = [
     Stat5Min: 25,
     Stat5Max: 25,
     lineNumber: 168
+  },
+  {
+    id: 'Runeword171',
+    name: 'Mosaic',
+    requiredLevel: 53,
+    complete: 1,
+    patchRelease: 110,
+    itype1: 'Missile',
+    RequiredRunes: 'OrtEth',
+    Rune1: 'Mal',
+    Rune2: 'Gul',
+    Rune3: 'Gul',
+    Stat1: 'Enhanced Damage %',
+    Stat1Min: 200,
+    Stat1Max: 250,
+    Stat2: 'Cold Skill Damage %',
+    Stat2Min: 8,
+    Stat2Max: 15,
+    Stat3: 'Lightning Skill Damage %',
+    Stat3Min: 8,
+    Stat3Max: 15,
+    Stat4: 'Fire Skill Damage %',
+    Stat4Min: 8,
+    Stat4Max: 15,
+    Stat5: 'Defense',
+    Stat5Min: 25,
+    Stat5Max: 25,
+    lineNumber: 168
   }
 ]
-
-console.log(Runewords.filter(runeword => !runeword.Stat1Min))
