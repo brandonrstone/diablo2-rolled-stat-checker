@@ -2742,7 +2742,7 @@ export const Runewords: RunewordType[] = [
     requiredLevel: 53,
     complete: 1,
     patchRelease: 110,
-    itype1: 'Missile',
+    itype1: 'Claw',
     RequiredRunes: 'MalGulAmn',
     Rune1: 'Mal',
     Rune2: 'Gul',
