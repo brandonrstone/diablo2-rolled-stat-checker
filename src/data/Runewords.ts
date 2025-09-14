@@ -1,9 +1,10 @@
-import { RunewordType } from '../types';
+import type { RunewordType } from '../types';
 
 export const Runewords: RunewordType[] = [
   {
     id: 'Runeword1',
     name: "Ancients' Pledge",
+    base: 'Grim Shield',
     requiredLevel: 21,
     complete: 1,
     patchRelease: 109,
@@ -29,6 +30,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword4',
     name: 'Beast',
+    base: 'Berserker Axe',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 110,
@@ -64,6 +66,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword6',
     name: 'Black',
+    base: 'Flail',
     requiredLevel: 35,
     complete: 1,
     patchRelease: 109,
@@ -94,6 +97,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword8',
     name: 'Bone',
+    base: 'Dusk Shroud',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 111,
@@ -121,6 +125,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword9',
     name: 'Bramble',
+    base: 'Dusk Shroud',
     requiredLevel: 61,
     complete: 1,
     patchRelease: 110,
@@ -153,6 +158,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword10',
     name: 'Brand',
+    base: 'Grand Matron Bow',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -189,6 +195,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword11',
     name: 'Breath of the Dying',
+    base: 'Ethereal Berserker Axe',
     requiredLevel: 69,
     complete: 1,
     patchRelease: 110,
@@ -227,6 +234,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword13',
     name: 'Call to Arms',
+    base: 'Crystal Sword',
     requiredLevel: 57,
     complete: 1,
     patchRelease: 110,
@@ -263,6 +271,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword14',
     name: 'Chains of Honor',
+    base: 'Archon Plate',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 110,
@@ -298,6 +307,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword16',
     name: 'Chaos',
+    base: 'Runic Talons',
     requiredLevel: 57,
     complete: 1,
     patchRelease: 110,
@@ -333,6 +343,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword17',
     name: 'Crescent Moon',
+    base: 'Phase Blade',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 110,
@@ -366,6 +377,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword20',
     name: 'Death',
+    base: 'Ethereal Berserker Axe',
     requiredLevel: 55,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -401,6 +413,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword22',
     name: 'Delirium',
+    base: 'Bone Visage',
     requiredLevel: 51,
     complete: 1,
     patchRelease: 110,
@@ -433,6 +446,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword25',
     name: 'Destruction',
+    base: 'Cryptic Sword',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -473,6 +487,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword26',
     name: 'Doom',
+    base: 'Berserker Axe',
     requiredLevel: 67,
     complete: 1,
     patchRelease: 110,
@@ -505,6 +520,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword27',
     name: 'Dragon',
+    base: 'Archon Plate',
     requiredLevel: 66,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -537,6 +553,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword29',
     name: 'Dream',
+    base: 'Sacred Targe',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -569,6 +586,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword30',
     name: 'Duress',
+    base: 'Dusk Shroud',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 110,
@@ -603,6 +621,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword31',
     name: 'Edge',
+    base: 'Great Bow',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -634,6 +653,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword33',
     name: 'Enigma',
+    base: 'Archon Plate',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 110,
@@ -648,7 +668,7 @@ export const Runewords: RunewordType[] = [
     Stat2: 'Defense',
     Stat2Min: 14,
     Stat2Max: 14,
-    Stat3: 'move2',
+    Stat3: 'Faster Run/Walk %',
     Stat3Min: 45,
     Stat3Max: 45,
     Stat4: 'Strength Per Level',
@@ -666,6 +686,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword34',
     name: 'Enlightenment',
+    base: 'Dusk Shroud',
     requiredLevel: 45,
     complete: 1,
     patchRelease: 111,
@@ -693,6 +714,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword36',
     name: 'Eternity',
+    base: 'Berserker Axe',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 110,
@@ -726,6 +748,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword37',
     name: 'Exile',
+    base: 'Ethereal Sacred Targe',
     requiredLevel: 57,
     complete: 1,
     patchRelease: 110,
@@ -762,6 +785,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword38',
     name: 'Faith',
+    base: 'Grand Matron Bow',
     requiredLevel: 65,
     complete: 1,
     patchRelease: '"110, Previously Ladder Only"',
@@ -798,6 +822,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword39',
     name: 'Famine',
+    base: 'Berserker Axe',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 110,
@@ -834,6 +859,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword40',
     name: 'Flickering Flame',
+    base: 'Bone Visage',
     requiredLevel: 55,
     complete: 1,
     server: 1,
@@ -866,6 +892,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword41',
     name: 'Fortitude',
+    base: 'Archon Plate',
     requiredLevel: 59,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -903,6 +930,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword44',
     name: 'Fury',
+    base: 'Phase Blade',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 109,
@@ -938,6 +966,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword45',
     name: 'Gloom',
+    base: 'Dusk Shroud',
     requiredLevel: 47,
     complete: 1,
     patchRelease: 110,
@@ -973,6 +1002,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword47',
     name: 'Grief',
+    base: 'Phase Blade',
     requiredLevel: 59,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1011,6 +1041,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword48',
     name: 'Hand of Justice',
+    base: 'Phase Blade',
     requiredLevel: 67,
     complete: 1,
     patchRelease: 110,
@@ -1045,6 +1076,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword49',
     name: 'Harmony',
+    base: 'Matriarchal Bow',
     requiredLevel: 39,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1080,6 +1112,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword51',
     name: 'Heart of the Oak',
+    base: 'Flail',
     requiredLevel: 55,
     complete: 1,
     patchRelease: 110,
@@ -1110,6 +1143,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword54',
     name: 'Holy Thunder',
+    base: 'War Scepter',
     requiredLevel: 24,
     complete: 1,
     patchRelease: 109,
@@ -1143,6 +1177,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword55',
     name: 'Honor',
+    base: 'Naga',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 109,
@@ -1176,6 +1211,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword59',
     name: 'Ice',
+    base: 'Matriarchal Bow',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1209,6 +1245,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword60',
     name: 'Infinity',
+    base: 'Ethereal Thresher',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1239,6 +1276,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword62',
     name: 'Insight',
+    base: 'Ethereal Thresher',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1273,6 +1311,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword65',
     name: "King's Grace",
+    base: 'War Scepter',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 109,
@@ -1305,6 +1344,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword66',
     name: 'Kingslayer',
+    base: 'Phase Blade',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 110,
@@ -1341,6 +1381,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword69',
     name: 'Last Wish',
+    base: 'Phase Blade',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1364,6 +1405,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword71',
     name: 'Lawbringer',
+    base: 'Phase Blade',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1401,6 +1443,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword72',
     name: 'Leaf',
+    base: 'Staff (+3 Fire Ball)',
     requiredLevel: 19,
     complete: 1,
     patchRelease: 109,
@@ -1434,6 +1477,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword74',
     name: 'Lionheart',
+    base: 'Dusk Shroud',
     requiredLevel: 41,
     complete: 1,
     patchRelease: 109,
@@ -1465,6 +1509,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword75',
     name: 'Lore',
+    base: 'Druid Pelt (2os)',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 109,
@@ -1489,6 +1534,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword81',
     name: 'Malice',
+    base: 'Flail',
     requiredLevel: 15,
     complete: 1,
     patchRelease: 109,
@@ -1520,6 +1566,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword82',
     name: 'Melody',
+    base: 'Matriarchal Bow',
     requiredLevel: 39,
     complete: 1,
     patchRelease: 109,
@@ -1555,6 +1602,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword83',
     name: 'Memory',
+    base: 'Staff (+3 Energy Shield)',
     requiredLevel: 37,
     complete: 1,
     patchRelease: 109,
@@ -1592,6 +1640,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword84',
     name: 'Mist',
+    base: 'Grand Matron Bow',
     requiredLevel: 67,
     complete: 1,
     server: 1,
@@ -1626,6 +1675,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword87',
     name: 'Myth',
+    base: 'Dusk Shroud',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 111,
@@ -1653,6 +1703,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword88',
     name: 'Nadir',
+    base: 'Mask',
     requiredLevel: 13,
     complete: 1,
     patchRelease: 109,
@@ -1680,6 +1731,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword91',
     name: 'Oath',
+    base: 'Ethereal Small Crescent',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1712,6 +1764,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword92',
     name: 'Obedience',
+    base: 'Ethereal Thresher',
     requiredLevel: 41,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1750,6 +1803,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword94',
     name: 'Obsession',
+    base: 'Archon Staff',
     requiredLevel: 69,
     complete: 1,
     server: 1,
@@ -1789,6 +1843,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword95',
     name: 'Passion',
+    base: 'Phase Blade',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 110,
@@ -1818,6 +1873,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword97',
     name: 'Pattern',
+    base: 'Greater Talons',
     requiredLevel: 23,
     complete: 1,
     server: 1,
@@ -1853,6 +1909,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword98',
     name: 'Peace',
+    base: 'Dusk Shroud',
     requiredLevel: 29,
     complete: 1,
     patchRelease: 111,
@@ -1880,6 +1937,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword103',
     name: 'Phoenix',
+    base: 'Monarch',
     requiredLevel: 65,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1918,6 +1976,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword106',
     name: 'Plague',
+    base: 'Phase Blade',
     requiredLevel: 67,
     complete: 1,
     server: 1,
@@ -1943,6 +2002,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword109',
     name: 'Pride',
+    base: 'Ethereal Giant Thresher',
     requiredLevel: 67,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -1978,6 +2038,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword110',
     name: 'Principle',
+    base: 'Dusk Shroud',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 111,
@@ -2004,6 +2065,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword112',
     name: 'Prudence',
+    base: 'Dusk Shroud',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 110,
@@ -2036,6 +2098,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword116',
     name: 'Radiance',
+    base: 'Crown',
     requiredLevel: 27,
     complete: 1,
     patchRelease: 109,
@@ -2067,6 +2130,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword117',
     name: 'Rain',
+    base: 'Dusk Shroud',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 111,
@@ -2094,6 +2158,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword120',
     name: 'Rhyme',
+    base: 'Grim Shield',
     requiredLevel: 29,
     complete: 1,
     patchRelease: 109,
@@ -2124,6 +2189,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword121',
     name: 'Rift',
+    base: 'Caduceus',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2159,6 +2225,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword122',
     name: 'Sanctuary',
+    base: 'Sacred Targe',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 110,
@@ -2190,6 +2257,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword126',
     name: 'Silence',
+    base: 'Phase Blade',
     requiredLevel: 55,
     complete: 1,
     patchRelease: 109,
@@ -2227,6 +2295,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword128',
     name: 'Smoke',
+    base: 'Dusk Shroud',
     requiredLevel: 37,
     complete: 1,
     patchRelease: 109,
@@ -2254,6 +2323,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword130',
     name: 'Spirit',
+    base: 'Monarch',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2290,6 +2360,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword131',
     name: 'Splendor',
+    base: 'Necromancer Head (2os)',
     requiredLevel: 37,
     complete: 1,
     patchRelease: 110,
@@ -2323,6 +2394,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword133',
     name: 'Stealth',
+    base: 'Mage Plate',
     requiredLevel: 17,
     complete: 1,
     patchRelease: 109,
@@ -2339,7 +2411,7 @@ export const Runewords: RunewordType[] = [
     Stat3: 'stam',
     Stat3Min: 15,
     Stat3Max: 15,
-    Stat4: 'move2',
+    Stat4: 'Faster Run/Walk %',
     Stat4Min: 25,
     Stat4Max: 25,
     Stat5: 'cast2',
@@ -2353,6 +2425,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword134',
     name: 'Steel',
+    base: 'Scimitar',
     requiredLevel: 13,
     complete: 1,
     patchRelease: 109,
@@ -2382,6 +2455,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword137',
     name: 'Stone',
+    base: 'Archon Plate',
     requiredLevel: 66,
     complete: 1,
     patchRelease: 110,
@@ -2411,6 +2485,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword139',
     name: 'Strength',
+    base: 'Flail',
     requiredLevel: 25,
     complete: 1,
     patchRelease: 109,
@@ -2435,6 +2510,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword148',
     name: 'Treachery',
+    base: 'Dusk Shroud',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 111,
@@ -2462,6 +2538,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword151',
     name: 'Unbending Will',
+    base: 'Colossus Blade',
     requiredLevel: 63,
     complete: 1,
     server: 1,
@@ -2502,6 +2579,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword154',
     name: 'Venom',
+    base: 'Phase Blade',
     requiredLevel: 49,
     complete: 1,
     patchRelease: 109,
@@ -2525,6 +2603,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword99',
     name: 'Voice of Reason',
+    base: 'Phase Blade',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2558,6 +2637,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword160',
     name: 'Wealth',
+    base: 'Dusk Shroud',
     requiredLevel: 43,
     complete: 1,
     patchRelease: 109,
@@ -2577,6 +2657,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword162',
     name: 'White',
+    base: 'Bone Wand (+3 Bone Spear)',
     requiredLevel: 35,
     complete: 1,
     patchRelease: 109,
@@ -2614,6 +2695,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword163',
     name: 'Wind',
+    base: 'Scimitar',
     requiredLevel: 61,
     complete: 1,
     patchRelease: 110,
@@ -2627,7 +2709,7 @@ export const Runewords: RunewordType[] = [
     Stat2: 'Increased Attack Speed %',
     Stat2Min: 40,
     Stat2Max: 40,
-    Stat3: 'move2',
+    Stat3: 'Faster Run/Walk %',
     Stat3Min: 20,
     Stat3Max: 20,
     Stat4: 'reduce-ac',
@@ -2645,6 +2727,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword165',
     name: 'Wisdom',
+    base: 'Bone Visage',
     requiredLevel: 45,
     complete: 1,
     server: 1,
@@ -2677,6 +2760,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword168',
     name: 'Wrath',
+    base: 'Grand Matron Bow',
     requiredLevel: 63,
     complete: 1,
     patchRelease: 'Previously Ladder Only',
@@ -2712,6 +2796,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword170',
     name: 'Zephyr',
+    base: 'Composite Bow',
     requiredLevel: 21,
     complete: 1,
     patchRelease: 109,
@@ -2719,7 +2804,7 @@ export const Runewords: RunewordType[] = [
     RequiredRunes: 'OrtEth',
     Rune1: 'Ort',
     Rune2: 'Eth',
-    Stat1: 'move2',
+    Stat1: 'Faster Run/Walk %',
     Stat1Min: 25,
     Stat1Max: 25,
     Stat2: 'Increased Attack Speed %',
@@ -2739,6 +2824,7 @@ export const Runewords: RunewordType[] = [
   {
     id: 'Runeword171',
     name: 'Mosaic',
+    base: 'Runic Talons',
     requiredLevel: 53,
     complete: 1,
     patchRelease: 110,

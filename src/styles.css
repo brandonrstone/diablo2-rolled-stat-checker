@@ -1,0 +1,46 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Exocet";
+  src: url("/fonts/EXL_____.TTF") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-gold: rgb(201, 175, 111);
+  --color-ui-gold: rgb(185, 157, 87);
+  --color-blueish: rgb(92, 92, 207);
+  --color-muted: rgb(150, 150, 150);
+  --color-muted-2: rgb(110, 108, 108);
+  --color-roll-min: rgb(214, 105, 105);
+  --color-roll-max: rgb(74, 226, 175);
+
+  --font-exocet: "Exocet", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: var(--font-ui);
+}
+
+@layer base {
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: transparent;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url("/Diablo_II_Background.png") center/cover no-repeat;
+    pointer-events: none;
+  }
+}
