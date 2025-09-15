@@ -11,6 +11,8 @@ import { SetItem } from './components/SetItem';
 import { UniqueItem } from './components/UniqueItem';
 import { useDebounced } from './hooks/useDebounced';
 
+// TODO: Add OpenGraph meta tags, favicon, etc.
+
 function normalize(str: string) {
   return str.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 }
@@ -40,7 +42,7 @@ function runewordHaystack(runeword: RunewordType): string {
   parts.push(...runes);
 
   if (Array.isArray(runeword.stats) && runeword.stats.length) {
-    parts.push(...(runeword.stats.map(s => s.code).filter(Boolean) as string[]));
+    parts.push(...(runeword.stats.map(stat => stat.code).filter(Boolean) as string[]));
   } else {
     for (let i = 1; i <= 12; i++) {
       const k = runeword[`Stat${i}`];
@@ -139,7 +141,7 @@ export default function App() {
           <div className={`relative bottom-2 flex flex-col items-center ${blurred && 'text-white/90'}`}>
             <img className='max-w-[360px] h-auto m-0 select-none' src='/Diablo_II_Logo.webp' alt='Diablo II logo' draggable={false} />
             <span className='mb-1 text-ui-gold font-system-ui [font-size:clamp(0.95rem,0.8rem+0.4vw,1.1rem)]'>
-              Rolled Stat Checker v1.2.1
+              Rolled Stat Checker v1.2.2
             </span>
 
             {/* Search field */}
