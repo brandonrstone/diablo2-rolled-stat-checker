@@ -77,12 +77,3 @@ export function filterExtracted(stats: ExtractedStat[], mode: 'all' | 'rollable'
   if (mode === 'all') return stats;
   return stats.filter(isRollable);
 }
-
-const item: UniqueItemType = {
-  prop1: 'value1',
-  prop2: 42,
-};
-
-// Accessing dynamic keys
-const key = 'prop1';
-console.log(item[key]); // No error
