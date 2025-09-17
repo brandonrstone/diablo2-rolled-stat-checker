@@ -1,8 +1,12 @@
 import { Fragment, memo } from 'react';
 
+import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
+
 import type { RunewordType } from '../types';
 
-type Props = { runeword: RunewordType };
+type Props = {
+  runeword: RunewordType
+};
 
 function renderRuneInline(rune: string) {
   if (!rune) return null;
@@ -37,7 +41,7 @@ function collectItemTypes(runeword: RunewordType): string[] {
 type LegacyStat = { code: string; min?: number; max?: number };
 function collectStats(runeword: RunewordType): LegacyStat[] {
   if (Array.isArray(runeword.stats) && runeword.stats.length) {
-    return runeword.stats.map(s => ({ code: s.code, min: s.min, max: s.max }));
+    return runeword.stats.map(stat => ({ code: stat.code, min: stat.min, max: stat.max }));
   }
   const stats: LegacyStat[] = [];
   for (let i = 1; i <= 10; i++) {
@@ -67,6 +71,7 @@ function analyzeRoll(min?: number, max?: number):
 }
 
 export const Runeword = memo(function Runeword({ runeword }: Props) {
+  const { mode } = useStatDisplayMode();
   const runes = collectRunes(runeword);
   const types = collectItemTypes(runeword);
   const stats = collectStats(runeword);
@@ -74,7 +79,7 @@ export const Runeword = memo(function Runeword({ runeword }: Props) {
   return (
     <div
       className='w-full grid justify-items-center text-center px-4 py-4 rounded-lg bg-black text-blueish shadow-[0_1px_8px_rgba(0,0,0,0.35)]
-      transition-transform duration-150 ease-out hover:-translate-y-[1px] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] [content-visibility:auto]
+      transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] [content-visibility:auto]
       font-exocet font-semibold text-lg'
       style={{ containIntrinsicSize: '200px' }}
     >
@@ -99,6 +104,10 @@ export const Runeword = memo(function Runeword({ runeword }: Props) {
         {stats.map((stat, idx) => {
           if (!stat.code) return null;
           const roll = analyzeRoll(stat.min, stat.max);
+
+          // Return null if filtering out non-rollable stats
+          if (mode === 'rollable' && roll.kind !== 'variable') return null;
+
           return (
             <div className='grid items-center justify-items-center' key={`${stat.code}-${idx}`}>
               <div className='text-blueish'>{stat.code}</div>

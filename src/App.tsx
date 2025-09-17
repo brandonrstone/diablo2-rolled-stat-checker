@@ -4,6 +4,7 @@ import './styles.css';
 import { UniqueItems } from './data/UniqueItems';
 import { SetItems } from './data/SetItems';
 import { Runewords } from './data/Runewords';
+
 import type { RunewordType, SetItemType, UniqueItemType } from './types';
 
 import { Runeword } from './components/Runeword';
@@ -11,16 +12,17 @@ import { SetItem } from './components/SetItem';
 import { UniqueItem } from './components/UniqueItem';
 import { useDebounced } from './hooks/useDebounced';
 
+import { type StatDisplayMode } from './contexts/StatDisplayContext';
+import { useStatDisplayMode } from './hooks/useStatDisplayMode';
+
 // TODO: Add OpenGraph meta tags, favicon, etc.
 
 function normalize(str: string) {
   return str.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 }
-
 function squashRunes(str: string) {
   return normalize(str).replace(/[\s\-/|,_.]+/g, '');
 }
-
 function includesAllTokens(haystack: string, tokens: string[]) {
   if (!tokens.length) return true;
   return tokens.every(t => haystack.includes(t));
@@ -58,10 +60,42 @@ function runewordHaystack(runeword: RunewordType): string {
 function setItemHaystack(item: SetItemType): string {
   return normalize(item.name);
 }
-
 function uniqueItemHaystack(item: UniqueItemType): string {
   const base = item.itemBase ?? item.base;
   return normalize([item.name, base].filter(Boolean).join(' '));
+}
+
+function HeaderControls({ blurred }: { blurred: boolean }) {
+  const { mode, setMode } = useStatDisplayMode();
+  const change = (m: StatDisplayMode) => setMode(m);
+
+  return (
+    <div className={`flex w-full items-center gap-3 mt-2 ${blurred ? 'text-white/80' : 'text-black/80'}`}>
+      <div
+        className={[
+          'inline-flex rounded-xl overflow-hidden border border-white/10 bg-white/5',
+          'shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]'
+        ].join(' ')}
+        role="radiogroup"
+        aria-label="Stat display mode"
+      >
+        {(['rollable', 'all'] as const).map(option => (
+          <button
+            key={option}
+            role="radio"
+            aria-checked={mode === option}
+            onClick={() => change(option)}
+            className={[
+              'px-3 py-1 text-sm font-medium transition cursor-pointer',
+              mode === option ? 'bg-yellow-700/30 text-yellow-100' : 'hover:bg-white/10'
+            ].join(' ')}
+          >
+            {option === 'rollable' ? 'Rollable Only' : 'All Stats'}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default function App() {
@@ -72,7 +106,6 @@ export default function App() {
   const itemQuery = useDebounced(deferred, 150).trim();
   const headerRef = useRef<HTMLDivElement | null>(null);
 
-  // Measure header height (to spacer-pad the page)
   useEffect(() => {
     const measure = () => setHeaderH(headerRef.current?.offsetHeight ?? 0);
     measure();
@@ -85,7 +118,6 @@ export default function App() {
     };
   }, []);
 
-  // Toggle subtle background blur once scrolled
   useEffect(() => {
     const onScroll = () => setBlurred(window.scrollY > 2);
     onScroll();
@@ -112,7 +144,7 @@ export default function App() {
 
   const filteredUniqueItems = useMemo(() => {
     if (!tokens.length) return [];
-    return UniqueItems.filter((uniqueItem: UniqueItemType) => includesAllTokens(uniqueItemHaystack(uniqueItem), tokens));
+    return UniqueItems.filter((uniqueItem) => includesAllTokens(uniqueItemHaystack(uniqueItem as UniqueItemType), tokens));
   }, [tokens]);
 
   const total =
@@ -141,7 +173,7 @@ export default function App() {
           <div className={`relative bottom-2 flex flex-col items-center ${blurred && 'text-white/90'}`}>
             <img className='max-w-[360px] h-auto m-0 select-none' src='/Diablo_II_Logo.webp' alt='Diablo II logo' draggable={false} />
             <span className='mb-1 text-ui-gold font-system-ui [font-size:clamp(0.95rem,0.8rem+0.4vw,1.1rem)]'>
-              Rolled Stat Checker v1.2.2
+              Rolled Stat Checker v1.2.3
             </span>
 
             {/* Search field */}
@@ -166,6 +198,9 @@ export default function App() {
                 />
               </div>
             </label>
+
+            {/* NEW: stat mode toggle */}
+            <HeaderControls blurred={blurred} />
           </div>
         </div>
       </div>
@@ -195,7 +230,7 @@ export default function App() {
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
                   Unique Items ({filteredUniqueItems.length})
                 </h2>
-                {filteredUniqueItems.map((uniqueItem: UniqueItemType) => <UniqueItem key={uniqueItem.id} {...uniqueItem} />)}
+                {filteredUniqueItems.map((uniqueItem) => <UniqueItem key={(uniqueItem as UniqueItemType).id} {...(uniqueItem as UniqueItemType)} />)}
               </>
             )}
 
@@ -221,4 +256,4 @@ export default function App() {
       </div>
     </div>
   );
-};
+}

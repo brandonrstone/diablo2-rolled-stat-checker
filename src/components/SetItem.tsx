@@ -1,9 +1,14 @@
 import { Fragment } from 'react';
+
 import useItemValidation from '../hooks/useItemValidation';
-import type { SetItemType } from '../types';
+import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
+
+import type { SetItemType, SetMaxKey, SetMinKey, SetPropKey, SetStatIndex } from '../types';
+
 
 export function SetItem(setItem: SetItemType) {
   const { isValidStat } = useItemValidation();
+  const { mode } = useStatDisplayMode();
 
   type Roll =
     | { kind: 'none' }
@@ -24,16 +29,17 @@ export function SetItem(setItem: SetItemType) {
     return { kind: 'none' };
   }
 
-  const renderLine = (idx: number) => {
-    const code = setItem[`prop${idx}`] as string | undefined;
+  const renderLine = (idx: SetStatIndex) => {
+    const code = setItem[`prop${idx}` as SetPropKey] as string | undefined;
     if (!isValidStat(code ?? '')) return null;
 
-    const min = setItem[`min${idx}`] as number | undefined;
-    const max = setItem[`max${idx}`] as number | undefined;
+    const min = setItem[`min${idx}` as SetMinKey] as number | undefined;
+    const max = setItem[`max${idx}` as SetMaxKey] as number | undefined;
 
     const roll = analyzeRoll(min, max);
 
-    // No numeric part -> label only
+    if (mode === 'rollable' && roll.kind !== 'variable') return null;
+
     if (roll.kind === 'none') {
       return (
         <div className='grid justify-items-center'>
@@ -59,10 +65,11 @@ export function SetItem(setItem: SetItemType) {
     );
   };
 
+
   return (
     <div
       className='grid justify-items-center text-center w-full px-4 pt-4 rounded-lg bg-black text-blueish
-      shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:-translate-y-[1px] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
+      shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
       [content-visibility:auto] font-exocet font-semibold text-xl'
       style={{ containIntrinsicSize: '200px' }}
     >
@@ -74,7 +81,7 @@ export function SetItem(setItem: SetItemType) {
       <div className='text-white'>Required Level: {setItem.requiredLevel ?? '—'}</div>
 
       <div className='mt-1 w-full grid gap-1'>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => <Fragment key={i}>{renderLine(i)}</Fragment>)}
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => <Fragment key={i}>{renderLine(i as SetStatIndex)}</Fragment>)}
       </div>
     </div>
   );

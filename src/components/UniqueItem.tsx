@@ -1,10 +1,13 @@
 import { Fragment } from 'react';
 
 import useItemValidation from '../hooks/useItemValidation';
-import type { UniqueItemType } from '../types';
+import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
+
+import type { MaxKey, MinKey, PropKey, StatIndex, UniqueItemType } from '../types';
 
 export function UniqueItem(uniqueItem: UniqueItemType) {
   const { isValidStat } = useItemValidation();
+  const { mode } = useStatDisplayMode();
 
   const isCharm = (base?: string) =>
     base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
@@ -28,14 +31,16 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     return { kind: 'none' };
   }
 
-  const renderLine = (idx: number) => {
-    const code = uniqueItem[`prop${idx}`] as string | undefined;
+  const renderLine = (idx: StatIndex) => {
+    const code = uniqueItem[`prop${idx}` as PropKey] as string | undefined;
     if (!isValidStat(code ?? '')) return null;
 
-    const min = uniqueItem[`min${idx}`] as number | undefined;
-    const max = uniqueItem[`max${idx}`] as number | undefined;
+    const min = uniqueItem[`min${idx}` as MinKey] as number | undefined;
+    const max = uniqueItem[`max${idx}` as MaxKey] as number | undefined;
 
     const roll = analyzeRoll(min, max);
+
+    if (mode === 'rollable' && roll.kind !== 'variable') return null;
 
     if (roll.kind === 'none') {
       return (
@@ -62,13 +67,14 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     );
   };
 
+
   const base = uniqueItem.itemBase;
   const baseClass = isCharm(base) ? 'text-gold' : 'text-muted-2';
 
   return (
     <div
       className='grid justify-items-center text-center w-full px-4 pt-4 rounded-lg bg-black text-blueish
-      shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:-translate-y-[1px] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
+      shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
       [content-visibility:auto] font-exocet font-semibold text-xl'
       style={{ containIntrinsicSize: '200px' }}
     >
@@ -79,7 +85,7 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
       <div className='text-white'>Required Level: {uniqueItem.requiredLevel ?? '—'}</div>
 
       <div className='mt-1 w-full grid gap-1'>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => <Fragment key={i}>{renderLine(i)}</Fragment>)}
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => <Fragment key={i}>{renderLine(i as StatIndex)}</Fragment>)}
       </div>
     </div>
   );
