@@ -65,46 +65,15 @@ function uniqueItemHaystack(item: UniqueItemType): string {
   return normalize([item.name, base].filter(Boolean).join(' '));
 }
 
-function HeaderControls({ blurred }: { blurred: boolean }) {
-  const { mode, setMode } = useStatDisplayMode();
-  const change = (m: StatDisplayMode) => setMode(m);
-
-  return (
-    <div className={`flex w-full items-center gap-3 mt-2 ${blurred ? 'text-white/80' : 'text-black/80'}`}>
-      <div
-        className={[
-          'inline-flex rounded-xl overflow-hidden border border-white/10 bg-white/5',
-          'shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]'
-        ].join(' ')}
-        role="radiogroup"
-        aria-label="Stat display mode"
-      >
-        {(['rollable', 'all'] as const).map(option => (
-          <button
-            key={option}
-            role="radio"
-            aria-checked={mode === option}
-            onClick={() => change(option)}
-            className={[
-              'px-3 py-1 text-sm font-medium transition cursor-pointer',
-              mode === option ? 'bg-yellow-700/30 text-yellow-100' : 'hover:bg-white/10'
-            ].join(' ')}
-          >
-            {option === 'rollable' ? 'Rollable Only' : 'All Stats'}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function App() {
+  const { mode, setMode } = useStatDisplayMode();
   const [search, setSearch] = useState('');
   const [blurred, setBlurred] = useState(false);
-  const [headerH, setHeaderH] = useState(0);
+  const [headerHeight, setHeaderH] = useState(0);
   const deferred = useDeferredValue(search);
   const itemQuery = useDebounced(deferred, 150).trim();
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const change = (mode: StatDisplayMode) => setMode(mode);
 
   useEffect(() => {
     const measure = () => setHeaderH(headerRef.current?.offsetHeight ?? 0);
@@ -144,33 +113,23 @@ export default function App() {
 
   const filteredUniqueItems = useMemo(() => {
     if (!tokens.length) return [];
-    return UniqueItems.filter((uniqueItem) => includesAllTokens(uniqueItemHaystack(uniqueItem as UniqueItemType), tokens));
+    return (UniqueItems as UniqueItemType[]).filter(uniqueItem => includesAllTokens(uniqueItemHaystack(uniqueItem), tokens));
   }, [tokens]);
 
-  const total =
-    (filteredRunewords?.length || 0) +
-    (filteredSetItems?.length || 0) +
-    (filteredUniqueItems?.length || 0);
-
+  const total = (filteredRunewords?.length || 0) + (filteredSetItems?.length || 0) + (filteredUniqueItems?.length || 0);
   const showEmpty = itemQuery.trim() === '';
 
   return (
     <div
       className='w-full min-h-[100dvh] grid grid-rows-[auto_1fr] justify-items-center overflow-x-clip'
-      style={{ paddingTop: headerH }} // spacer equal to fixed header height
+      style={{ paddingTop: headerHeight }} // spacer equal to fixed header height
     >
       {/* Fixed, centered, capped header */}
       <div className='fixed top-0 left-0 right-0 z-20'>
-        <div
-          className={['absolute inset-0 transition', blurred ? 'bg-black/40 backdrop-blur-[2px]' : 'bg-transparent'].join(' ')}
-          aria-hidden
-        />
+        <div className={['absolute inset-0 transition', blurred ? 'bg-black/40 backdrop-blur-[2px]' : 'bg-transparent'].join(' ')} aria-hidden />
         {/* Foreground content */}
-        <div
-          ref={headerRef}
-          className='relative flex flex-col items-center mx-auto px-4 py-4 gap-2'
-        >
-          <div className={`relative bottom-2 flex flex-col items-center ${blurred && 'text-white/90'}`}>
+        <div className='relative flex flex-col items-center mx-auto px-4 pt-2 pb-4 gap-2' ref={headerRef}>
+          <div className={`relative top-0 flex flex-col items-center ${blurred && 'text-white/90'}`}>
             <img className='max-w-[360px] h-auto m-0 select-none' src='/Diablo_II_Logo.webp' alt='Diablo II logo' draggable={false} />
             <span className='mb-1 text-ui-gold font-system-ui [font-size:clamp(0.95rem,0.8rem+0.4vw,1.1rem)]'>
               Rolled Stat Checker v1.2.3
@@ -199,8 +158,32 @@ export default function App() {
               </div>
             </label>
 
-            {/* NEW: stat mode toggle */}
-            <HeaderControls blurred={blurred} />
+            {/* Stat mode toggle */}
+            <div className={`flex w-full items-center gap-3 mt-2 ${blurred ? 'text-white/80' : 'text-black/80'}`}>
+              <div
+                className={[
+                  'inline-flex rounded-xl overflow-hidden border border-white/10 bg-white/5',
+                  'shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]'
+                ].join(' ')}
+                role="radiogroup"
+                aria-label="Stat display mode"
+              >
+                {(['rollable', 'all'] as const).map(option => (
+                  <button
+                    key={option}
+                    role="radio"
+                    aria-checked={mode === option}
+                    onClick={() => change(option)}
+                    className={[
+                      'px-3 py-1 text-sm font-medium transition cursor-pointer',
+                      mode === option ? 'bg-yellow-700/30 text-yellow-100' : 'hover:bg-white/10'
+                    ].join(' ')}
+                  >
+                    {option === 'rollable' ? 'Rollable Only' : 'All Stats'}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -210,35 +193,25 @@ export default function App() {
         {showEmpty ? (
           <div className='col-span-full text-center text-white/90'>
             <div>Type to search uniques, sets, and runewords.</div>
-            <div className='mt-1 text-muted font-sans text-[0.95rem]'>
-              Try: “enigma”, “archon plate”, “Tal Thul Ort Amn”, “all resistances”
-            </div>
+            <div className='mt-1 text-muted font-sans text-[0.95rem]'>Try: “enigma”, “archon plate”, “Tal Thul Ort Amn”, “all resistances”</div>
           </div>
         ) : total === 0 ? (
           <div className='col-span-full text-center text-white/90'>
-            <div>
-              No results for “<span className='italic'>{search}</span>”.
-            </div>
-            <div className='mt-1 text-muted font-sans text-[0.95rem]'>
-              Check spelling or try a different keyword.
-            </div>
+            <div>No results for “<span className='italic'>{search}</span>”.</div>
+            <div className='mt-1 text-muted font-sans text-[0.95rem]'>Check spelling or try a different keyword.</div>
           </div>
         ) : (
           <>
             {filteredUniqueItems.length > 0 && (
               <>
-                <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
-                  Unique Items ({filteredUniqueItems.length})
-                </h2>
+                <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>Unique Items ({filteredUniqueItems.length})</h2>
                 {filteredUniqueItems.map((uniqueItem) => <UniqueItem key={(uniqueItem as UniqueItemType).id} {...(uniqueItem as UniqueItemType)} />)}
               </>
             )}
 
             {filteredSetItems.length > 0 && (
               <>
-                <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
-                  Set Items ({filteredSetItems.length})
-                </h2>
+                <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'> Set Items ({filteredSetItems.length})</h2>
                 {filteredSetItems.map((setItem: SetItemType) => <SetItem key={setItem.id} {...setItem} />)}
               </>
             )}
@@ -248,7 +221,9 @@ export default function App() {
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
                   Runewords ({filteredRunewords.length})
                 </h2>
-                {filteredRunewords.map((runeword: RunewordType) => <Runeword key={runeword.id} runeword={runeword} />)}
+                {filteredRunewords.map((rw: RunewordType) => (
+                  <Runeword key={rw.id} runeword={rw} />
+                ))}
               </>
             )}
           </>

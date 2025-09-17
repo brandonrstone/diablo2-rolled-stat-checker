@@ -1,9 +1,8 @@
-import { Fragment } from 'react';
-
+import { useMemo } from 'react';
 import useItemValidation from '../hooks/useItemValidation';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
-
-import type { MaxKey, MinKey, PropKey, StatIndex, UniqueItemType } from '../types';
+import type { UniqueItemType } from '../types';
+import { extractUniqueItemStats, filterExtracted } from '../lib/rollable';
 
 export function UniqueItem(uniqueItem: UniqueItemType) {
   const { isValidStat } = useItemValidation();
@@ -31,61 +30,54 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     return { kind: 'none' };
   }
 
-  const renderLine = (idx: StatIndex) => {
-    const code = uniqueItem[`prop${idx}` as PropKey] as string | undefined;
-    if (!isValidStat(code ?? '')) return null;
-
-    const min = uniqueItem[`min${idx}` as MinKey] as number | undefined;
-    const max = uniqueItem[`max${idx}` as MaxKey] as number | undefined;
-
-    const roll = analyzeRoll(min, max);
-
-    if (mode === 'rollable' && roll.kind !== 'variable') return null;
-
-    if (roll.kind === 'none') {
-      return (
-        <div className='grid justify-items-center'>
-          <span className='text-gold'>{code}</span>
-        </div>
-      );
-    }
-
-    return (
-      <div className='grid justify-items-center'>
-        <div><span className='text-blueish'>{code}</span></div>
-
-        {roll.kind === 'variable' ? (
-          <div>
-            <span className='text-roll-min'>{roll.low}</span>
-            {' - '}
-            <span className='text-roll-max'>{roll.high}</span>
-          </div>
-        ) : (
-          <div><span className='text-white'>{roll.value}</span></div>
-        )}
-      </div>
-    );
-  };
-
+  // Build the exact list of *visible* stats (no empty props, filtered by mode)
+  const visibleStats = useMemo(() => {
+    const all = extractUniqueItemStats(uniqueItem)
+      .filter(stat => isValidStat(stat.text)); // drop invalid/placeholder lines
+    return filterExtracted(all, mode);     // 'all' or 'rollable'
+  }, [uniqueItem, isValidStat, mode]);
 
   const base = uniqueItem.itemBase;
   const baseClass = isCharm(base) ? 'text-gold' : 'text-muted-2';
 
   return (
     <div
-      className='grid justify-items-center text-center w-full px-4 pt-4 rounded-lg bg-black text-blueish
+      className='grid justify-items-center text-center w-full p-4 rounded-lg bg-black text-blueish
       shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
       [content-visibility:auto] font-exocet font-semibold text-xl'
       style={{ containIntrinsicSize: '200px' }}
     >
       <div className='text-gold'>{uniqueItem.name}</div>
-
       <div className={baseClass}>{base}</div>
-
       <div className='text-white'>Required Level: {uniqueItem.requiredLevel ?? '—'}</div>
 
       <div className='mt-1 w-full grid gap-1'>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => <Fragment key={i}>{renderLine(i as StatIndex)}</Fragment>)}
+        {visibleStats.map((stat, i) => {
+          const roll = analyzeRoll(stat.min, stat.max);
+
+          if (roll.kind === 'none') {
+            return (
+              <div className='grid justify-items-center' key={stat.source ?? i}>
+                <span className='text-gold'>{stat.text}</span>
+              </div>
+            );
+          }
+
+          return (
+            <div className='grid justify-items-center' key={stat.source ?? i}>
+              <div><span className='text-blueish'>{stat.text}</span></div>
+              {roll.kind === 'variable' ? (
+                <div>
+                  <span className='text-roll-min'>{roll.low}</span>
+                  {' - '}
+                  <span className='text-roll-max'>{roll.high}</span>
+                </div>
+              ) : (
+                <div><span className='text-white'>{roll.value}</span></div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

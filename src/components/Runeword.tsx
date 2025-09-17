@@ -1,12 +1,9 @@
-import { Fragment, memo } from 'react';
+import { Fragment, memo, useMemo } from 'react';
 
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 
 import type { RunewordType } from '../types';
-
-type Props = {
-  runeword: RunewordType
-};
+import { extractRunewordStats, filterExtracted } from '../lib/rollable';
 
 function renderRuneInline(rune: string) {
   if (!rune) return null;
@@ -54,10 +51,7 @@ function collectStats(runeword: RunewordType): LegacyStat[] {
   return stats;
 }
 
-function analyzeRoll(min?: number, max?: number):
-  | { kind: 'none' }
-  | { kind: 'fixed'; value: number }
-  | { kind: 'variable'; low: number; high: number } {
+function analyzeRoll(min?: number, max?: number): | { kind: 'none' } | { kind: 'fixed'; value: number } | { kind: 'variable'; low: number; high: number } {
   const hasMin = typeof min === 'number' && !Number.isNaN(min);
   const hasMax = typeof max === 'number' && !Number.isNaN(max);
   if (hasMin && hasMax) {
@@ -70,30 +64,30 @@ function analyzeRoll(min?: number, max?: number):
   return { kind: 'none' };
 }
 
-export const Runeword = memo(function Runeword({ runeword }: Props) {
+export const Runeword = memo(function Runeword({ runeword }: { runeword: RunewordType }) {
   const { mode } = useStatDisplayMode();
+
   const runes = collectRunes(runeword);
   const types = collectItemTypes(runeword);
-  const stats = collectStats(runeword);
+
+  const visibleStats = useMemo(() => {
+    const all = extractRunewordStats(runeword);
+    return filterExtracted(all, mode);
+  }, [runeword, mode]);
 
   return (
-    <div
-      className='w-full grid justify-items-center text-center px-4 py-4 rounded-lg bg-black text-blueish shadow-[0_1px_8px_rgba(0,0,0,0.35)]
-      transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] [content-visibility:auto]
+    <div className='w-full grid justify-items-center text-center px-4 py-4 rounded-lg bg-black text-blueish shadow-[0_1px_8px_rgba(0,0,0,0.35)]
+      transition-transform duration-150 ease-out hover:-translate-y-[1px] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] [content-visibility:auto]
       font-exocet font-semibold text-lg'
       style={{ containIntrinsicSize: '200px' }}
     >
       <div className='text-gold [font-size:clamp(1.1rem,1rem+0.5vw,1.35rem)]'>{runeword.name}</div>
 
-      {types.length > 0 && (
-        <div className='text-muted-2 [font-size:1.05rem]'>{types.join(' / ')}</div>
-      )}
+      {types.length > 0 && <div className='text-muted-2 [font-size:1.05rem]'>{types.join(' / ')}</div>}
 
       {runes.length > 0 && (
         <div className='text-gold whitespace-nowrap overflow-x-auto max-w-full'>
-          &apos;
-          {runes.map((r, i) => <Fragment key={r + i}>{renderRuneInline(r)}</Fragment>)}
-          &apos;
+          &apos;{runes.map((r, i) => <Fragment key={r + i}>{renderRuneInline(r)}</Fragment>)}&apos;
         </div>
       )}
 
@@ -101,25 +95,27 @@ export const Runeword = memo(function Runeword({ runeword }: Props) {
       <div className='text-white'>Required Level: {runeword.requiredLevel ?? '—'}</div>
 
       <div className='w-full'>
-        {stats.map((stat, idx) => {
-          if (!stat.code) return null;
+        {visibleStats.map((stat, i) => {
           const roll = analyzeRoll(stat.min, stat.max);
 
-          // Return null if filtering out non-rollable stats
-          if (mode === 'rollable' && roll.kind !== 'variable') return null;
+          if (roll.kind === 'none') return (
+            <div className='grid items-center justify-items-center' key={stat.source ?? i}>
+              <div className='text-blueish'>{stat.text}</div>
+            </div>
+          );
 
           return (
-            <div className='grid items-center justify-items-center' key={`${stat.code}-${idx}`}>
-              <div className='text-blueish'>{stat.code}</div>
+            <div className='grid items-center justify-items-center' key={stat.source ?? i}>
+              <div className='text-blueish'>{stat.text}</div>
               {roll.kind === 'variable' ? (
                 <div>
                   <span className='text-roll-min'>{roll.low}</span>
                   {' - '}
                   <span className='text-roll-max'>{roll.high}</span>
                 </div>
-              ) : roll.kind === 'fixed' ? (
+              ) : (
                 <div><span className='text-white'>{roll.value}</span></div>
-              ) : null}
+              )}
             </div>
           );
         })}
