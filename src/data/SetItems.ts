@@ -3183,9 +3183,6 @@ export const SetItems: SetItemType[] = [
     prop5: '+ Mana',
     min5: 42,
     max5: 42,
-    aprop3a: 'cast2',
-    amin3a: 10,
-    amax3a: 10,
     expansion: 1,
     lineNumber: 78
   },
@@ -3221,9 +3218,6 @@ export const SetItems: SetItemType[] = [
     aprop1a: 'Defense',
     amin1a: 60,
     amax1a: 60,
-    aprop2a: 'cast2',
-    amin2a: 10,
-    amax2a: 10,
     expansion: 1,
     lineNumber: 77
   },
@@ -3296,9 +3290,6 @@ export const SetItems: SetItemType[] = [
     prop7: 'Defense',
     min7: 400,
     max7: 400,
-    aprop1a: 'cast2',
-    amin1a: 10,
-    amax1a: 10,
     expansion: 1,
     lineNumber: 80
   },

@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { ItemCard } from './ItemCard';
 import useItemValidation from '../hooks/useItemValidation';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import type { UniqueItemType } from '../types';
@@ -7,9 +8,6 @@ import { extractUniqueItemStats, filterExtracted } from '../lib/rollable';
 export function UniqueItem(uniqueItem: UniqueItemType) {
   const { isValidStat } = useItemValidation();
   const { mode } = useStatDisplayMode();
-
-  const isCharm = (base?: string) =>
-    base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
 
   type Roll =
     | { kind: 'none' }
@@ -30,55 +28,46 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     return { kind: 'none' };
   }
 
-  // Build the exact list of *visible* stats (no empty props, filtered by mode)
   const visibleStats = useMemo(() => {
     const all = extractUniqueItemStats(uniqueItem)
-      .filter(stat => isValidStat(stat.text)); // drop invalid/placeholder lines
-    return filterExtracted(all, mode);     // 'all' or 'rollable'
+      .filter(stat => isValidStat(stat.text));
+    return filterExtracted(all, mode);
   }, [uniqueItem, isValidStat, mode]);
 
-  const base = uniqueItem.itemBase;
-  const baseClass = isCharm(base) ? 'text-gold' : 'text-muted-2';
+  const isCharm = (base?: string) =>
+    base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
 
   return (
-    <div
-      className='grid justify-items-center text-center w-full p-4 rounded-lg bg-black text-blueish
-      shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
-      [content-visibility:auto] font-exocet font-semibold text-xl'
-      style={{ containIntrinsicSize: '200px' }}
+    <ItemCard
+      title={uniqueItem.name}
+      subtitle={uniqueItem.itemBase}
+      requiredLevel={uniqueItem.requiredLevel}
+      type='unique'
+      charmSubtitleGold={isCharm(uniqueItem.itemBase)}
     >
-      <div className='text-gold'>{uniqueItem.name}</div>
-      <div className={baseClass}>{base}</div>
-      <div className='text-white'>Required Level: {uniqueItem.requiredLevel ?? '—'}</div>
+      {visibleStats.map((stat, i) => {
+        const roll = analyzeRoll(stat.min, stat.max);
 
-      <div className='mt-1 w-full grid gap-1'>
-        {visibleStats.map((stat, i) => {
-          const roll = analyzeRoll(stat.min, stat.max);
-
-          if (roll.kind === 'none') {
-            return (
-              <div className='grid justify-items-center' key={stat.source ?? i}>
-                <span className='text-gold'>{stat.text}</span>
+        return (
+          <div key={stat.source ?? i} className='flex flex-col items-center justify-center w-full max-w-xs'>
+            <span className='text-[var(--color-blueish)] text-center break-words'>
+              {stat.text}
+            </span>
+            {roll.kind === 'variable' && (
+              <div>
+                <span className='text-[var(--color-roll-min)]'>{roll.low}</span>
+                {' - '}
+                <span className='text-[var(--color-roll-max)]'>{roll.high}</span>
               </div>
-            );
-          }
-
-          return (
-            <div className='grid justify-items-center' key={stat.source ?? i}>
-              <div><span className='text-blueish'>{stat.text}</span></div>
-              {roll.kind === 'variable' ? (
-                <div>
-                  <span className='text-roll-min'>{roll.low}</span>
-                  {' - '}
-                  <span className='text-roll-max'>{roll.high}</span>
-                </div>
-              ) : (
-                <div><span className='text-white'>{roll.value}</span></div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+            )}
+            {roll.kind === 'fixed' && (
+              <div>
+                <span className='text-white'>{roll.value}</span>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </ItemCard>
   );
 }

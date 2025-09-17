@@ -1,9 +1,8 @@
 import { Fragment, memo, useMemo } from 'react';
-
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
-
 import type { RunewordType } from '../types';
 import { extractRunewordStats, filterExtracted } from '../lib/rollable';
+import { ItemCard } from './ItemCard';
 
 function renderRuneInline(rune: string) {
   if (!rune) return null;
@@ -34,23 +33,6 @@ function collectItemTypes(runeword: RunewordType): string[] {
   return [runeword.itype1, runeword.itype2, runeword.itype3].filter(Boolean) as string[];
 }
 
-/** Prefer canonical stats list; fall back to Stat1..Stat10 + Min/Max fields. */
-type LegacyStat = { code: string; min?: number; max?: number };
-function collectStats(runeword: RunewordType): LegacyStat[] {
-  if (Array.isArray(runeword.stats) && runeword.stats.length) {
-    return runeword.stats.map(stat => ({ code: stat.code, min: stat.min, max: stat.max }));
-  }
-  const stats: LegacyStat[] = [];
-  for (let i = 1; i <= 10; i++) {
-    const code = runeword[`Stat${i}` as keyof RunewordType] as unknown as string | undefined;
-    if (!code) continue;
-    const min = runeword[`Stat${i}Min` as keyof RunewordType] as unknown as number | undefined;
-    const max = runeword[`Stat${i}Max` as keyof RunewordType] as unknown as number | undefined;
-    stats.push({ code, min, max });
-  }
-  return stats;
-}
-
 function analyzeRoll(min?: number, max?: number): | { kind: 'none' } | { kind: 'fixed'; value: number } | { kind: 'variable'; low: number; high: number } {
   const hasMin = typeof min === 'number' && !Number.isNaN(min);
   const hasMax = typeof max === 'number' && !Number.isNaN(max);
@@ -76,50 +58,36 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
   }, [runeword, mode]);
 
   return (
-    <div className='w-full grid justify-items-center text-center px-4 py-4 rounded-lg bg-black text-blueish shadow-[0_1px_8px_rgba(0,0,0,0.35)]
-      transition-transform duration-150 ease-out hover:-translate-y-[1px] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] [content-visibility:auto]
-      font-exocet font-semibold text-lg'
-      style={{ containIntrinsicSize: '200px' }}
-    >
-      <div className='text-gold [font-size:clamp(1.1rem,1rem+0.5vw,1.35rem)]'>{runeword.name}</div>
-
-      {types.length > 0 && <div className='text-muted-2 [font-size:1.05rem]'>{types.join(' / ')}</div>}
-
+    <ItemCard title={runeword.name} subtitle={types.length > 0 ? types.join(' / ') : undefined} requiredLevel={runeword.requiredLevel} type='runeword'>
       {runes.length > 0 && (
-        <div className='text-gold whitespace-nowrap overflow-x-auto max-w-full'>
+        <div className='max-w-full text-[var(--color-gold)] whitespace-nowrap overflow-x-auto'>
           &apos;{runes.map((r, i) => <Fragment key={r + i}>{renderRuneInline(r)}</Fragment>)}&apos;
         </div>
       )}
 
-      {runeword.base && <div className='text-muted'>Base: {runeword.base}</div>}
-      <div className='text-white'>Required Level: {runeword.requiredLevel ?? '—'}</div>
+      {runeword.base && <div className='text-[var(--color-muted)]'>Base: {runeword.base}</div>}
 
-      <div className='w-full'>
-        {visibleStats.map((stat, i) => {
-          const roll = analyzeRoll(stat.min, stat.max);
+      {visibleStats.map((stat, i) => {
+        const roll = analyzeRoll(stat.min, stat.max);
 
-          if (roll.kind === 'none') return (
-            <div className='grid items-center justify-items-center' key={stat.source ?? i}>
-              <div className='text-blueish'>{stat.text}</div>
-            </div>
-          );
-
-          return (
-            <div className='grid items-center justify-items-center' key={stat.source ?? i}>
-              <div className='text-blueish'>{stat.text}</div>
-              {roll.kind === 'variable' ? (
-                <div>
-                  <span className='text-roll-min'>{roll.low}</span>
-                  {' - '}
-                  <span className='text-roll-max'>{roll.high}</span>
-                </div>
-              ) : (
-                <div><span className='text-white'>{roll.value}</span></div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+        return (
+          <div key={stat.source ?? i} className='flex flex-col items-center justify-center w-full max-w-xs'>
+            <span className='text-[var(--color-blueish)] text-center break-words'>{stat.text} </span>
+            {roll.kind === 'variable' && (
+              <div>
+                <span className='text-[var(--color-roll-min)]'>{roll.low}</span>
+                {' - '}
+                <span className='text-[var(--color-roll-max)]'>{roll.high}</span>
+              </div>
+            )}
+            {roll.kind === 'fixed' && (
+              <div>
+                <span className='text-white'>{roll.value}</span>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </ItemCard>
   );
 });

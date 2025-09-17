@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { ItemCard } from './ItemCard';
 
 import useItemValidation from '../hooks/useItemValidation';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
@@ -34,41 +35,33 @@ export function SetItem(setItem: SetItemType) {
   }, [setItem, isValidStat, mode]);
 
   return (
-    <div
-      className='grid justify-items-center text-center w-full p-4 rounded-lg bg-black text-blueish
-      shadow-[0_1px_8px_rgba(0,0,0,0.35)] transition-transform duration-150 ease-out hover:-translate-y-[1px] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)]
-      [content-visibility:auto] font-exocet font-semibold text-xl'
-      style={{ containIntrinsicSize: '200px' }}
-    >
-      <div className='text-[rgb(3,192,34)] [font-size:clamp(1.1rem,1rem+0.5vw,1.35rem)]'>{setItem.name}</div>
+    <ItemCard title={setItem.name} subtitle={setItem.itemBase} requiredLevel={setItem.requiredLevel} type="set">
+      {visibleStats.map((stat, i) => {
+        const roll = analyzeRoll(stat.min, stat.max);
 
-      <div className='text-muted'>{setItem.itemBase}</div>
-      <div className='text-white'>Required Level: {setItem.requiredLevel ?? '—'}</div>
-
-      <div className='mt-1 w-full grid gap-1'>
-        {visibleStats.map((stat, i) => {
-          const roll = analyzeRoll(stat.min, stat.max);
-
-          if (roll.kind === 'none') {
-            return (
-              <div className='grid justify-items-center' key={stat.source ?? i}>
-                <span className='text-blueish'>{stat.text}</span>
-              </div>
-            );
-          }
-
+        if (roll.kind === 'none') {
           return (
-            <div className='grid justify-items-center' key={stat.source ?? i}>
-              <div><span className='text-blueish'>{stat.text}</span></div>
-              {roll.kind === 'variable' ? (
-                <div><span className='text-roll-min'>{roll.low}</span>{' - '}<span className='text-roll-max'>{roll.high}</span></div>
-              ) : (
-                <div><span className='text-white'>{roll.value}</span></div>
-              )}
+            <div className='text-center' key={stat.source ?? i}>
+              <span className='text-blueish'>{stat.text}</span>
             </div>
           );
-        })}
-      </div>
-    </div>
+        }
+
+        return (
+          <div className='text-center' key={stat.source ?? i}>
+            <div><span className='text-blueish'>{stat.text}</span></div>
+            {roll.kind === 'variable' ? (
+              <div>
+                <span className='text-roll-min'>{roll.low}</span>
+                {' - '}
+                <span className='text-roll-max'>{roll.high}</span>
+              </div>
+            ) : (
+              <div><span className='text-white'>{roll.value}</span></div>
+            )}
+          </div>
+        );
+      })}
+    </ItemCard>
   );
 }
