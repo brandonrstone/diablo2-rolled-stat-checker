@@ -1,4 +1,5 @@
 import { Fragment, memo, useMemo } from 'react';
+
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import type { RunewordType } from '../types';
 import { extractRunewordStats, filterExtracted } from '../lib/rollable';
@@ -61,7 +62,7 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
     <ItemCard title={runeword.name} subtitle={types.length > 0 ? types.join(' / ') : undefined} requiredLevel={runeword.requiredLevel} type='runeword'>
       {runes.length > 0 && (
         <div className='max-w-full text-[var(--color-gold)] whitespace-nowrap overflow-x-auto'>
-          &apos;{runes.map((r, i) => <Fragment key={r + i}>{renderRuneInline(r)}</Fragment>)}&apos;
+          &apos;{runes.map((rune, i) => <Fragment key={rune + i}>{renderRuneInline(rune)}</Fragment>)}&apos;
         </div>
       )}
 
