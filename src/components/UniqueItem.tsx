@@ -38,13 +38,7 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
 
   return (
-    <ItemCard
-      title={uniqueItem.name}
-      subtitle={uniqueItem.itemBase}
-      requiredLevel={uniqueItem.requiredLevel}
-      type='unique'
-      charmSubtitleGold={isCharm(uniqueItem.itemBase)}
-    >
+    <ItemCard title={uniqueItem.name} subtitle={uniqueItem.itemBase} requiredLevel={uniqueItem.requiredLevel} type='unique' charmSubtitleGold={isCharm(uniqueItem.itemBase)}>
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
 
