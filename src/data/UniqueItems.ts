@@ -13104,7 +13104,6 @@ export const UniqueItems = [
     max2: 20,
     prop3: 'Level 3 Venom (11 Charges)',
     min3: 11,
-    max3: 3,
     prop4: '+ to All Skills',
     min4: 1,
     max4: 1,
