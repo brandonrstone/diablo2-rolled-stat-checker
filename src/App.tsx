@@ -189,7 +189,7 @@ export default function App() {
       </div>
 
       {/* Results grid (scrolls behind the header) */}
-      <div className='grid gap-3 w-[95%] max-w-[1100px] mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid gap-3 w-[95%] max-w-[1100px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto mb-6'>
         {showEmpty ? (
           <div className='col-span-full text-center text-white/90'>
             <div>Type to search uniques, sets, and runewords.</div>
@@ -221,9 +221,7 @@ export default function App() {
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
                   Runewords ({filteredRunewords.length})
                 </h2>
-                {filteredRunewords.map((rw: RunewordType) => (
-                  <Runeword key={rw.id} runeword={rw} />
-                ))}
+                {filteredRunewords.map((rw: RunewordType) => <Runeword key={rw.id} runeword={rw} />)}
               </>
             )}
           </>
