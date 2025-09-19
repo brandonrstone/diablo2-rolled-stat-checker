@@ -809,7 +809,7 @@ export const Runewords: RunewordType[] = [
     Stat4: '% Damage Taken Goes To Mana',
     Stat4Min: 12,
     Stat4Max: 12,
-    Stat7: '+ To + to Life (Based on character Level)',
+    Stat7: '+ to Life (Based on character Level)',
     Stat7Min: 8,
     Stat7Max: 12,
     Stat8: '+ All Resistances',
