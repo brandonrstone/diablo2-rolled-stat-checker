@@ -7465,7 +7465,7 @@ export const UniqueItems = [
     costAdd: 5000,
     chrtransform: 'dblu',
     invtransform: 'dblu',
-    prop1: 'Reduced Magic Defense',
+    prop1: 'Magic Damage Reduced By',
     min1: 9,
     max1: 13,
     prop2: '+ All Resistances',
