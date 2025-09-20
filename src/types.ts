@@ -4,12 +4,6 @@ export type RuneName =
   | 'Pul' | 'Um' | 'Mal' | 'Ist' | 'Gul' | 'Vex' | 'Ohm' | 'Lo' | 'Sur' | 'Ber'
   | 'Jah' | 'Cham' | 'Zod';
 
-export type PatchRelease =
-  | 109 | 110 | 111
-  | 'Previously Ladder Only'
-  | 'D2R Ladder 1'
-  | string;
-
 export interface StatLine {
   code: string;
   min?: number;
@@ -22,8 +16,6 @@ export interface RunewordType {
   name: string;
   base?: string;
   requiredLevel: number;
-  complete: 0 | 1 | boolean;
-  patchRelease: PatchRelease;
   server?: 0 | 1;
   itemTypes?: string[];
   runes?: RuneName[];
@@ -48,18 +40,9 @@ export type SetItemType = {
   id: number;
   name: string;
   set: string;
-  item: string;
   itemBase: string;
-  rarity: number;
   lvl: number;
   requiredLevel?: number;
-  chrtransform?: string;
-  invtransform?: string;
-  costMult?: number;
-  costAdd?: number;
-  addFunc?: number;
-  expansion?: number;
-  lineNumber: number;
   prop1?: string; min1?: number; max1?: number; par1?: number | string;
   prop2?: string; min2?: number; max2?: number; par2?: number | string;
   prop3?: string; min3?: number; max3?: number; par3?: number | string;
@@ -98,11 +81,6 @@ export type UniqueItemType = {
   base?: string;
   chrtransform?: string;
   invtransform?: string;
-  invfile?: string;
-  costMult?: number;
-  costAdd?: number;
-  expansion?: number;
-  lineNumber: number;
   prop1?: string; min1?: number; max1?: number; par1?: number | string;
   prop2?: string; min2?: number; max2?: number; par2?: number | string;
   prop3?: string; min3?: number; max3?: number; par3?: number | string;
