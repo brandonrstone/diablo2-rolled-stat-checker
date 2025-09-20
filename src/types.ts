@@ -16,7 +16,6 @@ export interface RunewordType {
   name: string;
   base?: string;
   requiredLevel: number;
-  server?: 0 | 1;
   itemTypes?: string[];
   runes?: RuneName[];
   stats?: StatLine[];
@@ -24,7 +23,6 @@ export interface RunewordType {
   RequiredRunes?: string;
   Rune1?: RuneName; Rune2?: RuneName; Rune3?: RuneName;
   Rune4?: RuneName; Rune5?: RuneName; Rune6?: RuneName; Rune7?: RuneName;
-
   [legacyKey: string]: unknown;
 }
 
@@ -71,16 +69,11 @@ export type ParKey = `par${StatIndex}`;
 export type UniqueItemType = {
   id: number;
   name: string;
-  version: number;
-  enabled: 0 | 1;
   rarity: number;
   level: number;
   requiredLevel?: number;
-  code: string;
   itemBase?: string;
   base?: string;
-  chrtransform?: string;
-  invtransform?: string;
   prop1?: string; min1?: number; max1?: number; par1?: number | string;
   prop2?: string; min2?: number; max2?: number; par2?: number | string;
   prop3?: string; min3?: number; max3?: number; par3?: number | string;
