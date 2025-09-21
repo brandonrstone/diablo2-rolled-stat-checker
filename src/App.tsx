@@ -15,56 +15,6 @@ import { useDebounced } from './hooks/useDebounced';
 import { type StatDisplayMode } from './contexts/StatDisplayContext';
 import { useStatDisplayMode } from './hooks/useStatDisplayMode';
 
-// TODO: Add OpenGraph meta tags, favicon, etc.
-
-function normalize(str: string) {
-  return str.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
-}
-function squashRunes(str: string) {
-  return normalize(str).replace(/[\s\-/|,_.]+/g, '');
-}
-function includesAllTokens(haystack: string, tokens: string[]) {
-  if (!tokens.length) return true;
-  return tokens.every(t => haystack.includes(t));
-}
-
-function runewordHaystack(runeword: RunewordType): string {
-  const parts: string[] = [];
-  if (runeword.name) parts.push(runeword.name);
-  if (runeword.base) parts.push(runeword.base);
-
-  const types = (runeword.itemTypes?.length
-    ? runeword.itemTypes
-    : [runeword.itype1, runeword.itype2, runeword.itype3].filter(Boolean)) as string[];
-  parts.push(...types);
-
-  const runes = Array.isArray(runeword.runes) && runeword.runes.length
-    ? (runeword.runes as string[])
-    : Array.from({ length: 7 }, (_, i) => runeword[`Rune${i + 1}`]).filter(Boolean) as string[];
-  parts.push(...runes);
-
-  if (Array.isArray(runeword.stats) && runeword.stats.length) {
-    parts.push(...(runeword.stats.map(stat => stat.code).filter(Boolean) as string[]));
-  } else {
-    for (let i = 1; i <= 12; i++) {
-      const k = runeword[`Stat${i}`];
-      if (k) parts.push(String(k));
-    }
-  }
-
-  if (runeword.RequiredRunes) parts.push(runeword.RequiredRunes);
-  const joined = parts.join(' ');
-  return normalize(joined) + ' ' + squashRunes(joined);
-}
-
-function setItemHaystack(item: SetItemType): string {
-  return normalize(item.name);
-}
-function uniqueItemHaystack(item: UniqueItemType): string {
-  const base = item.itemBase ?? item.base;
-  return normalize([item.name, base].filter(Boolean).join(' '));
-}
-
 export default function App() {
   const { mode, setMode } = useStatDisplayMode();
   const [search, setSearch] = useState('');
@@ -229,4 +179,52 @@ export default function App() {
       </div>
     </div>
   );
+}
+
+function normalize(str: string) {
+  return str.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+}
+function squashRunes(str: string) {
+  return normalize(str).replace(/[\s\-/|,_.]+/g, '');
+}
+function includesAllTokens(haystack: string, tokens: string[]) {
+  if (!tokens.length) return true;
+  return tokens.every(t => haystack.includes(t));
+}
+
+function runewordHaystack(runeword: RunewordType): string {
+  const parts: string[] = [];
+  if (runeword.name) parts.push(runeword.name);
+  if (runeword.base) parts.push(runeword.base);
+
+  const types = (runeword.itemTypes?.length
+    ? runeword.itemTypes
+    : [runeword.itype1, runeword.itype2, runeword.itype3].filter(Boolean)) as string[];
+  parts.push(...types);
+
+  const runes = Array.isArray(runeword.runes) && runeword.runes.length
+    ? (runeword.runes as string[])
+    : Array.from({ length: 7 }, (_, i) => runeword[`Rune${i + 1}`]).filter(Boolean) as string[];
+  parts.push(...runes);
+
+  if (Array.isArray(runeword.stats) && runeword.stats.length) {
+    parts.push(...(runeword.stats.map(stat => stat.code).filter(Boolean) as string[]));
+  } else {
+    for (let i = 1; i <= 12; i++) {
+      const k = runeword[`Stat${i}`];
+      if (k) parts.push(String(k));
+    }
+  }
+
+  if (runeword.RequiredRunes) parts.push(runeword.RequiredRunes);
+  const joined = parts.join(' ');
+  return normalize(joined) + ' ' + squashRunes(joined);
+}
+
+function setItemHaystack(item: SetItemType): string {
+  return normalize(item.name);
+}
+function uniqueItemHaystack(item: UniqueItemType): string {
+  const base = item.itemBase ?? item.base;
+  return normalize([item.name, base].filter(Boolean).join(' '));
 }

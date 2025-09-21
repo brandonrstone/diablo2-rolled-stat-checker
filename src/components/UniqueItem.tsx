@@ -1,12 +1,11 @@
 import { useMemo } from 'react';
+
 import { ItemCard } from './ItemCard';
-import useItemValidation from '../hooks/useItemValidation';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import type { UniqueItemType } from '../types';
 import { extractUniqueItemStats, filterExtracted } from '../lib/rollable';
 
 export function UniqueItem(uniqueItem: UniqueItemType) {
-  const { isValidStat } = useItemValidation();
   const { mode } = useStatDisplayMode();
 
   type Roll =
@@ -29,10 +28,9 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
   }
 
   const visibleStats = useMemo(() => {
-    const all = extractUniqueItemStats(uniqueItem)
-      .filter(stat => isValidStat(stat.text));
+    const all = extractUniqueItemStats(uniqueItem).filter(stat => stat.text);
     return filterExtracted(all, mode);
-  }, [uniqueItem, isValidStat, mode]);
+  }, [uniqueItem, mode]);
 
   const isCharm = (base?: string) =>
     base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';

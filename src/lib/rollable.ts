@@ -27,7 +27,7 @@ export function extractRunewordStats(runeword: RunewordType): ExtractedStat[] {
 export function extractSetItemStats(item: SetItemType): ExtractedStat[] {
   const out: ExtractedStat[] = [];
 
-  for (let i = 1; i <= 20; i++) { // generous upper bound
+  for (let i = 1; i <= 20; i++) {
     const p = item[`prop${i}`];
     if (!p) continue;
     const min = numOrUndef(item[`min${i}`]);

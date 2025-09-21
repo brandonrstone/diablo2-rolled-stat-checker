@@ -1,13 +1,11 @@
 import { useMemo } from 'react';
-import { ItemCard } from './ItemCard';
 
-import useItemValidation from '../hooks/useItemValidation';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import { extractSetItemStats, filterExtracted } from '../lib/rollable';
 import type { SetItemType } from '../types';
+import { ItemCard } from './ItemCard';
 
 export function SetItem(setItem: SetItemType) {
-  const { isValidStat } = useItemValidation();
   const { mode } = useStatDisplayMode();
 
   type Roll =
@@ -30,9 +28,9 @@ export function SetItem(setItem: SetItemType) {
   }
 
   const visibleStats = useMemo(() => {
-    const all = extractSetItemStats(setItem).filter(stat => isValidStat(stat.text));
+    const all = extractSetItemStats(setItem).filter(stat => stat.text);
     return filterExtracted(all, mode);
-  }, [setItem, isValidStat, mode]);
+  }, [setItem, mode]);
 
   return (
     <ItemCard title={setItem.name} subtitle={setItem.itemBase} requiredLevel={setItem.requiredLevel} type="set">
