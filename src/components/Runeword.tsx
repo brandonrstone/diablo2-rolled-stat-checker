@@ -26,17 +26,6 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
 
       {runeword.base && <div className='text-[var(--color-muted)]'>Base: {runeword.base}</div>}
 
-      {types.length > 0 && (
-        <div className='text-[var(--color-muted)]'>
-          Item Types: {types.map((type, i) => (
-            <span key={type + i}>
-              {type}
-              {i < types.length - 1 ? ' / ' : ''}
-            </span>
-          ))}
-        </div>
-      )}
-
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
         return (
