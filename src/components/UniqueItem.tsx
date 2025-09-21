@@ -39,14 +39,14 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
 
         return (
           <div key={stat.source ?? i} className='flex flex-col items-center justify-center w-full max-w-xs'>
-            <span className='text-[var(--color-blueish)] text-center break-words'>
+            <span className='text-blueish text-center break-words'>
               {stat.text}
             </span>
             {roll.kind === 'variable' && (
               <div>
-                <span className='text-[var(--color-roll-min)]'>{roll.low}</span>
+                <span className='text-roll-min'>{roll.low}</span>
                 {' - '}
-                <span className='text-[var(--color-roll-max)]'>{roll.high}</span>
+                <span className='text-roll-max'>{roll.high}</span>
               </div>
             )}
             {roll.kind === 'fixed' && (

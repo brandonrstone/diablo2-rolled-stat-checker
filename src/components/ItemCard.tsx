@@ -10,20 +10,21 @@ type ItemCardProps = PropsWithChildren<{
 
 export function ItemCard({ title, subtitle, requiredLevel, type, charmSubtitleGold, children }: ItemCardProps) {
   const titleColor = {
-    unique: 'text-[var(--color-gold)]',
+    unique: 'text-gold',
     set: 'text-[rgb(3,192,34)]',
-    runeword: 'text-[var(--color-ui-gold)]'
+    runeword: 'text-ui-gold'
   }[type];
 
   return (
     <div
-      className={`inline-flex flex-col items-center p-4 rounded-lg bg-black/95 text-[var(--color-blueish)] shadow-[0_1px_8px_rgba(0,0,0,0.35)] 
-      transition-transform duration-150 ease-out hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] [content-visibility:auto] font-exocet text-xl `}
+      className={`inline-flex flex-col items-center p-4 text-xl text-blueish font-exocet 
+      bg-black/95 rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.45)] 
+      [content-visibility:auto] transition-transform duration-150 ease-out `}
     >
       <div className={`w-full text-center ${titleColor} [font-size:clamp(1.5rem,1rem+0.5vw,1.5rem)]`}>{title}</div>
 
       {subtitle && (
-        <div className={`w-full text-center ${charmSubtitleGold ? 'text-[var(--color-gold)]' : 'text-[var(--color-muted)]'}`}>
+        <div className={`w-full text-center ${charmSubtitleGold ? 'text-gold' : 'text-muted'}`}>
           {subtitle}
         </div>
       )}
