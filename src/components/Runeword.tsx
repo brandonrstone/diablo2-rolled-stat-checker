@@ -1,15 +1,12 @@
 import { Fragment, memo, useMemo } from 'react';
 
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
-import type { Rune, RunewordType } from '../types';
+import type { RunewordType } from '../types';
 import { extractRunewordStats, filterExtracted } from '../lib/rollable';
 import { ItemCard } from './ItemCard';
 
 export const Runeword = memo(function Runeword({ runeword }: { runeword: RunewordType }) {
   const { mode } = useStatDisplayMode();
-
-  const runes = collectRunes(runeword);
-  const types = collectItemTypes(runeword);
 
   const visibleStats = useMemo(() => {
     const all = extractRunewordStats(runeword);
@@ -17,14 +14,12 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
   }, [runeword, mode]);
 
   return (
-    <ItemCard title={runeword.name} subtitle={types.length > 0 ? types.join(' / ') : undefined} requiredLevel={runeword.requiredLevel} type='runeword'>
-      {runes.length > 0 && (
-        <div className='max-w-full text-[var(--color-gold)] whitespace-nowrap overflow-x-auto'>
-          &apos;{runes.map((rune, i) => <Fragment key={rune + i}>{renderRuneInline(rune)}</Fragment>)}&apos;
-        </div>
-      )}
+    <ItemCard title={runeword.name} subtitle={runeword.itemTypes.join(' / ')} requiredLevel={runeword.requiredLevel} type='runeword'>
+      <div className='max-w-full text-[var(--color-gold)] whitespace-nowrap overflow-x-auto'>
+        &apos;{runeword.runes.map((rune, i) => <Fragment key={rune + i}>{renderRuneInline(rune)}</Fragment>)}&apos;
+      </div>
 
-      {runeword.base && <div className='text-[var(--color-muted)]'>Base: {runeword.base}</div>}
+      <div className='text-[var(--color-muted)]'>Base: {runeword.base}</div>
 
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
@@ -59,14 +54,6 @@ function renderRuneInline(rune: string) {
       <span className='text-[0.86em] leading-none'>{tail}</span>
     </span>
   );
-}
-
-function collectRunes(runeword: RunewordType) {
-  return Array.isArray(runeword.runes) ? (runeword.runes as Rune[]) : [];
-}
-
-function collectItemTypes(runeword: RunewordType) {
-  return runeword.itemTypes.filter(Boolean);
 }
 
 function analyzeRoll(min?: number, max?: number) {

@@ -13,9 +13,9 @@ export type RunewordNumberedStatFields =
 export interface RunewordType extends RunewordNumberedStatFields {
   id: string;
   name: string;
-  base?: string;
+  base: string;
   requiredLevel: number;
-  runes?: Rune[];
+  runes: Rune[];
   itemTypes: string[]
 }
 
