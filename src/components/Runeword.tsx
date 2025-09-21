@@ -61,18 +61,15 @@ function renderRuneInline(rune: string) {
   );
 }
 
-function collectRunes(runeword: RunewordType): string[] {
+function collectRunes(runeword: RunewordType) {
   return Array.isArray(runeword.runes) ? (runeword.runes as Rune[]) : [];
 }
 
-function collectItemTypes(runeword: RunewordType): string[] {
+function collectItemTypes(runeword: RunewordType) {
   return runeword.itemTypes.filter(Boolean);
 }
 
-function analyzeRoll(
-  min?: number,
-  max?: number
-): { kind: 'none' } | { kind: 'fixed'; value: number } | { kind: 'variable'; low: number; high: number } {
+function analyzeRoll(min?: number, max?: number) {
   const hasMin = typeof min === 'number' && !Number.isNaN(min);
   const hasMax = typeof max === 'number' && !Number.isNaN(max);
   if (hasMin && hasMax) {
