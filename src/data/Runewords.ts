@@ -1447,7 +1447,6 @@ export const Runewords: RunewordType[] = [
     Stat1Max: 210,
     Stat2: 'Zeal',
     Stat2Min: 1,
-    Stat2Max: 1,
     Stat3: '% Bonus To attack Rating',
     Stat3Min: 50,
     Stat3Max: 80,
