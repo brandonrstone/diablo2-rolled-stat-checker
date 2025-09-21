@@ -30,10 +30,10 @@ export function ItemCard({ title, subtitle, requiredLevel, type, charmSubtitleGo
       )}
 
       {typeof requiredLevel !== 'undefined' && (
-        <div className="text-white">Required Level: {requiredLevel ?? '—'}</div>
+        <div className='text-white'>Required Level: {requiredLevel ?? '—'}</div>
       )}
 
-      <div className="w-full flex-col gap-1 items-center mt-1 flex">{children}</div>
+      <div className='w-full flex-col gap-1 items-center mt-1 flex'>{children}</div>
     </div>
   );
 }

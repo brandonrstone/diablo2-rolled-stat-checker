@@ -1,9 +1,9 @@
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import './styles.css';
 
+import { Runewords } from './data/Runewords';
 import { UniqueItems } from './data/UniqueItems';
 import { SetItems } from './data/SetItems';
-import { Runewords } from './data/Runewords';
 
 import type { RunewordStatIndex, RunewordType, SetItemType, UniqueItemType } from './types';
 
@@ -197,7 +197,8 @@ function runewordHaystack(runeword: RunewordType): string {
 
   if (runeword.name) parts.push(runeword.name);
   if (runeword.base) parts.push(runeword.base);
-  parts.push(...([runeword.itemType1, runeword.itemType2, runeword.itemType3].filter(Boolean) as string[]));
+
+  parts.push(...runeword.itemTypes.filter(Boolean));
 
   if (Array.isArray(runeword.runes) && runeword.runes.length) {
     parts.push(...(runeword.runes as string[]));

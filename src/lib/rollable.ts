@@ -30,21 +30,22 @@ export function extractRunewordStats(runeword: RunewordType): ExtractedStat[] {
 export function extractSetItemStats(item: SetItemType): ExtractedStat[] {
   const out: ExtractedStat[] = [];
 
+  // SetItems now use statN/minN/maxN (not propN)
   for (let i = 1; i <= 20; i++) {
-    const p = item[`prop${i}`];
-    if (!p) continue;
-    const min = numOrUndef(item[`min${i}`]);
-    const max = numOrUndef(item[`max${i}`]);
-    out.push({ text: String(p), min, max, source: `prop${i}` });
-  }
+    const key = `stat${i}`;
+    const minKey = `min${i}`;
+    const maxKey = `max${i}`;
 
-  for (let i = 1; i <= 20; i++) {
-    const p = item[`aprop${i}a`];
-    if (!p) continue;
+    const text = item[key];
+    if (!text) continue;
 
-    const min = numOrUndef(item[`amin${i}a`]);
-    const max = numOrUndef(item[`amax${i}a`]);
-    out.push({ text: String(p), min, max, source: `aprop${i}a` });
+    const min = numOrUndef(item[minKey]);
+    // Only include max if it exists as a property on the item
+    const max = Object.prototype.hasOwnProperty.call(item, maxKey)
+      ? numOrUndef(item[maxKey])
+      : undefined;
+
+    out.push({ text: String(text), min, max, source: key });
   }
 
   return out;
