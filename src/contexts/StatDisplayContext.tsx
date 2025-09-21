@@ -19,5 +19,9 @@ export function StatDisplayProvider({ children }: { children: React.ReactNode })
   useEffect(() => localStorage.setItem('statDisplayMode', mode), [mode]);
 
   const value = useMemo(() => ({ mode, setMode }), [mode]);
-  return <StatDisplayContext.Provider value={value}>{children}</StatDisplayContext.Provider>;
-}
+  return (
+    <StatDisplayContext.Provider value={value}>
+      {children}
+    </StatDisplayContext.Provider>
+  );
+};
