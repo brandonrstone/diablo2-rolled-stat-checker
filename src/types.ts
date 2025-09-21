@@ -5,7 +5,7 @@ export type Rune =
   | 'Jah' | 'Cham' | 'Zod';
 
 export type RunewordStatIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-type RunewordNumberedStatFields =
+export type RunewordNumberedStatFields =
   { [I in RunewordStatIndex as `stat${I}`]?: string } &
   { [I in RunewordStatIndex as `min${I}`]?: number } &
   { [I in RunewordStatIndex as `max${I}`]?: number };

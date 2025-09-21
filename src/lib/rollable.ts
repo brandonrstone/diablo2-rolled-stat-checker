@@ -11,15 +11,15 @@ export function extractRunewordStats(runeword: RunewordType): ExtractedStat[] {
   const out: ExtractedStat[] = [];
 
   for (let i = 1; i <= 8; i++) {
-    const key = `stat${i}` as const;
-    const minK = `min${i}` as const;
-    const maxK = `max${i}` as const;
+    const key = `stat${i}`;
+    const minKey = `min${i}`;
+    const maxKey = `max${i}`;
 
-    const text = runeword[key] as string | number;
+    const text = runeword[key];
     if (!text) continue;
 
-    const min = numOrUndef((runeword as any)[minK]);
-    const max = numOrUndef((runeword as any)[maxK]);
+    const min = numOrUndef(runeword[minKey]);
+    const max = numOrUndef(runeword[maxKey]);
 
     out.push({ text: String(text), min, max, source: key });
   }
@@ -53,19 +53,19 @@ export function extractSetItemStats(item: SetItemType): ExtractedStat[] {
 export function extractUniqueItemStats(item: UniqueItemType): ExtractedStat[] {
   const out: ExtractedStat[] = [];
   for (let i = 1; i <= 20; i++) {
-    const p = item[`prop${i}`];
+    const p = item[`stat${i}`];
     if (!p) continue;
     const min = numOrUndef(item[`min${i}`]);
     const max = numOrUndef(item[`max${i}`]);
-    out.push({ text: String(p), min, max, source: `prop${i}` });
+    out.push({ text: String(p), min, max, source: `stat${i}` });
   }
   return out;
 }
 
-function numOrUndef(v: any): number | undefined {
-  return isFiniteNumber(v) ? Number(v) : undefined;
+function numOrUndef(value: number): number | undefined {
+  return isFiniteNumber(value) ? Number(value) : undefined;
 }
-function isFiniteNumber(x: any): x is number {
+function isFiniteNumber(x: number): x is number {
   return typeof x === 'number' && Number.isFinite(x);
 }
 
