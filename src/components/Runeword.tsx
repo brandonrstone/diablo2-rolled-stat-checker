@@ -15,17 +15,17 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
 
   return (
     <ItemCard title={runeword.name} subtitle={runeword.itemTypes.join(' / ')} requiredLevel={runeword.requiredLevel} type='runeword'>
-      <div className='max-w-full text-[var(--color-gold)] whitespace-nowrap overflow-x-auto'>
+      <div className='max-w-full text-gold whitespace-nowrap overflow-x-auto'>
         &apos;{runeword.runes.map((rune, i) => <Fragment key={rune + i}>{renderRuneInline(rune)}</Fragment>)}&apos;
       </div>
 
-      <div className='text-[var(--color-muted)]'>Base: {runeword.base}</div>
+      <div className='text-muted'>Base: {runeword.base}</div>
 
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
         return (
-          <div key={stat.source ?? i} className='flex flex-col items-center justify-center w-full max-w-xs'>
-            <span className='text-blueish text-center break-words'>{stat.text} </span>
+          <div key={stat.source ?? i} className='w-full max-w-xs flex flex-col items-center justify-center'>
+            <span className='text-blueish text-center'>{stat.text}</span>
             {roll.kind === 'variable' && (
               <div>
                 <span className='text-roll-min'>{roll.low}</span>
