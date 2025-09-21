@@ -1,29 +1,24 @@
-export type RuneName =
+export type Rune =
   | 'El' | 'Eld' | 'Tir' | 'Nef' | 'Eth' | 'Ith' | 'Tal' | 'Ral' | 'Ort' | 'Thul'
   | 'Amn' | 'Sol' | 'Shael' | 'Dol' | 'Hel' | 'Io' | 'Lum' | 'Ko' | 'Fal' | 'Lem'
   | 'Pul' | 'Um' | 'Mal' | 'Ist' | 'Gul' | 'Vex' | 'Ohm' | 'Lo' | 'Sur' | 'Ber'
   | 'Jah' | 'Cham' | 'Zod';
 
-export interface StatLine {
-  code: string;
-  min?: number;
-  max?: number;
-  params?: Array<string | number>;
-}
+export type RunewordStatIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+type RunewordNumberedStatFields =
+  { [I in RunewordStatIndex as `stat${I}`]?: string } &
+  { [I in RunewordStatIndex as `min${I}`]?: number } &
+  { [I in RunewordStatIndex as `max${I}`]?: number };
 
-export interface RunewordType {
+export interface RunewordType extends RunewordNumberedStatFields {
   id: string;
   name: string;
   base?: string;
   requiredLevel: number;
-  itemTypes?: string[];
-  runes?: RuneName[];
-  stats?: StatLine[];
-  itype1?: string; itype2?: string; itype3?: string;
-  RequiredRunes?: string;
-  Rune1?: RuneName; Rune2?: RuneName; Rune3?: RuneName;
-  Rune4?: RuneName; Rune5?: RuneName; Rune6?: RuneName; Rune7?: RuneName;
-  [legacyKey: string]: unknown;
+  runes?: Rune[];
+  itemType1: string;
+  itemType2?: string;
+  itemType3?: string;
 }
 
 export const SET_STAT_INDEXES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;

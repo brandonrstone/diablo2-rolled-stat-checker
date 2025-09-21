@@ -9,18 +9,21 @@ export type ExtractedStat = {
 
 export function extractRunewordStats(runeword: RunewordType): ExtractedStat[] {
   const out: ExtractedStat[] = [];
-  for (let i = 1; i <= 12; i++) {
-    const key = `Stat${i}`;
-    const text = runeword[key];
+
+  for (let i = 1; i <= 8; i++) {
+    const key = `stat${i}` as const;
+    const minK = `min${i}` as const;
+    const maxK = `max${i}` as const;
+
+    const text = runeword[key] as string | number;
     if (!text) continue;
 
-    const minK = `${key}Min`;
-    const maxK = `${key}Max`;
-    const min = isFiniteNumber(runeword[minK]) ? Number(runeword[minK]) : undefined;
-    const max = isFiniteNumber(runeword[maxK]) ? Number(runeword[maxK]) : undefined;
+    const min = numOrUndef((runeword as any)[minK]);
+    const max = numOrUndef((runeword as any)[maxK]);
 
     out.push({ text: String(text), min, max, source: key });
   }
+
   return out;
 }
 

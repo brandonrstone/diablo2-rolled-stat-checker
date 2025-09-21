@@ -1,7 +1,7 @@
 import { Fragment, memo, useMemo } from 'react';
 
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
-import type { RunewordType } from '../types';
+import type { Rune, RunewordType } from '../types';
 import { extractRunewordStats, filterExtracted } from '../lib/rollable';
 import { ItemCard } from './ItemCard';
 
@@ -17,33 +17,26 @@ function renderRuneInline(rune: string) {
 }
 
 function collectRunes(runeword: RunewordType): string[] {
-  if (Array.isArray(runeword.runes) && runeword.runes.length) return runeword.runes as string[];
-
-  const runes: string[] = [];
-  for (let i = 1; i <= 7; i++) {
-    const rune = runeword[`Rune${i}` as keyof RunewordType] as unknown as string | undefined;
-    if (rune) runes.push(rune);
-  }
-  if (runes.length) return runes;
-
-  return [];
+  return Array.isArray(runeword.runes) ? (runeword.runes as Rune[]) : [];
 }
 
 function collectItemTypes(runeword: RunewordType): string[] {
-  if (Array.isArray(runeword.itemTypes) && runeword.itemTypes.length) return runeword.itemTypes;
-  return [runeword.itype1, runeword.itype2, runeword.itype3].filter(Boolean) as string[];
+  return [runeword.itemType1, runeword.itemType2, runeword.itemType3].filter(Boolean) as string[];
 }
 
-function analyzeRoll(min?: number, max?: number): | { kind: 'none' } | { kind: 'fixed'; value: number } | { kind: 'variable'; low: number; high: number } {
+function analyzeRoll(
+  min?: number,
+  max?: number
+): { kind: 'none' } | { kind: 'fixed'; value: number } | { kind: 'variable'; low: number; high: number } {
   const hasMin = typeof min === 'number' && !Number.isNaN(min);
   const hasMax = typeof max === 'number' && !Number.isNaN(max);
   if (hasMin && hasMax) {
-    const low = Math.min(min as number, max as number);
-    const high = Math.max(min as number, max as number);
+    const low = Math.min(min!, max!);
+    const high = Math.max(min!, max!);
     return low === high ? { kind: 'fixed', value: low } : { kind: 'variable', low, high };
   }
-  if (hasMin) return { kind: 'fixed', value: min as number };
-  if (hasMax) return { kind: 'fixed', value: max as number };
+  if (hasMin) return { kind: 'fixed', value: min! };
+  if (hasMax) return { kind: 'fixed', value: max! };
   return { kind: 'none' };
 }
 
@@ -54,6 +47,7 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
   const types = collectItemTypes(runeword);
 
   const visibleStats = useMemo(() => {
+    // assumes extractRunewordStats knows how to read stat1..stat8/min/max
     const all = extractRunewordStats(runeword);
     return filterExtracted(all, mode);
   }, [runeword, mode]);
@@ -62,7 +56,7 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
     <ItemCard title={runeword.name} subtitle={types.length > 0 ? types.join(' / ') : undefined} requiredLevel={runeword.requiredLevel} type='runeword'>
       {runes.length > 0 && (
         <div className='max-w-full text-[var(--color-gold)] whitespace-nowrap overflow-x-auto'>
-          &apos;{runes.map((r, i) => <Fragment key={r + i}>{renderRuneInline(r)}</Fragment>)}&apos;
+          &apos;{runes.map((rune, i) => <Fragment key={rune + i}>{renderRuneInline(rune)}</Fragment>)}&apos;
         </div>
       )}
 
@@ -70,7 +64,6 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
 
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
-
         return (
           <div key={stat.source ?? i} className='flex flex-col items-center justify-center w-full max-w-xs'>
             <span className='text-[var(--color-blueish)] text-center break-words'>{stat.text} </span>

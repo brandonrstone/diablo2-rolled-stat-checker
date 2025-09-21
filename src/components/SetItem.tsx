@@ -17,13 +17,13 @@ export function SetItem(setItem: SetItemType) {
     const hasMin = typeof min === 'number' && !Number.isNaN(min);
     const hasMax = typeof max === 'number' && !Number.isNaN(max);
     if (hasMin && hasMax) {
-      const low = Math.min(min as number, max as number);
-      const high = Math.max(min as number, max as number);
+      const low = Math.min(min, max);
+      const high = Math.max(min, max);
       if (low === high) return { kind: 'fixed', value: low };
       return { kind: 'variable', low, high };
     }
-    if (hasMin) return { kind: 'fixed', value: min as number };
-    if (hasMax) return { kind: 'fixed', value: max as number };
+    if (hasMin) return { kind: 'fixed', value: min };
+    if (hasMax) return { kind: 'fixed', value: max };
     return { kind: 'none' };
   }
 

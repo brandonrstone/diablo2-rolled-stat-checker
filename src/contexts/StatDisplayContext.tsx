@@ -5,7 +5,7 @@ export type StatDisplayMode = 'all' | 'rollable';
 
 type StatDisplayModeContext = {
   mode: StatDisplayMode;
-  setMode: (m: StatDisplayMode) => void;
+  setMode: (mode: StatDisplayMode) => void;
 };
 
 export const StatDisplayContext = createContext<StatDisplayModeContext | null>(null);

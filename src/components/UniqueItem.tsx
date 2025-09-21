@@ -14,16 +14,14 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     | { kind: 'variable'; low: number; high: number };
 
   function analyzeRoll(min?: number, max?: number): Roll {
-    const hasMin = typeof min === 'number' && !Number.isNaN(min);
-    const hasMax = typeof max === 'number' && !Number.isNaN(max);
-    if (hasMin && hasMax) {
-      const low = Math.min(min as number, max as number);
-      const high = Math.max(min as number, max as number);
+    if (min && max) {
+      const low = Math.min(min, max);
+      const high = Math.max(min, max);
       if (low === high) return { kind: 'fixed', value: low };
       return { kind: 'variable', low, high };
     }
-    if (hasMin) return { kind: 'fixed', value: min as number };
-    if (hasMax) return { kind: 'fixed', value: max as number };
+    if (min) return { kind: 'fixed', value: min };
+    if (max) return { kind: 'fixed', value: max };
     return { kind: 'none' };
   }
 
@@ -32,8 +30,7 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     return filterExtracted(all, mode);
   }, [uniqueItem, mode]);
 
-  const isCharm = (base?: string) =>
-    base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
+  const isCharm = (base?: string) => base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
 
   return (
     <ItemCard title={uniqueItem.name} subtitle={uniqueItem.itemBase} requiredLevel={uniqueItem.requiredLevel} type='unique' charmSubtitleGold={isCharm(uniqueItem.itemBase)}>

@@ -5,7 +5,7 @@ import { UniqueItems } from './data/UniqueItems';
 import { SetItems } from './data/SetItems';
 import { Runewords } from './data/Runewords';
 
-import type { RunewordType, SetItemType, UniqueItemType } from './types';
+import type { RunewordStatIndex, RunewordType, SetItemType, UniqueItemType } from './types';
 
 import { Runeword } from './components/Runeword';
 import { SetItem } from './components/SetItem';
@@ -93,12 +93,12 @@ export default function App() {
               >
                 <input
                   className={[
-                    "w-full pl-4 pr-4 py-1 box-border bg-transparent border-0 outline-none text-base font-sans",
-                    "selection:bg-yellow-700/40 transition-colors",
+                    'w-full pl-4 pr-4 py-1 box-border bg-transparent border-0 outline-none text-base font-sans',
+                    'selection:bg-yellow-700/40 transition-colors',
                     blurred
-                      ? "text-white/95 placeholder:text-white/60 caret-white"
-                      : "text-black placeholder:text-black/60 caret-black"
-                  ].join(" ")}
+                      ? 'text-white/95 placeholder:text-white/60 caret-white'
+                      : 'text-black placeholder:text-black/60 caret-black'
+                  ].join(' ')}
                   type='text'
                   placeholder='Search name, base, runes, stats…'
                   value={search}
@@ -115,19 +115,19 @@ export default function App() {
                   'inline-flex rounded-xl overflow-hidden border border-white/10 bg-white/5',
                   'shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]'
                 ].join(' ')}
-                role="radiogroup"
-                aria-label="Stat display mode"
+                role='radiogroup'
+                aria-label='Stat display mode'
               >
                 {(['rollable', 'all'] as const).map(option => (
                   <button
                     key={option}
-                    role="radio"
-                    aria-checked={mode === option}
-                    onClick={() => change(option)}
                     className={[
                       'px-3 py-1 text-sm font-medium transition cursor-pointer',
                       mode === option ? 'bg-yellow-700/30 text-yellow-100' : 'hover:bg-white/10'
                     ].join(' ')}
+                    onClick={() => change(option)}
+                    role='radio'
+                    aria-checked={mode === option}
                   >
                     {option === 'rollable' ? 'Rollable Only' : 'All Stats'}
                   </button>
@@ -189,36 +189,33 @@ function squashRunes(str: string) {
 }
 function includesAllTokens(haystack: string, tokens: string[]) {
   if (!tokens.length) return true;
-  return tokens.every(t => haystack.includes(t));
+  return tokens.every(token => haystack.includes(token));
 }
 
 function runewordHaystack(runeword: RunewordType): string {
   const parts: string[] = [];
+
   if (runeword.name) parts.push(runeword.name);
   if (runeword.base) parts.push(runeword.base);
+  parts.push(...([runeword.itemType1, runeword.itemType2, runeword.itemType3].filter(Boolean) as string[]));
 
-  const types = (runeword.itemTypes?.length
-    ? runeword.itemTypes
-    : [runeword.itype1, runeword.itype2, runeword.itype3].filter(Boolean)) as string[];
-  parts.push(...types);
-
-  const runes = Array.isArray(runeword.runes) && runeword.runes.length
-    ? (runeword.runes as string[])
-    : Array.from({ length: 7 }, (_, i) => runeword[`Rune${i + 1}`]).filter(Boolean) as string[];
-  parts.push(...runes);
-
-  if (Array.isArray(runeword.stats) && runeword.stats.length) {
-    parts.push(...(runeword.stats.map(stat => stat.code).filter(Boolean) as string[]));
-  } else {
-    for (let i = 1; i <= 12; i++) {
-      const k = runeword[`Stat${i}`];
-      if (k) parts.push(String(k));
-    }
+  if (Array.isArray(runeword.runes) && runeword.runes.length) {
+    parts.push(...(runeword.runes as string[]));
   }
 
-  if (runeword.RequiredRunes) parts.push(runeword.RequiredRunes);
+  const INDEXES: RunewordStatIndex[] = [1, 2, 3, 4, 5, 6, 7, 8];
+  for (const i of INDEXES) {
+    const text = runeword[`stat${i}`];
+    const min = runeword[`min${i}`];
+    const max = runeword[`max${i}`];
+
+    if (text != null && text !== '') parts.push(String(text));
+    if (typeof min === 'number') parts.push(String(min));
+    if (typeof max === 'number' && max !== min) parts.push(String(max));
+  }
+
   const joined = parts.join(' ');
-  return normalize(joined) + ' ' + squashRunes(joined);
+  return `${normalize(joined)} ${squashRunes(joined)}`;
 }
 
 function setItemHaystack(item: SetItemType): string {
