@@ -4,7 +4,7 @@ export type Rune =
   | 'Pul' | 'Um' | 'Mal' | 'Ist' | 'Gul' | 'Vex' | 'Ohm' | 'Lo' | 'Sur' | 'Ber'
   | 'Jah' | 'Cham' | 'Zod';
 
-export type RunewordStatIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+export type RunewordStatIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 export type RunewordNumberedStatFields =
   { [I in RunewordStatIndex as `stat${I}`]?: string } &
   { [I in RunewordStatIndex as `min${I}`]?: number } &
