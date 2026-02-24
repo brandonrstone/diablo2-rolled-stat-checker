@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div
       className='w-full min-h-[100dvh] grid grid-rows-[auto_1fr] justify-items-center overflow-x-clip'
-      style={{ paddingTop: headerHeight }} // spacer equal to fixed header height
+      style={{ paddingTop: headerHeight }}
     >
       {/* Fixed, centered, capped header */}
       <div className='fixed top-0 left-0 right-0 z-20'>

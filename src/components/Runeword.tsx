@@ -57,14 +57,12 @@ function renderRuneInline(rune: string) {
 }
 
 function analyzeRoll(min?: number, max?: number) {
-  const hasMin = typeof min === 'number' && !Number.isNaN(min);
-  const hasMax = typeof max === 'number' && !Number.isNaN(max);
-  if (hasMin && hasMax) {
+  if (!Number.isNaN(min) && !Number.isNaN(max)) {
     const low = Math.min(min!, max!);
     const high = Math.max(min!, max!);
     return low === high ? { kind: 'fixed', value: low } : { kind: 'variable', low, high };
   }
-  if (hasMin) return { kind: 'fixed', value: min! };
-  if (hasMax) return { kind: 'fixed', value: max! };
+  if (!Number.isNaN(min)) return { kind: 'fixed', value: min! };
+  if (!Number.isNaN(max)) return { kind: 'fixed', value: max! };
   return { kind: 'none' };
 }
