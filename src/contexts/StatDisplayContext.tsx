@@ -8,15 +8,21 @@ type StatDisplayModeContext = {
   setMode: (mode: StatDisplayMode) => void;
 };
 
+const LocalStorageKey = {
+  StatDisplayMode: 'statDisplayMode',
+  Rollable: 'rollable',
+  All: 'all',
+} as const
+
 export const StatDisplayContext = createContext<StatDisplayModeContext | null>(null);
 
 export function StatDisplayProvider({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState<StatDisplayMode>(() => {
-    const saved = localStorage.getItem('statDisplayMode');
-    return (saved === 'rollable' || saved === 'all') ? saved : 'all';
+    const saved = localStorage.getItem(LocalStorageKey.StatDisplayMode);
+    return (saved === LocalStorageKey.Rollable || saved === LocalStorageKey.All) ? saved : LocalStorageKey.All;
   });
 
-  useEffect(() => localStorage.setItem('statDisplayMode', mode), [mode]);
+  useEffect(() => localStorage.setItem(LocalStorageKey.StatDisplayMode, mode), [mode]);
 
   const value = useMemo(() => ({ mode, setMode }), [mode]);
   return (
