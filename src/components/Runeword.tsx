@@ -4,13 +4,15 @@ import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import type { RunewordType } from '../types';
 import { extractRunewordStats, filterExtracted } from '../lib/rollable';
 import { ItemCard } from './ItemCard';
+import { LocalStorageKey } from '../contexts/StatDisplayContext';
 
 export const Runeword = memo(function Runeword({ runeword }: { runeword: RunewordType }) {
   const { mode } = useStatDisplayMode();
 
   const visibleStats = useMemo(() => {
     const all = extractRunewordStats(runeword);
-    return filterExtracted(all, mode);
+    const modeString = mode === LocalStorageKey.Rollable ? LocalStorageKey.Rollable : LocalStorageKey.All;
+    return filterExtracted(all, modeString);
   }, [runeword, mode]);
 
   return (
@@ -56,13 +58,19 @@ function renderRuneInline(rune: string) {
   );
 }
 
+enum Roll {
+  None = 'none',
+  Fixed = 'fixed',
+  Variable = 'variable',
+}
+
 function analyzeRoll(min?: number, max?: number) {
   if (!Number.isNaN(min) && !Number.isNaN(max)) {
     const low = Math.min(min!, max!);
     const high = Math.max(min!, max!);
-    return low === high ? { kind: 'fixed', value: low } : { kind: 'variable', low, high };
+    return low === high ? { kind: Roll.Fixed, value: low } : { kind: Roll.Variable, low, high };
   }
-  if (!Number.isNaN(min)) return { kind: 'fixed', value: min! };
-  if (!Number.isNaN(max)) return { kind: 'fixed', value: max! };
-  return { kind: 'none' };
+  if (!Number.isNaN(min)) return { kind: Roll.Fixed, value: min! };
+  if (!Number.isNaN(max)) return { kind: Roll.Fixed, value: max! };
+  return { kind: Roll.None };
 }

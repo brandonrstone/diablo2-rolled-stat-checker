@@ -4,6 +4,7 @@ import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import { extractSetItemStats, filterExtracted } from '../lib/rollable';
 import type { SetItemType } from '../types';
 import { ItemCard } from './ItemCard';
+import { LocalStorageKey } from '../contexts/StatDisplayContext';
 
 export function SetItem(setItem: SetItemType) {
   const { mode } = useStatDisplayMode();
@@ -29,7 +30,8 @@ export function SetItem(setItem: SetItemType) {
 
   const visibleStats = useMemo(() => {
     const all = extractSetItemStats(setItem).filter(stat => stat.text);
-    return filterExtracted(all, mode);
+    const modeString = mode === LocalStorageKey.Rollable ? LocalStorageKey.Rollable : LocalStorageKey.All;
+    return filterExtracted(all, modeString);
   }, [setItem, mode]);
 
   return (
