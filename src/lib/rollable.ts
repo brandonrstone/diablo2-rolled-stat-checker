@@ -1,3 +1,4 @@
+import { LocalStorageKey } from '../contexts/StatDisplayContext';
 import type { RunewordType, SetItemType, UniqueItemType } from '../types';
 
 export type ExtractedStat = {
@@ -80,7 +81,7 @@ export function isRollable(stat: ExtractedStat): boolean {
   return false;
 }
 
-export function filterExtracted(stats: ExtractedStat[], mode: 'all' | 'rollable'): ExtractedStat[] {
-  if (mode === 'all') return stats;
+export function filterExtracted(stats: ExtractedStat[], mode: LocalStorageKey): ExtractedStat[] {
+  if (mode === LocalStorageKey.All) return stats;
   return stats.filter(isRollable);
 }

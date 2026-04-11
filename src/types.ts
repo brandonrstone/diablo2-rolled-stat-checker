@@ -1,8 +1,44 @@
-export type Rune =
-  | 'El' | 'Eld' | 'Tir' | 'Nef' | 'Eth' | 'Ith' | 'Tal' | 'Ral' | 'Ort' | 'Thul'
-  | 'Amn' | 'Sol' | 'Shael' | 'Dol' | 'Hel' | 'Io' | 'Lum' | 'Ko' | 'Fal' | 'Lem'
-  | 'Pul' | 'Um' | 'Mal' | 'Ist' | 'Gul' | 'Vex' | 'Ohm' | 'Lo' | 'Sur' | 'Ber'
-  | 'Jah' | 'Cham' | 'Zod';
+export enum Rune {
+  El = 'El',
+  Eld = 'Eld',
+  Tir = 'Tir',
+  Nef = 'Nef',
+  Eth = 'Eth',
+  Ith = 'Ith',
+  Tal = 'Tal',
+  Ral = 'Ral',
+  Ort = 'Ort',
+  Thul = 'Thul',
+  Amn = 'Amn',
+  Sol = 'Sol',
+  Shael = 'Shael',
+  Dol = 'Dol',
+  Hel = 'Hel',
+  Io = 'Io',
+  Lum = 'Lum',
+  Ko = 'Ko',
+  Fal = 'Fal',
+  Lem = 'Lem',
+  Pul = 'Pul',
+  Um = 'Um',
+  Mal = 'Mal',
+  Ist = 'Ist',
+  Gul = 'Gul',
+  Vex = 'Vex',
+  Ohm = 'Ohm',
+  Lo = 'Lo',
+  Sur = 'Sur',
+  Ber = 'Ber',
+  Jah = 'Jah',
+  Cham = 'Cham',
+  Zod = 'Zod'
+}
+
+export enum Charm {
+  Small = 'Small Charm',
+  Large = 'Large Charm',
+  Grand = 'Grand Charm',
+}
 
 export type RunewordStatIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 export type RunewordNumberedStatFields =

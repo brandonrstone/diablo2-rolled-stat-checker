@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import { ItemCard } from './ItemCard';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
-import type { UniqueItemType } from '../types';
+import { Charm, type UniqueItemType } from '../types';
 import { extractUniqueItemStats, filterExtracted } from '../lib/rollable';
 
 export function UniqueItem(uniqueItem: UniqueItemType) {
@@ -30,7 +30,7 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
     return filterExtracted(all, mode);
   }, [uniqueItem, mode]);
 
-  const isCharm = (base?: string) => base === 'Grand Charm' || base === 'Large Charm' || base === 'Small Charm';
+  const isCharm = (base?: string) => base === Charm.Grand || base === Charm.Large || base === Charm.Small;
 
   return (
     <ItemCard title={uniqueItem.name} subtitle={uniqueItem.itemBase} requiredLevel={uniqueItem.requiredLevel} type='unique' charmSubtitleGold={isCharm(uniqueItem.itemBase)}>

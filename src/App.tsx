@@ -12,8 +12,9 @@ import { SetItem } from './components/SetItem';
 import { UniqueItem } from './components/UniqueItem';
 import { useDebounced } from './hooks/useDebounced';
 
-import { type StatDisplayMode } from './contexts/StatDisplayContext';
+
 import { useStatDisplayMode } from './hooks/useStatDisplayMode';
+import { LocalStorageKey } from './contexts/StatDisplayContext';
 
 export default function App() {
   const { mode, setMode } = useStatDisplayMode();
@@ -23,7 +24,7 @@ export default function App() {
   const deferred = useDeferredValue(search);
   const itemQuery = useDebounced(deferred, 150).trim();
   const headerRef = useRef<HTMLDivElement | null>(null);
-  const change = (mode: StatDisplayMode) => setMode(mode);
+  const change = (mode: LocalStorageKey) => setMode(mode);
 
   useEffect(() => {
     const measure = () => setHeaderH(headerRef.current?.offsetHeight ?? 0);
@@ -118,7 +119,7 @@ export default function App() {
                 role='radiogroup'
                 aria-label='Stat display mode'
               >
-                {(['rollable', 'all'] as const).map(option => (
+                {([LocalStorageKey.Rollable, LocalStorageKey.All] as const).map(option => (
                   <button
                     key={option}
                     className={[
