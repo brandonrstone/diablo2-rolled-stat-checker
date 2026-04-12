@@ -31,7 +31,6 @@ export function extractRunewordStats(runeword: RunewordType): ExtractedStat[] {
 export function extractSetItemStats(item: SetItemType): ExtractedStat[] {
   const out: ExtractedStat[] = [];
 
-  // SetItems now use statN/minN/maxN (not propN)
   for (let i = 1; i <= 20; i++) {
     const key = `stat${i}` as keyof SetItemType;
     const minKey = `min${i}` as keyof SetItemType;
@@ -41,7 +40,6 @@ export function extractSetItemStats(item: SetItemType): ExtractedStat[] {
     if (!text) continue;
 
     const min = numOrUndef(item[minKey]);
-    // Only include max if it exists as a property on the item
     const max = Object.prototype.hasOwnProperty.call(item, maxKey)
       ? numOrUndef(item[maxKey])
       : undefined;

@@ -563,7 +563,7 @@ export const Runewords: RunewordType[] = [
     itemTypes: ['Helm'],
     requiredLevel: 55,
     runes: [Rune.Nef, Rune.Pul, Rune.Vex],
-    stat1: 'fireskill',
+    stat1: '+ To Fire Skills',
     min1: 3,
     stat2: 'Resist Fire',
     min2: 4,
@@ -576,8 +576,6 @@ export const Runewords: RunewordType[] = [
     max4: 75,
     stat5: 'Half Freeze Duration',
     min5: 1,
-    stat6: 'res-pois-len',
-    min6: 50,
   },
   {
     id: 'Runeword41',

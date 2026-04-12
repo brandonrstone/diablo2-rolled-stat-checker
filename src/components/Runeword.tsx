@@ -65,12 +65,15 @@ enum Roll {
 }
 
 function analyzeRoll(min?: number, max?: number) {
-  if (!Number.isNaN(min) && !Number.isNaN(max)) {
-    const low = Math.min(min!, max!);
-    const high = Math.max(min!, max!);
+  const hasMin = typeof min === 'number' && Number.isFinite(min);
+  const hasMax = typeof max === 'number' && Number.isFinite(max);
+
+  if (hasMin && hasMax) {
+    const low = Math.min(min, max);
+    const high = Math.max(min, max);
     return low === high ? { kind: Roll.Fixed, value: low } : { kind: Roll.Variable, low, high };
   }
-  if (!Number.isNaN(min)) return { kind: Roll.Fixed, value: min! };
-  if (!Number.isNaN(max)) return { kind: Roll.Fixed, value: max! };
+  if (hasMin) return { kind: Roll.Fixed, value: min };
+  if (hasMax) return { kind: Roll.Fixed, value: max };
   return { kind: Roll.None };
 }
