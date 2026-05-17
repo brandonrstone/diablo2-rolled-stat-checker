@@ -153,21 +153,21 @@ export default function App() {
           </div>
         ) : (
           <>
-            {filteredUniqueItems.length > 0 && (
+            {filteredUniqueItems.length && (
               <>
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>Unique Items ({filteredUniqueItems.length})</h2>
                 {filteredUniqueItems.map((uniqueItem) => <UniqueItem key={(uniqueItem as UniqueItemType).id} {...(uniqueItem as UniqueItemType)} />)}
               </>
             )}
 
-            {filteredSetItems.length > 0 && (
+            {filteredSetItems.length && (
               <>
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'> Set Items ({filteredSetItems.length})</h2>
                 {filteredSetItems.map((setItem: SetItemType) => <SetItem key={setItem.id} {...setItem} />)}
               </>
             )}
 
-            {filteredRunewords.length > 0 && (
+            {filteredRunewords.length && (
               <>
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
                   Runewords ({filteredRunewords.length})
