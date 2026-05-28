@@ -11,6 +11,7 @@ import { Runeword } from './components/Runeword';
 import { SetItem } from './components/SetItem';
 import { UniqueItem } from './components/UniqueItem';
 import { useDebounced } from './hooks/useDebounced';
+import { attachSetImage, attachUniqueImage } from './lib/itemImages';
 
 
 import { useStatDisplayMode } from './hooks/useStatDisplayMode';
@@ -54,17 +55,22 @@ export default function App() {
 
   const filteredRunewords = useMemo(() => {
     if (!tokens.length) return [];
-    return Runewords.filter((runeword: RunewordType) => includesAllTokens(runewordHaystack(runeword), tokens));
+    return Runewords
+      .filter((runeword: RunewordType) => includesAllTokens(runewordHaystack(runeword), tokens));
   }, [tokens]);
 
   const filteredSetItems = useMemo(() => {
     if (!tokens.length) return [];
-    return SetItems.filter((setItem: SetItemType) => includesAllTokens(setItemHaystack(setItem), tokens));
+    return SetItems
+      .filter((setItem: SetItemType) => includesAllTokens(setItemHaystack(setItem), tokens))
+      .map(attachSetImage);
   }, [tokens]);
 
   const filteredUniqueItems = useMemo(() => {
     if (!tokens.length) return [];
-    return (UniqueItems as UniqueItemType[]).filter(uniqueItem => includesAllTokens(uniqueItemHaystack(uniqueItem), tokens));
+    return (UniqueItems as UniqueItemType[])
+      .filter(uniqueItem => includesAllTokens(uniqueItemHaystack(uniqueItem), tokens))
+      .map(attachUniqueImage);
   }, [tokens]);
 
   const total = (filteredRunewords?.length || 0) + (filteredSetItems?.length || 0) + (filteredUniqueItems?.length || 0);
@@ -81,9 +87,9 @@ export default function App() {
         {/* Foreground content */}
         <div className='relative flex flex-col items-center mx-auto px-4 pt-2 pb-4 gap-2' ref={headerRef}>
           <div className={`relative top-0 flex flex-col items-center ${blurred && 'text-white/90'}`}>
-            <img className='max-w-[360px] h-auto m-0 select-none' src='/Diablo_II_Logo.webp' alt='Diablo II logo' draggable={false} />
+            <img className='max-w-[324px] h-auto m-0 select-none' src='/Diablo_II_Logo.webp' alt='Diablo II logo' draggable={false} />
             <span className='mb-1 text-ui-gold font-system-ui [font-size:clamp(0.95rem,0.8rem+0.4vw,1.1rem)]'>
-              Rolled Stat Checker v1.2.5
+              Rolled Stat Checker v1.2.6
             </span>
 
             {/* Search field */}
@@ -153,21 +159,21 @@ export default function App() {
           </div>
         ) : (
           <>
-            {filteredUniqueItems.length && (
+            {filteredUniqueItems.length > 0 && (
               <>
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>Unique Items ({filteredUniqueItems.length})</h2>
                 {filteredUniqueItems.map((uniqueItem) => <UniqueItem key={(uniqueItem as UniqueItemType).id} {...(uniqueItem as UniqueItemType)} />)}
               </>
             )}
 
-            {filteredSetItems.length && (
+            {filteredSetItems.length > 0 && (
               <>
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'> Set Items ({filteredSetItems.length})</h2>
                 {filteredSetItems.map((setItem: SetItemType) => <SetItem key={setItem.id} {...setItem} />)}
               </>
             )}
 
-            {filteredRunewords.length && (
+            {filteredRunewords.length > 0 && (
               <>
                 <h2 className='col-span-full mt-3 text-ui-gold font-sans [font-size:clamp(1rem,0.9rem+0.4vw,1.15rem)]'>
                   Runewords ({filteredRunewords.length})

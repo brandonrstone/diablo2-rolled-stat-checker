@@ -16,7 +16,26 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
   }, [runeword, mode]);
 
   return (
-    <ItemCard title={runeword.name} subtitle={runeword.itemTypes.join(' / ')} requiredLevel={runeword.requiredLevel} type='runeword'>
+    <ItemCard
+      title={runeword.name}
+      subtitle={runeword.itemTypes.join(' / ')}
+      requiredLevel={runeword.requiredLevel}
+      type='runeword'
+      imageSlotContent={(
+        <div className='inline-flex items-center justify-center gap-1.5 min-h-20'>
+          {runeword.runes.map((rune, i) => (
+            <img
+              key={rune + i}
+              src={runeIconSrc(rune)}
+              alt={`${rune} rune`}
+              className='w-12 h-12 object-contain select-none'
+              loading='lazy'
+              decoding='async'
+            />
+          ))}
+        </div>
+      )}
+    >
       <div className='max-w-full text-gold whitespace-nowrap overflow-x-auto'>
         &apos;{runeword.runes.map((rune, i) => <Fragment key={rune + i}>{renderRuneInline(rune)}</Fragment>)}&apos;
       </div>
@@ -47,9 +66,13 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
   );
 });
 
+function runeIconSrc(rune: string) {
+  return `/item-icons/runes/${rune.toLowerCase()}.png`;
+}
+
 function renderRuneInline(rune: string) {
   if (!rune) return null;
-  const { head, tail } = { head: rune.slice(0, 1), tail: rune.slice(1) }
+  const { head, tail } = { head: rune.slice(0, 1), tail: rune.slice(1) };
   return (
     <span className='inline-flex items-baseline whitespace-nowrap align-baseline'>
       <span className='text-[1.18em] leading-none'>{head}</span>

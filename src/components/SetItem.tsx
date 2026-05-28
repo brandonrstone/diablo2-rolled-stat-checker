@@ -35,7 +35,13 @@ export function SetItem(setItem: SetItemType) {
   }, [setItem, mode]);
 
   return (
-    <ItemCard title={setItem.name} subtitle={setItem.itemBase} requiredLevel={setItem.requiredLevel} type="set">
+    <ItemCard
+      title={setItem.name}
+      subtitle={setItem.itemBase}
+      requiredLevel={setItem.requiredLevel}
+      type="set"
+      imageUrl={setItem.imageUrl}
+    >
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
 

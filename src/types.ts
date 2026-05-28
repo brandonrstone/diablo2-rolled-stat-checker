@@ -52,7 +52,8 @@ export interface RunewordType extends RunewordNumberedStatFields {
   base: string;
   requiredLevel: number;
   runes: Rune[];
-  itemTypes: string[]
+  itemTypes: string[];
+  imageUrl?: string;
 }
 
 export const SET_STAT_INDEXES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
@@ -68,6 +69,7 @@ export type SetItemType = {
   name: string;
   set: string;
   itemBase: string;
+  imageUrl?: string;
   requiredLevel?: number;
   stat1?: string;
   min1?: number;
@@ -121,6 +123,7 @@ export type UniqueItemType = {
   requiredLevel?: number;
   itemBase?: string;
   base?: string;
+  imageUrl?: string;
   stat1?: string;
   min1?: number;
   max1?: number;

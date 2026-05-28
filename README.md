@@ -59,6 +59,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - `src/lib/` — Stat extraction and utility functions
 - `scripts/` — Node.js scripts for data normalization and migration
 
+## Item Icon Mapping
+
+Item cards now support icons out of the box. The app auto-generates an `imageUrl` for each item by slugifying the item name:
+
+- Unique items: `public/item-icons/unique/<item-name-slug>.png`
+- Set items: `public/item-icons/set/<item-name-slug>.png`
+- Rune icons (for runeword cards): `public/item-icons/runes/<rune-name-lowercase>.png`
+
+Example:
+
+- `Tal Rasha's Lidless Eye` -> `public/item-icons/set/tal-rasha-s-lidless-eye.png`
+- `Jah` rune -> `public/item-icons/runes/jah.png`
+
+If a file is missing or fails to load, the card gracefully hides the icon and still renders stats normally.
+
 ## Contributing
 
 Pull requests and suggestions are welcome! Please open an issue or PR for any improvements or bug fixes.

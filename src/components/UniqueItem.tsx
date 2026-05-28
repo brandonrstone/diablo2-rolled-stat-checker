@@ -33,7 +33,14 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
   const isCharm = (base?: string) => base === Charm.Grand || base === Charm.Large || base === Charm.Small;
 
   return (
-    <ItemCard title={uniqueItem.name} subtitle={uniqueItem.itemBase} requiredLevel={uniqueItem.requiredLevel} type='unique' charmSubtitleGold={isCharm(uniqueItem.itemBase)}>
+    <ItemCard
+      title={uniqueItem.name}
+      subtitle={uniqueItem.itemBase}
+      requiredLevel={uniqueItem.requiredLevel}
+      type='unique'
+      charmSubtitleGold={isCharm(uniqueItem.itemBase)}
+      imageUrl={uniqueItem.imageUrl}
+    >
       {visibleStats.map((stat, i) => {
         const roll = analyzeRoll(stat.min, stat.max);
 
