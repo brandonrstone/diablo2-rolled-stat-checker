@@ -1,34 +1,15 @@
 import { useMemo } from 'react';
 
 import { ItemCard } from './ItemCard';
+import { StatLineView } from './StatLineView';
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import { Charm, type UniqueItemType } from '../types';
-import { extractUniqueItemStats, filterExtracted } from '../lib/rollable';
+import { filterStats, getStats } from '../lib/rollable';
 
 export function UniqueItem(uniqueItem: UniqueItemType) {
   const { mode } = useStatDisplayMode();
 
-  type Roll =
-    | { kind: 'none' }
-    | { kind: 'fixed'; value: number }
-    | { kind: 'variable'; low: number; high: number };
-
-  function analyzeRoll(min?: number, max?: number): Roll {
-    if (min && max) {
-      const low = Math.min(min, max);
-      const high = Math.max(min, max);
-      if (low === high) return { kind: 'fixed', value: low };
-      return { kind: 'variable', low, high };
-    }
-    if (min) return { kind: 'fixed', value: min };
-    if (max) return { kind: 'fixed', value: max };
-    return { kind: 'none' };
-  }
-
-  const visibleStats = useMemo(() => {
-    const all = extractUniqueItemStats(uniqueItem).filter(stat => stat.text);
-    return filterExtracted(all, mode);
-  }, [uniqueItem, mode]);
+  const visibleStats = useMemo(() => filterStats(getStats(uniqueItem), mode), [uniqueItem, mode]);
 
   const isCharm = (base?: string) => base === Charm.Grand || base === Charm.Large || base === Charm.Small;
 
@@ -37,31 +18,16 @@ export function UniqueItem(uniqueItem: UniqueItemType) {
       title={uniqueItem.name}
       subtitle={uniqueItem.itemBase}
       requiredLevel={uniqueItem.requiredLevel}
+      base={uniqueItem.base_stats}
       type='unique'
       charmSubtitleGold={isCharm(uniqueItem.itemBase)}
       imageUrl={uniqueItem.imageUrl}
     >
-      {visibleStats.map((stat, i) => {
-        const roll = analyzeRoll(stat.min, stat.max);
-
-        return (
-          <div key={stat.source ?? i} className='flex flex-col items-center justify-center w-full max-w-xs'>
-            <span className='text-blueish text-center break-words'>{stat.text}</span>
-            {roll.kind === 'variable' && (
-              <div>
-                <span className='text-roll-min'>{roll.low}</span>
-                {' - '}
-                <span className='text-roll-max'>{roll.high}</span>
-              </div>
-            )}
-            {roll.kind === 'fixed' && (
-              <div>
-                <span className='text-white'>{roll.value}</span>
-              </div>
-            )}
-          </div>
-        );
-      })}
+      {visibleStats.map((stat, i) => (
+        <div key={i} className='flex flex-col items-center justify-center w-full max-w-xs'>
+          <StatLineView stat={stat} />
+        </div>
+      ))}
     </ItemCard>
   );
 }

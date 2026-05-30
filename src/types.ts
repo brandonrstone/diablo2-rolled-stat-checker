@@ -40,13 +40,48 @@ export enum Charm {
   Grand = 'Grand Charm',
 }
 
-export type RunewordStatIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-export type RunewordNumberedStatFields =
-  { [I in RunewordStatIndex as `stat${I}`]?: string } &
-  { [I in RunewordStatIndex as `min${I}`]?: number } &
-  { [I in RunewordStatIndex as `max${I}`]?: number };
+/**
+ * A single displayable item modifier.
+ *
+ * `template` is the fully-formatted in-game line with one `{v}` placeholder
+ * marking where the numeric value(s) belong, e.g. "{v} Defense",
+ * "{v}% Faster Cast Rate", "{v} to All Skills". Lines that have no number
+ * (e.g. "Indestructible") simply omit the placeholder.
+ *
+ * `signed` indicates the game prefixes a `+` for non-negative values.
+ *
+ * `kind` is `roll` when the value rolls within a range (`min !== max`) and is
+ * rendered with the red (min) / green (max) colour scheme; otherwise `fixed`.
+ */
+export type StatKind = 'fixed' | 'roll';
 
-export interface RunewordType extends RunewordNumberedStatFields {
+export interface StatLine {
+  template: string;
+  signed?: boolean;
+  min?: number;
+  max?: number;
+  kind: StatKind;
+  /** In-game display priority (higher shows first). */
+  order?: number;
+}
+
+/** Intrinsic stats of the underlying base item (shown above the magic mods). */
+export interface BaseStats {
+  defenseMin?: number;
+  defenseMax?: number;
+  durability?: number;
+  reqStr?: number;
+  reqDex?: number;
+  block?: number;
+  damageMin?: number;
+  damageMax?: number;
+  twoHandDamageMin?: number;
+  twoHandDamageMax?: number;
+  throwDamageMin?: number;
+  throwDamageMax?: number;
+}
+
+export interface RunewordType {
   id: string;
   name: string;
   base: string;
@@ -54,15 +89,9 @@ export interface RunewordType extends RunewordNumberedStatFields {
   runes: Rune[];
   itemTypes: string[];
   imageUrl?: string;
+  base_stats?: BaseStats;
+  stats: StatLine[];
 }
-
-export const SET_STAT_INDEXES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
-export type SetStatIndex = typeof SET_STAT_INDEXES[number];
-
-export type SetPropKey = `prop${SetStatIndex}`;
-export type SetMinKey = `min${SetStatIndex}`;
-export type SetMaxKey = `max${SetStatIndex}`;
-export type SetParKey = `par${SetStatIndex}`;
 
 export type SetItemType = {
   id: number;
@@ -71,51 +100,9 @@ export type SetItemType = {
   itemBase: string;
   imageUrl?: string;
   requiredLevel?: number;
-  stat1?: string;
-  min1?: number;
-  max1?: number;
-  stat2?: string;
-  min2?: number;
-  max2?: number;
-  stat3?: string;
-  min3?: number;
-  max3?: number;
-  stat4?: string;
-  min4?: number;
-  max4?: number;
-  stat5?: string;
-  min5?: number;
-  max5?: number;
-  stat6?: string;
-  min6?: number;
-  max6?: number;
-  stat7?: string;
-  min7?: number;
-  max7?: number;
-  stat8?: string;
-  min8?: number;
-  max8?: number;
-  stat9?: string;
-  min9?: number;
-  max9?: number;
-  stat10?: string;
-  min10?: number;
-  max10?: number;
-  stat11?: string;
-  min11?: number;
-  max11?: number;
-  stat12?: string;
-  min12?: number;
-  max12?: number;
+  base_stats?: BaseStats;
+  stats: StatLine[];
 };
-
-export const STAT_INDEXES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
-export type StatIndex = typeof STAT_INDEXES[number];
-
-export type PropKey = `prop${StatIndex}`;
-export type MinKey = `min${StatIndex}`;
-export type MaxKey = `max${StatIndex}`;
-export type ParKey = `par${StatIndex}`;
 
 export type UniqueItemType = {
   id: number;
@@ -124,35 +111,7 @@ export type UniqueItemType = {
   itemBase?: string;
   base?: string;
   imageUrl?: string;
-  stat1?: string;
-  min1?: number;
-  max1?: number;
-  stat2?: string;
-  min2?: number;
-  max2?: number;
-  stat3?: string;
-  min3?: number;
-  max3?: number;
-  stat4?: string;
-  min4?: number;
-  max4?: number;
-  stat5?: string;
-  min5?: number;
-  max5?: number;
-  stat6?: string;
-  min6?: number;
-  max6?: number;
-  stat7?: string;
-  min7?: number;
-  max7?: number;
-  stat8?: string;
-  min8?: number;
-  max8?: number;
-  stat9?: string;
-  min9?: number;
-  max9?: number;
-  stat10?: string;
-  min10?: number;
-  max10?: number;
+  base_stats?: BaseStats;
+  stats: StatLine[];
 };
 

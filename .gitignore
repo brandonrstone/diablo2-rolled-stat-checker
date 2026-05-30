@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Cached raw D2R data tables used by scripts/generateItems.mjs
+scripts/.cache
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

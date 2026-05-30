@@ -2,24 +2,21 @@ import { Fragment, memo, useMemo } from 'react';
 
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
 import type { RunewordType } from '../types';
-import { extractRunewordStats, filterExtracted } from '../lib/rollable';
+import { filterStats, getStats } from '../lib/rollable';
 import { ItemCard } from './ItemCard';
-import { LocalStorageKey } from '../contexts/StatDisplayContext';
+import { StatLineView } from './StatLineView';
 
 export const Runeword = memo(function Runeword({ runeword }: { runeword: RunewordType }) {
   const { mode } = useStatDisplayMode();
 
-  const visibleStats = useMemo(() => {
-    const all = extractRunewordStats(runeword);
-    const modeString = mode === LocalStorageKey.Rollable ? LocalStorageKey.Rollable : LocalStorageKey.All;
-    return filterExtracted(all, modeString);
-  }, [runeword, mode]);
+  const visibleStats = useMemo(() => filterStats(getStats(runeword), mode), [runeword, mode]);
 
   return (
     <ItemCard
       title={runeword.name}
       subtitle={runeword.itemTypes.join(' / ')}
       requiredLevel={runeword.requiredLevel}
+      base={runeword.base_stats}
       type='runeword'
       imageSlotContent={(
         <div className='inline-flex items-center justify-center gap-1.5 min-h-20'>
@@ -42,26 +39,11 @@ export const Runeword = memo(function Runeword({ runeword }: { runeword: Runewor
 
       <div className='text-muted'>Base: {runeword.base}</div>
 
-      {visibleStats.map((stat, i) => {
-        const roll = analyzeRoll(stat.min, stat.max);
-        return (
-          <div key={stat.source ?? i} className='w-full max-w-xs flex flex-col items-center justify-center'>
-            <span className='text-blueish text-center'>{stat.text}</span>
-            {roll.kind === 'variable' && (
-              <div>
-                <span className='text-roll-min'>{roll.low}</span>
-                {' - '}
-                <span className='text-roll-max'>{roll.high}</span>
-              </div>
-            )}
-            {roll.kind === 'fixed' && (
-              <div>
-                <span className='text-white'>{roll.value}</span>
-              </div>
-            )}
-          </div>
-        );
-      })}
+      {visibleStats.map((stat, i) => (
+        <div key={i} className='w-full max-w-xs flex flex-col items-center justify-center'>
+          <StatLineView stat={stat} />
+        </div>
+      ))}
     </ItemCard>
   );
 });
@@ -79,24 +61,4 @@ function renderRuneInline(rune: string) {
       <span className='text-[0.86em] leading-none'>{tail}</span>
     </span>
   );
-}
-
-enum Roll {
-  None = 'none',
-  Fixed = 'fixed',
-  Variable = 'variable',
-}
-
-function analyzeRoll(min?: number, max?: number) {
-  const hasMin = typeof min === 'number' && Number.isFinite(min);
-  const hasMax = typeof max === 'number' && Number.isFinite(max);
-
-  if (hasMin && hasMax) {
-    const low = Math.min(min, max);
-    const high = Math.max(min, max);
-    return low === high ? { kind: Roll.Fixed, value: low } : { kind: Roll.Variable, low, high };
-  }
-  if (hasMin) return { kind: Roll.Fixed, value: min };
-  if (hasMax) return { kind: Roll.Fixed, value: max };
-  return { kind: Roll.None };
 }

@@ -1,17 +1,21 @@
 import { useState, type PropsWithChildren } from 'react';
 import type { ReactNode } from 'react';
 
+import type { BaseStats } from '../types';
+import { BaseStatsView } from './StatLineView';
+
 type ItemCardProps = PropsWithChildren<{
   title: string;
   subtitle?: string;
   requiredLevel?: number;
+  base?: BaseStats;
   type: 'unique' | 'set' | 'runeword';
   charmSubtitleGold?: boolean;
   imageUrl?: string;
   imageSlotContent?: ReactNode;
 }>;
 
-export function ItemCard({ title, subtitle, requiredLevel, type, charmSubtitleGold, imageUrl, imageSlotContent, children }: ItemCardProps) {
+export function ItemCard({ title, subtitle, requiredLevel, base, type, charmSubtitleGold, imageUrl, imageSlotContent, children }: ItemCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
   const titleColor = {
     unique: 'text-gold',
@@ -48,7 +52,7 @@ export function ItemCard({ title, subtitle, requiredLevel, type, charmSubtitleGo
         </div>
       )}
 
-      {requiredLevel && <div className='text-white'>Required Level: {requiredLevel ?? '—'}</div>}
+      <BaseStatsView base={base} requiredLevel={requiredLevel} />
 
       <div className='w-full flex-col gap-1 items-center mt-1 flex'>{children}</div>
     </div>

@@ -1,73 +1,30 @@
 import { useMemo } from 'react';
 
 import { useStatDisplayMode } from '../hooks/useStatDisplayMode';
-import { extractSetItemStats, filterExtracted } from '../lib/rollable';
+import { filterStats, getStats } from '../lib/rollable';
 import type { SetItemType } from '../types';
 import { ItemCard } from './ItemCard';
-import { LocalStorageKey } from '../contexts/StatDisplayContext';
+import { StatLineView } from './StatLineView';
 
 export function SetItem(setItem: SetItemType) {
   const { mode } = useStatDisplayMode();
 
-  type Roll =
-    | { kind: 'none' }
-    | { kind: 'fixed'; value: number }
-    | { kind: 'variable'; low: number; high: number };
-
-  function analyzeRoll(min?: number, max?: number): Roll {
-    const hasMin = typeof min === 'number' && !Number.isNaN(min);
-    const hasMax = typeof max === 'number' && !Number.isNaN(max);
-    if (hasMin && hasMax) {
-      const low = Math.min(min, max);
-      const high = Math.max(min, max);
-      if (low === high) return { kind: 'fixed', value: low };
-      return { kind: 'variable', low, high };
-    }
-    if (hasMin) return { kind: 'fixed', value: min };
-    if (hasMax) return { kind: 'fixed', value: max };
-    return { kind: 'none' };
-  }
-
-  const visibleStats = useMemo(() => {
-    const all = extractSetItemStats(setItem).filter(stat => stat.text);
-    const modeString = mode === LocalStorageKey.Rollable ? LocalStorageKey.Rollable : LocalStorageKey.All;
-    return filterExtracted(all, modeString);
-  }, [setItem, mode]);
+  const visibleStats = useMemo(() => filterStats(getStats(setItem), mode), [setItem, mode]);
 
   return (
     <ItemCard
       title={setItem.name}
       subtitle={setItem.itemBase}
       requiredLevel={setItem.requiredLevel}
-      type="set"
+      base={setItem.base_stats}
+      type='set'
       imageUrl={setItem.imageUrl}
     >
-      {visibleStats.map((stat, i) => {
-        const roll = analyzeRoll(stat.min, stat.max);
-
-        if (roll.kind === 'none') {
-          return (
-            <div className='text-center' key={stat.source ?? i}>
-              <span className='text-blueish'>{stat.text}</span>
-            </div>
-          );
-        }
-
-        return (
-          <div className='text-center' key={stat.source ?? i}>
-            <div><span className='text-blueish'>{stat.text}</span></div>
-            {roll.kind === 'variable' ? (
-              <div>
-                <span className='text-roll-min'>{roll.low}</span>
-                {' - '}
-                <span className='text-roll-max'>{roll.high}</span>
-              </div>
-            ) : (
-              <div><span className='text-white'>{roll.value}</span></div>
-            )}
-          </div>
-        );
-      })}
+      {visibleStats.map((stat, i) => (
+        <div key={i} className='flex flex-col items-center justify-center w-full max-w-xs'>
+          <StatLineView stat={stat} />
+        </div>
+      ))}
     </ItemCard>
   );
 }

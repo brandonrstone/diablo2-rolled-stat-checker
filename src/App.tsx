@@ -5,7 +5,7 @@ import { Runewords } from './data/Runewords';
 import { UniqueItems } from './data/UniqueItems';
 import { SetItems } from './data/SetItems';
 
-import type { RunewordStatIndex, RunewordType, SetItemType, UniqueItemType } from './types';
+import type { RunewordType, SetItemType, StatLine, UniqueItemType } from './types';
 
 import { Runeword } from './components/Runeword';
 import { SetItem } from './components/SetItem';
@@ -89,7 +89,7 @@ export default function App() {
           <div className={`relative top-0 flex flex-col items-center ${blurred && 'text-white/90'}`}>
             <img className='max-w-[324px] h-auto m-0 select-none' src='/Diablo_II_Logo.webp' alt='Diablo II logo' draggable={false} />
             <span className='mb-1 text-ui-gold font-system-ui [font-size:clamp(0.95rem,0.8rem+0.4vw,1.1rem)]'>
-              Rolled Stat Checker v1.2.6
+              Rolled Stat Checker v1.3.0
             </span>
 
             {/* Search field */}
@@ -199,6 +199,17 @@ function includesAllTokens(haystack: string, tokens: string[]) {
   return tokens.every(token => haystack.includes(token));
 }
 
+function statsText(stats: StatLine[] | undefined): string {
+  if (!stats) return '';
+  const parts: string[] = [];
+  for (const stat of stats) {
+    parts.push(stat.template.replace('{v}', ''));
+    if (typeof stat.min === 'number') parts.push(String(stat.min));
+    if (typeof stat.max === 'number' && stat.max !== stat.min) parts.push(String(stat.max));
+  }
+  return parts.join(' ');
+}
+
 function runewordHaystack(runeword: RunewordType): string {
   const parts: string[] = [];
 
@@ -211,25 +222,16 @@ function runewordHaystack(runeword: RunewordType): string {
     parts.push(...(runeword.runes as string[]));
   }
 
-  const INDEXES: RunewordStatIndex[] = [1, 2, 3, 4, 5, 6, 7, 8];
-  for (const i of INDEXES) {
-    const text = runeword[`stat${i}`];
-    const min = runeword[`min${i}`];
-    const max = runeword[`max${i}`];
-
-    if (text != null && text !== '') parts.push(String(text));
-    if (typeof min === 'number') parts.push(String(min));
-    if (typeof max === 'number' && max !== min) parts.push(String(max));
-  }
+  parts.push(statsText(runeword.stats));
 
   const joined = parts.join(' ');
   return `${normalize(joined)} ${squashRunes(joined)}`;
 }
 
 function setItemHaystack(item: SetItemType): string {
-  return normalize(item.name);
+  return normalize([item.name, item.itemBase, statsText(item.stats)].filter(Boolean).join(' '));
 }
 function uniqueItemHaystack(item: UniqueItemType): string {
   const base = item.itemBase ?? item.base;
-  return normalize([item.name, base].filter(Boolean).join(' '));
+  return normalize([item.name, base, statsText(item.stats)].filter(Boolean).join(' '));
 }
